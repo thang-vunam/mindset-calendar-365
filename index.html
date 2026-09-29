@@ -337,41 +337,66 @@
       <div id="notify-modal" class="modal-backdrop hidden" aria-hidden="true" role="dialog">
         <div class="modal-card">
           <div class="modal-header">
-            <h3>Nhắc nhở Mindset hàng ngày</h3>
+            <h3>Cài đặt giờ nhắc Mindset</h3>
             <button id="btn-close-notify" class="icon-round-btn close-modal-btn" aria-label="Đóng">&times;</button>
           </div>
           <div class="modal-body notify-modal-body">
+            <p class="notify-intro-text">Tùy chọn 2 khung giờ trong ngày để nhận thông báo:</p>
+
             <div class="notify-schedule-list">
+              <!-- Khung giờ 1 -->
               <div class="notify-slot-item">
-                <span class="slot-emoji">🌅</span>
-                <div class="slot-text">
-                  <strong>06:00 Sáng</strong>
-                  <p>Đánh thức mục tiêu & năng lượng ngày mới</p>
+                <div class="slot-left-cluster">
+                  <input type="checkbox" id="notify-slot1-enable" class="slot-checkbox" checked aria-label="Bật nhắc nhở lần 1">
+                  <span class="slot-emoji">🌅</span>
                 </div>
-                <span class="slot-tag">Mỗi ngày</span>
+                <div class="slot-text">
+                  <label for="notify-time-1" class="slot-label">Khung giờ 1 (Buổi sáng)</label>
+                  <p class="slot-desc">Đánh thức năng lượng ngày mới</p>
+                </div>
+                <div class="slot-time-wrapper">
+                  <input type="time" id="notify-time-1" value="06:00" class="time-picker-input" aria-label="Chọn giờ lần 1">
+                </div>
               </div>
+
+              <!-- Khung giờ 2 -->
               <div class="notify-slot-item">
-                <span class="slot-emoji">⚡</span>
-                <div class="slot-text">
-                  <strong>14:00 Chiều</strong>
-                  <p>Tiếp sức tư duy & bứt phá buổi chiều</p>
+                <div class="slot-left-cluster">
+                  <input type="checkbox" id="notify-slot2-enable" class="slot-checkbox" checked aria-label="Bật nhắc nhở lần 2">
+                  <span class="slot-emoji">⚡</span>
                 </div>
-                <span class="slot-tag">Mỗi ngày</span>
+                <div class="slot-text">
+                  <label for="notify-time-2" class="slot-label">Khung giờ 2 (Chiều / Tối)</label>
+                  <p class="slot-desc">Khắc sâu & nạp lại tư duy</p>
+                </div>
+                <div class="slot-time-wrapper">
+                  <input type="time" id="notify-time-2" value="14:00" class="time-picker-input" aria-label="Chọn giờ lần 2">
+                </div>
               </div>
+            </div>
+
+            <!-- Ghi chú đồng nhất nội dung của ngày -->
+            <div class="notify-sync-note">
+              <span class="sync-icon">🎯</span>
+              <span>Cả 2 lần đều nhắc lại <strong>cùng 1 câu quote của ngày</strong> để giúp bạn nghiền ngẫm và khắc sâu tư duy.</span>
             </div>
 
             <div id="notify-status-box" class="notify-status-banner">
               <span class="status-indicator-dot" id="notify-status-dot"></span>
-              <span id="notify-status-text">Chưa bật thông báo đẩy</span>
+              <span id="notify-status-text">Chưa kích hoạt thông báo</span>
             </div>
 
             <button id="btn-request-push" class="btn-primary-action">
-              🔔 Bật thông báo 6h & 14h
+              🔔 Lưu & Bật thông báo đẩy
             </button>
 
             <button id="btn-test-push" class="btn-test-push-action hidden">
-              ⚡ Gửi thông báo thử ngay (Test Push)
+              ⚡ Gửi thông báo thử ngay (Hiện nội dung quote)
             </button>
+
+            <p id="ios-preview-hint" class="ios-preview-hint hidden">
+              💡 <em>Mẹo iPhone:</em> Khi khóa máy, nếu màn hình chỉ hiện chữ <strong>"Thông báo"</strong>, đó là chế độ bảo mật riêng tư của Apple khi chưa nhận diện Face ID. Bạn chỉ cần nhìn vào máy mở khóa khuôn mặt là toàn bộ nội dung quote sẽ hiện ra ngay; hoặc vào <em>Cài đặt > Thông báo > Mindset 365 > Hiển thị bản xem trước: Luôn luôn</em>.
+            </p>
           </div>
         </div>
       </div>
