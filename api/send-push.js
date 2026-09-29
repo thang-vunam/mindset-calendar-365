@@ -70,18 +70,14 @@ function getTodayQuote() {
   const year = vnTime.getFullYear();
   const startOfYear = new Date(year, 0, 1);
   const day = Math.min(365, Math.max(1, Math.floor((vnTime - startOfYear) / (1000 * 60 * 60 * 24)) + 1));
-  const hour = vnTime.getHours();
 
   const quotes = require('../quotes.json');
   const quoteItem = quotes[day - 1] || quotes[0];
 
-  const greeting = hour < 12 ? '🌅 Chào buổi sáng (6:00)' : '⚡ Nạp năng lượng chiều (14:00)';
-  
   return {
     day,
-    greeting,
-    title: `${greeting} - Ngày ${day}/365`,
-    body: `"${quoteItem.headline}"\n${quoteItem.quote}\n— ${quoteItem.author}`,
+    title: `🌅 Ngày ${day}/365 • ${quoteItem.headline}`,
+    body: `"${quoteItem.quote}"\n— ${quoteItem.author}`,
     category: quoteItem.category
   };
 }
