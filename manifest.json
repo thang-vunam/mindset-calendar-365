@@ -1,8 +1,8 @@
 {
-  "name": "Lịch Để Bàn 365 - Mindset Fuel",
-  "short_name": "Mindset 365",
+  "name": "Động Lực 365",
+  "short_name": "Động Lực 365",
   "description": "Lịch để bàn 365 ngày & Năng lượng tư duy - Đánh thức bản lĩnh mỗi ngày",
-  "start_url": "./index.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
