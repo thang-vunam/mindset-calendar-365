@@ -37,15 +37,14 @@ const hour = vnTime.getHours();
 const quotes = require('../quotes.json');
 const quoteItem = quotes[day - 1] || quotes[0];
 
-const greeting = hour < 12 ? '🌅 06:00 Khởi đầu ngày mới' : '⚡ 14:00 Nạp năng lượng chiều';
 const payload = JSON.stringify({
-  title: `${greeting} - Ngày ${day}/365`,
-  body: `"${quoteItem.headline}"\n\n"${quoteItem.quote}"\n— ${quoteItem.author} (${quoteItem.category})`,
+  title: `🌅 Ngày ${day}/365 • ${quoteItem.headline}`,
+  body: `"${quoteItem.quote}"\n— ${quoteItem.author}`,
   url: './index.html',
   day: day
 });
 
-console.log(`Sending Daily Mindset Notification: [${greeting}] Day ${day}`);
+console.log(`Sending Daily Mindset Notification: Day ${day}`);
 console.log(`Headline: "${quoteItem.headline}"`);
 
 const subFile = path.join(__dirname, '..', 'data', 'subscriptions.json');
@@ -61,10 +60,21 @@ if (!Array.isArray(subscriptions) || subscriptions.length === 0) {
   process.exit(0);
 }
 
-console.log(`Broadcasting to ${subscriptions.length} subscribed devices...`);
+// Filter subscribers matching current hour if scheduled
+const currentHourStr = String(vnTime.getHours()).padStart(2, '0');
+const isForce = process.argv.includes('--force');
+const targetSubs = isForce ? subscriptions : subscriptions.filter(sub => {
+  const s = sub.settings;
+  if (!s) return true; // default 06:00 & 14:00
+  const match1 = s.enabled1 !== false && (s.time1 || '06:00').startsWith(currentHourStr);
+  const match2 = s.enabled2 !== false && (s.time2 || '14:00').startsWith(currentHourStr);
+  return match1 || match2;
+});
+
+console.log(`Broadcasting to ${targetSubs.length}/${subscriptions.length} subscribed devices for hour ${currentHourStr}:00...`);
 
 Promise.allSettled(
-  subscriptions.map(sub => webpush.sendNotification(sub, payload))
+  targetSubs.map(sub => webpush.sendNotification(sub, payload))
 ).then(results => {
   let success = 0;
   let failed = 0;
