@@ -36,7 +36,6 @@
     widgetAuthor: document.getElementById('widget-author-text'),
     widgetProgressPercent: document.getElementById('widget-progress-percent'),
     widgetCategoryLabel: document.getElementById('widget-category-label'),
-    widgetSoundBtn: document.getElementById('widget-sound-btn'),
 
     // Full View
     fullView: document.getElementById('full-view'),
@@ -45,7 +44,8 @@
     btnFavorite: document.getElementById('btn-favorite'),
     favoriteHeartIcon: document.getElementById('favorite-heart-icon'),
     btnShare: document.getElementById('btn-share'),
-    fullSoundBtn: document.getElementById('full-sound-btn'),
+    btnNotifyToggle: document.getElementById('btn-notify-toggle'),
+    bellBadgeDot: document.getElementById('bell-badge-dot'),
     
     calendarCardFlipper: document.getElementById('calendar-card-flipper'),
     fullCategoryTag: document.getElementById('full-category-tag'),
@@ -79,7 +79,15 @@
 
     // Toast
     appToast: document.getElementById('app-toast'),
-    toastMessage: document.getElementById('toast-message')
+    toastMessage: document.getElementById('toast-message'),
+
+    // Notify Modal
+    notifyModal: document.getElementById('notify-modal'),
+    btnCloseNotify: document.getElementById('btn-close-notify'),
+    btnRequestPush: document.getElementById('btn-request-push'),
+    btnTestPush: document.getElementById('btn-test-push'),
+    notifyStatusDot: document.getElementById('notify-status-dot'),
+    notifyStatusText: document.getElementById('notify-status-text')
   };
 
   /**
@@ -672,6 +680,143 @@
   }
 
   /**
+   * 13. Web Push Notification Logic (06:00 & 14:00)
+   */
+  const VAPID_PUBLIC_KEY = 'BDBCjDHMFw8gwxyDJKPoVskgGm0oSd46c1Nw6caC7ZFISwZVWtc5EhN-5cTOgNp7fOGXVAJypM5wX_3SyBDBreM';
+
+  function urlBase64ToUint8Array(base64String) {
+    const padding = '='.repeat((4 - base64String.length % 4) % 4);
+    const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
+    const rawData = window.atob(base64);
+    const outputArray = new Uint8Array(rawData.length);
+    for (let i = 0; i < rawData.length; ++i) {
+      outputArray[i] = rawData.charCodeAt(i);
+    }
+    return outputArray;
+  }
+
+  async function checkNotificationStatus() {
+    if (!DOM.notifyStatusText) return;
+
+    if (!('Notification' in window) || !('serviceWorker' in navigator)) {
+      DOM.notifyStatusText.textContent = 'Mở từ Màn hình chính (PWA) để nhận thông báo iOS';
+      return;
+    }
+
+    if (Notification.permission === 'granted') {
+      try {
+        const reg = await navigator.serviceWorker.ready;
+        const sub = await reg.pushManager.getSubscription();
+        if (sub) {
+          DOM.notifyStatusText.textContent = 'Đang bật nhắc nhở 06:00 & 14:00 hàng ngày';
+          DOM.notifyStatusDot.classList.add('active');
+          DOM.btnRequestPush.textContent = '✅ Đã kích hoạt thông báo';
+          DOM.btnRequestPush.disabled = true;
+          DOM.btnRequestPush.style.opacity = '0.85';
+          DOM.btnTestPush.classList.remove('hidden');
+          DOM.bellBadgeDot.classList.remove('hidden');
+          return;
+        }
+      } catch (e) {}
+    } else if (Notification.permission === 'denied') {
+      DOM.notifyStatusText.textContent = 'Thông báo bị chặn (Mở Cài đặt > Mindset 365 để bật)';
+      DOM.notifyStatusDot.classList.remove('active');
+      DOM.btnRequestPush.textContent = 'Xem hướng dẫn mở Cài đặt';
+      return;
+    }
+
+    DOM.notifyStatusText.textContent = 'Chưa bật thông báo nhắc nhở';
+    DOM.notifyStatusDot.classList.remove('active');
+    DOM.btnRequestPush.textContent = '🔔 Bật thông báo 6h & 14h';
+    DOM.btnRequestPush.disabled = false;
+    DOM.btnRequestPush.style.opacity = '1';
+    DOM.btnTestPush.classList.add('hidden');
+    DOM.bellBadgeDot.classList.add('hidden');
+  }
+
+  async function subscribeUserToPush() {
+    if (!('Notification' in window) || !('serviceWorker' in navigator)) {
+      showToast('Hãy thêm ứng dụng vào Màn hình chính (Add to Home Screen) để bật thông báo trên iPhone');
+      return;
+    }
+
+    try {
+      DOM.btnRequestPush.textContent = 'Đang kích hoạt...';
+      const permission = await Notification.requestPermission();
+      if (permission !== 'granted') {
+        showToast('Bạn chưa cấp quyền nhận thông báo.');
+        checkNotificationStatus();
+        return;
+      }
+
+      const reg = await navigator.serviceWorker.ready;
+      let sub = await reg.pushManager.getSubscription();
+      if (!sub) {
+        const convertedKey = urlBase64ToUint8Array(VAPID_PUBLIC_KEY);
+        sub = await reg.pushManager.subscribe({
+          userVisibleOnly: true,
+          applicationServerKey: convertedKey
+        });
+      }
+
+      // Send to server
+      await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ subscription: sub })
+      }).catch(() => {});
+
+      showToast('🎉 Đã kích hoạt thông báo 06:00 và 14:00 thành công!');
+      checkNotificationStatus();
+    } catch (err) {
+      console.error('Subscription error:', err);
+      showToast('Lỗi kích hoạt thông báo: ' + err.message);
+      checkNotificationStatus();
+    }
+  }
+
+  async function sendTestPush() {
+    showToast('Đang gửi thông báo thử nghiệm...');
+    try {
+      // 1. Send via server API
+      fetch('/api/send-push', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          title: '🌅 Lịch Để Bàn 365 - Mindset Fuel',
+          body: 'Thông báo đẩy 06:00 & 14:00 của bạn đã hoạt động hoàn hảo!'
+        })
+      }).catch(() => {});
+
+      // 2. Instant local notification via Service Worker
+      if ('serviceWorker' in navigator) {
+        const reg = await navigator.serviceWorker.ready;
+        reg.showNotification('🌅 Lịch Để Bàn 365 (Test Push)', {
+          body: 'Thông báo nhắc nhở 06:00 & 14:00 đã sẵn sàng xuất hiện trên màn hình khóa!',
+          icon: './assets/icons/icon-192.png',
+          badge: './assets/icons/icon-192.png',
+          tag: 'daily-mindset-reminder'
+        });
+      }
+
+      showToast('✅ Đã gửi thông báo thành công!');
+    } catch (err) {
+      showToast('Lỗi gửi thử nghiệm: ' + err.message);
+    }
+  }
+
+  function openNotifyModal() {
+    DOM.notifyModal.classList.remove('hidden');
+    DOM.notifyModal.setAttribute('aria-hidden', 'false');
+    checkNotificationStatus();
+  }
+
+  function closeNotifyModal() {
+    DOM.notifyModal.classList.add('hidden');
+    DOM.notifyModal.setAttribute('aria-hidden', 'true');
+  }
+
+  /**
    * 13. Desktop Mockup Frame Toggle
    */
   function toggleFrameMode() {
@@ -786,6 +931,25 @@
       showToast(`Đã lật sang ngày thứ ${chosenDay}`);
     });
 
+    // Notification Modal & Push Events
+    if (DOM.btnNotifyToggle) {
+      DOM.btnNotifyToggle.addEventListener('click', openNotifyModal);
+    }
+    if (DOM.btnCloseNotify) {
+      DOM.btnCloseNotify.addEventListener('click', closeNotifyModal);
+    }
+    if (DOM.notifyModal) {
+      DOM.notifyModal.addEventListener('click', (e) => {
+        if (e.target === DOM.notifyModal) closeNotifyModal();
+      });
+    }
+    if (DOM.btnRequestPush) {
+      DOM.btnRequestPush.addEventListener('click', subscribeUserToPush);
+    }
+    if (DOM.btnTestPush) {
+      DOM.btnTestPush.addEventListener('click', sendTestPush);
+    }
+
     initSwipeGestures();
   }
 
@@ -862,6 +1026,7 @@
     registerEvents();
     loadQuotesData();
     registerServiceWorker();
+    checkNotificationStatus();
   }
 
   // Bootstrap when DOM ready
