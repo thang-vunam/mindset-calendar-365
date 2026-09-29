@@ -76,7 +76,7 @@ function getTodayQuote() {
 
   return {
     day,
-    title: `🌅 Ngày ${day}/365 • ${quoteItem.headline}`,
+    title: quoteItem.headline,
     body: `"${quoteItem.quote}"\n— ${quoteItem.author}`,
     category: quoteItem.category
   };
