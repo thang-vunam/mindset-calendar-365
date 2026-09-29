@@ -60,7 +60,7 @@ module.exports = async (req, res) => {
       body = JSON.parse(body);
     }
 
-    const { subscription } = body || {};
+    const { subscription, settings } = body || {};
     if (!subscription || !subscription.endpoint) {
       return res.status(400).json({ error: 'Missing subscription endpoint' });
     }
@@ -89,6 +89,7 @@ module.exports = async (req, res) => {
     const existingIndex = subscriptions.findIndex(s => s.endpoint === subscription.endpoint);
     const subRecord = {
       ...subscription,
+      settings: settings || { enabled1: true, time1: '06:00', enabled2: true, time2: '14:00' },
       updatedAt: new Date().toISOString()
     };
 
