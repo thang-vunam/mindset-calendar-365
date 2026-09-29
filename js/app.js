@@ -87,7 +87,12 @@
     btnRequestPush: document.getElementById('btn-request-push'),
     btnTestPush: document.getElementById('btn-test-push'),
     notifyStatusDot: document.getElementById('notify-status-dot'),
-    notifyStatusText: document.getElementById('notify-status-text')
+    notifyStatusText: document.getElementById('notify-status-text'),
+    notifySlot1Enable: document.getElementById('notify-slot1-enable'),
+    notifyTime1: document.getElementById('notify-time-1'),
+    notifySlot2Enable: document.getElementById('notify-slot2-enable'),
+    notifyTime2: document.getElementById('notify-time-2'),
+    iosPreviewHint: document.getElementById('ios-preview-hint')
   };
 
   /**
@@ -695,8 +700,43 @@
     return outputArray;
   }
 
+  const NOTIFY_STORAGE_KEY = 'mindset_notify_settings';
+
+  function getNotificationSettings() {
+    try {
+      const saved = localStorage.getItem(NOTIFY_STORAGE_KEY);
+      if (saved) return JSON.parse(saved);
+    } catch (e) {}
+    return {
+      enabled1: true,
+      time1: '06:00',
+      enabled2: true,
+      time2: '14:00'
+    };
+  }
+
+  function saveNotificationSettings(settings) {
+    try {
+      localStorage.setItem(NOTIFY_STORAGE_KEY, JSON.stringify(settings));
+    } catch (e) {}
+  }
+
+  function formatScheduleSummary(settings) {
+    const times = [];
+    if (settings.enabled1 && settings.time1) times.push(settings.time1);
+    if (settings.enabled2 && settings.time2) times.push(settings.time2);
+    if (times.length === 0) return 'Đã tắt các giờ nhắc';
+    return `Đang bật nhắc: ${times.join(' & ')} hàng ngày`;
+  }
+
   async function checkNotificationStatus() {
     if (!DOM.notifyStatusText) return;
+
+    const settings = getNotificationSettings();
+    if (DOM.notifySlot1Enable) DOM.notifySlot1Enable.checked = settings.enabled1;
+    if (DOM.notifyTime1) DOM.notifyTime1.value = settings.time1 || '06:00';
+    if (DOM.notifySlot2Enable) DOM.notifySlot2Enable.checked = settings.enabled2;
+    if (DOM.notifyTime2) DOM.notifyTime2.value = settings.time2 || '14:00';
 
     if (!('Notification' in window) || !('serviceWorker' in navigator)) {
       DOM.notifyStatusText.textContent = 'Mở từ Màn hình chính (PWA) để nhận thông báo iOS';
@@ -708,11 +748,11 @@
         const reg = await navigator.serviceWorker.ready;
         const sub = await reg.pushManager.getSubscription();
         if (sub) {
-          DOM.notifyStatusText.textContent = 'Đang bật nhắc nhở 06:00 & 14:00 hàng ngày';
+          DOM.notifyStatusText.textContent = formatScheduleSummary(settings);
           DOM.notifyStatusDot.classList.add('active');
-          DOM.btnRequestPush.textContent = '✅ Đã kích hoạt thông báo';
-          DOM.btnRequestPush.disabled = true;
-          DOM.btnRequestPush.style.opacity = '0.85';
+          DOM.btnRequestPush.textContent = '💾 Lưu cài đặt giờ nhắc';
+          DOM.btnRequestPush.disabled = false;
+          DOM.btnRequestPush.style.opacity = '1';
           DOM.btnTestPush.classList.remove('hidden');
           DOM.bellBadgeDot.classList.remove('hidden');
           return;
@@ -725,9 +765,9 @@
       return;
     }
 
-    DOM.notifyStatusText.textContent = 'Chưa bật thông báo nhắc nhở';
+    DOM.notifyStatusText.textContent = 'Chưa kích hoạt thông báo';
     DOM.notifyStatusDot.classList.remove('active');
-    DOM.btnRequestPush.textContent = '🔔 Bật thông báo 6h & 14h';
+    DOM.btnRequestPush.textContent = '🔔 Lưu & Bật thông báo đẩy';
     DOM.btnRequestPush.disabled = false;
     DOM.btnRequestPush.style.opacity = '1';
     DOM.btnTestPush.classList.add('hidden');
@@ -740,8 +780,16 @@
       return;
     }
 
+    const currentSettings = {
+      enabled1: DOM.notifySlot1Enable ? DOM.notifySlot1Enable.checked : true,
+      time1: DOM.notifyTime1 ? (DOM.notifyTime1.value || '06:00') : '06:00',
+      enabled2: DOM.notifySlot2Enable ? DOM.notifySlot2Enable.checked : true,
+      time2: DOM.notifyTime2 ? (DOM.notifyTime2.value || '14:00') : '14:00'
+    };
+    saveNotificationSettings(currentSettings);
+
     try {
-      DOM.btnRequestPush.textContent = 'Đang kích hoạt...';
+      DOM.btnRequestPush.textContent = 'Đang lưu cài đặt...';
       const permission = await Notification.requestPermission();
       if (permission !== 'granted') {
         showToast('Bạn chưa cấp quyền nhận thông báo.');
@@ -759,47 +807,74 @@
         });
       }
 
-      // Send to server
+      // Send to server with chosen times
       await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ subscription: sub })
+        body: JSON.stringify({
+          subscription: sub,
+          settings: currentSettings
+        })
       }).catch(() => {});
 
-      showToast('🎉 Đã kích hoạt thông báo 06:00 và 14:00 thành công!');
+      const activeTimes = [];
+      if (currentSettings.enabled1) activeTimes.push(currentSettings.time1);
+      if (currentSettings.enabled2) activeTimes.push(currentSettings.time2);
+
+      showToast(`🎉 Đã lưu lịch nhắc nhở (${activeTimes.join(' & ') || 'Tắt'}) thành công!`);
       checkNotificationStatus();
     } catch (err) {
       console.error('Subscription error:', err);
-      showToast('Lỗi kích hoạt thông báo: ' + err.message);
+      showToast('Lỗi cài đặt thông báo: ' + err.message);
       checkNotificationStatus();
     }
   }
 
   async function sendTestPush() {
-    showToast('Đang gửi thông báo thử nghiệm...');
+    showToast('Đang gửi câu quote hôm nay lên màn hình...');
     try {
-      // 1. Send via server API
+      const todayDay = calculateCurrentDayOfYear();
+      const quoteItem = (quotesData && quotesData[todayDay - 1]) || state.currentQuote;
+      if (!quoteItem) {
+        showToast('Chưa nạp được dữ liệu câu trích dẫn.');
+        return;
+      }
+
+      const notifTitle = `🌅 Ngày ${quoteItem.day}/365 • ${quoteItem.headline}`;
+      const notifBody = `"${quoteItem.quote}"\n— ${quoteItem.author}`;
+
+      // 1. Show instant notification on current device via Service Worker with full quote
+      if ('serviceWorker' in navigator) {
+        const reg = await navigator.serviceWorker.ready;
+        await reg.showNotification(notifTitle, {
+          body: notifBody,
+          icon: './assets/icons/icon-192.png',
+          badge: './assets/icons/icon-192.png',
+          tag: 'daily-mindset-reminder',
+          renotify: true,
+          data: {
+            url: './index.html',
+            day: quoteItem.day
+          }
+        });
+      }
+
+      // 2. Also trigger backend send-push with exact quote payload
       fetch('/api/send-push', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          title: '🌅 Lịch Để Bàn 365 - Mindset Fuel',
-          body: 'Thông báo đẩy 06:00 & 14:00 của bạn đã hoạt động hoàn hảo!'
+          title: notifTitle,
+          body: notifBody,
+          day: quoteItem.day,
+          category: quoteItem.category
         })
       }).catch(() => {});
 
-      // 2. Instant local notification via Service Worker
-      if ('serviceWorker' in navigator) {
-        const reg = await navigator.serviceWorker.ready;
-        reg.showNotification('🌅 Lịch Để Bàn 365 (Test Push)', {
-          body: 'Thông báo nhắc nhở 06:00 & 14:00 đã sẵn sàng xuất hiện trên màn hình khóa!',
-          icon: './assets/icons/icon-192.png',
-          badge: './assets/icons/icon-192.png',
-          tag: 'daily-mindset-reminder'
-        });
+      showToast('✅ Đã gửi trích dẫn hôm nay lên màn hình!');
+      if (DOM.iosPreviewHint) {
+        DOM.iosPreviewHint.classList.remove('hidden');
       }
-
-      showToast('✅ Đã gửi thông báo thành công!');
     } catch (err) {
       showToast('Lỗi gửi thử nghiệm: ' + err.message);
     }
