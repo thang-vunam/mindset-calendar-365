@@ -76,8 +76,8 @@ function getTodayQuote() {
 
   return {
     day,
-    title: quoteItem.headline,
-    body: `"${quoteItem.quote}"\n— ${quoteItem.author}`,
+    title: `"${quoteItem.quote}"`,
+    body: `— ${quoteItem.author}`,
     category: quoteItem.category
   };
 }
