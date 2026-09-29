@@ -38,8 +38,8 @@ const quotes = require('../quotes.json');
 const quoteItem = quotes[day - 1] || quotes[0];
 
 const payload = JSON.stringify({
-  title: quoteItem.headline,
-  body: `"${quoteItem.quote}"\n— ${quoteItem.author}`,
+  title: `"${quoteItem.quote}"`,
+  body: `— ${quoteItem.author}`,
   url: './index.html',
   day: day
 });
