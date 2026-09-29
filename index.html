@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Lịch Để Bàn 365 - Mindset Fuel</title>
+  
+  <!-- PWA Meta Tags -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0a1324">
+  <meta name="color-scheme" content="dark light">
+  
+  <!-- iOS Safari Specific Meta -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Mindset 365">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+
+  <!-- Google Fonts: Editorial luxury & high readability -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Cinzel:wght@600;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-ambient">
+
+  <!-- Desktop Device Wrapper (Centers iPhone frame on desktop, transparent on mobile) -->
+  <div id="device-wrapper" class="device-wrapper iphone-mode">
+    
+    <!-- iPhone Device Frame Chrome (only visible on desktop) -->
+    <div class="iphone-frame-bar desktop-only">
+      <div class="device-notch">
+        <div class="dynamic-island">
+          <div class="island-camera"></div>
+          <div class="island-sensor"></div>
+        </div>
+      </div>
+      <div class="desktop-controls">
+        <button id="toggle-frame-btn" class="frame-toggle-btn" title="Chuyển đổi khung viền iPhone / Toàn màn hình">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"></rect><path d="M12 18h.01"></path></svg>
+          <span id="frame-toggle-text">Khung iPhone</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Viewport Container (Aspect Ratio 19.5:9 on mobile / frame) -->
+    <div id="app-container" class="app-viewport mode-collapsed">
+
+      <!-- ==============================================
+           1. INITIAL STATE: COLLAPSED / WIDGET VIEW
+           ============================================== -->
+      <section id="widget-view" class="view-panel widget-panel" aria-label="Khung lịch để bàn thu gọn">
+        
+        <!-- Subtle Ambient Desk Backdrop -->
+        <div class="desk-ambient-bg">
+          <div class="desk-grain"></div>
+          <div class="desk-light-beam"></div>
+          <div class="desk-props">
+            <span class="desk-prop-pen"></span>
+            <span class="desk-prop-coffee"></span>
+          </div>
+        </div>
+
+        <!-- Desk Calendar Stand Top Hook -->
+        <div class="desk-scene-header">
+          <div class="app-brand-pill">
+            <span class="live-dot"></span>
+            <span class="brand-text">365-DAY DESK CALENDAR</span>
+          </div>
+        </div>
+
+        <!-- Realistic Spiral Bound Desktop Calendar Card -->
+        <div id="widget-calendar-card" class="spiral-calendar-widget" role="button" tabindex="0" aria-label="Chạm để mở toàn màn hình">
+          
+          <!-- Wire Spiral Rings Binding Top -->
+          <div class="widget-spiral-binder">
+            <div class="spiral-ring"><span class="ring-loop"></span><span class="ring-hole"></span></div>
+            <div class="spiral-ring"><span class="ring-loop"></span><span class="ring-hole"></span></div>
+            <div class="spiral-ring"><span class="ring-loop"></span><span class="ring-hole"></span></div>
+            <div class="spiral-ring"><span class="ring-loop"></span><span class="ring-hole"></span></div>
+            <div class="spiral-ring"><span class="ring-loop"></span><span class="ring-hole"></span></div>
+            <div class="spiral-ring"><span class="ring-loop"></span><span class="ring-hole"></span></div>
+            <div class="spiral-ring"><span class="ring-loop"></span><span class="ring-hole"></span></div>
+          </div>
+
+          <!-- Calendar Page Surface -->
+          <div class="widget-card-surface">
+            <!-- Header bar on calendar -->
+            <div class="widget-header-strip">
+              <span id="widget-day-badge" class="badge-day-index">NGÀY 271 / 365</span>
+              <span id="widget-date-text" class="widget-date-label">Thứ Hai, 28/09/2026</span>
+            </div>
+
+            <!-- Main Day Number & Visual Impact -->
+            <div class="widget-hero-body">
+              <div class="widget-number-display">
+                <span id="widget-day-number" class="big-day-number">271</span>
+                <span class="widget-year-tag">2026</span>
+              </div>
+
+              <!-- Impactful Headline -->
+              <div class="widget-headline-container">
+                <p id="widget-headline-text" class="widget-headline">LÀM CHỦ HIỆN TẠI, LÀM CHỦ CUỘC ĐỜI</p>
+                <div class="widget-author-brief">
+                  <span class="dash">—</span>
+                  <span id="widget-author-text">Marcus Aurelius</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Interactive Prompt -->
+            <div class="widget-tap-prompt">
+              <div class="prompt-pulse-dot"></div>
+              <span class="prompt-text">Chạm để lật trang / Xem đầy đủ</span>
+              <svg class="prompt-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+            </div>
+          </div>
+
+          <!-- Calendar Stand Base (Triangular Desk Stand 3D Shadow) -->
+          <div class="calendar-stand-shadow"></div>
+          <div class="calendar-stand-wood"></div>
+        </div>
+
+        <!-- Widget Bottom Quick Stats -->
+        <div class="widget-bottom-status">
+          <div class="stat-pill">
+            <span class="stat-label">Tiến độ năm:</span>
+            <span id="widget-progress-percent" class="stat-value">74.2%</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-label">Chủ đề hôm nay:</span>
+            <span id="widget-category-label" class="stat-value highlight">Tư duy Khắc kỷ</span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ==============================================
+           2. EXPANDED STATE: FULL APP VIEW (19.5:9 PORTRAIT)
+           ============================================== -->
+      <section id="full-view" class="view-panel full-panel hidden" aria-label="Toàn màn hình lịch 365 ngày">
+        
+        <!-- App Top Navigation Bar -->
+        <header class="full-top-bar">
+          <button id="btn-collapse-view" class="icon-round-btn glass-btn" title="Thu nhỏ về lịch bàn" aria-label="Thu gọn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 14 10 14 10 20"></polyline><polyline points="20 10 14 10 14 4"></polyline><line x1="14" y1="10" x2="21" y2="3"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+          </button>
+
+          <div class="full-center-status">
+            <span class="header-day-badge" id="header-day-counter">NGÀY 271 / 365</span>
+          </div>
+
+          <div class="top-actions-cluster">
+            <button id="btn-favorite" class="icon-round-btn glass-btn" title="Lưu câu trích dẫn này" aria-label="Yêu thích">
+              <svg id="favorite-heart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+            <button id="btn-share" class="icon-round-btn glass-btn" title="Sao chép / Chia sẻ" aria-label="Chia sẻ">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+            </button>
+            
+          </div>
+        </header>
+
+        <!-- Subtle Modern Spiral Rings Header (Digital Desk Calendar Feel) -->
+        <div class="calendar-spiral-header" aria-hidden="true">
+          <div class="spiral-wire-track">
+            <div class="metal-wire"><span class="coil"></span><span class="paper-hole"></span></div>
+            <div class="metal-wire"><span class="coil"></span><span class="paper-hole"></span></div>
+            <div class="metal-wire"><span class="coil"></span><span class="paper-hole"></span></div>
+            <div class="metal-wire"><span class="coil"></span><span class="paper-hole"></span></div>
+            <div class="metal-wire"><span class="coil"></span><span class="paper-hole"></span></div>
+            <div class="metal-wire"><span class="coil"></span><span class="paper-hole"></span></div>
+            <div class="metal-wire"><span class="coil"></span><span class="paper-hole"></span></div>
+            <div class="metal-wire"><span class="coil"></span><span class="paper-hole"></span></div>
+            <div class="metal-wire"><span class="coil"></span><span class="paper-hole"></span></div>
+          </div>
+          <div class="spiral-paper-tear-line"></div>
+        </div>
+
+        <!-- Main Swipeable Calendar Sheet Content -->
+        <div id="calendar-card-flipper" class="calendar-sheet">
+
+          <!-- 1. MAIN HERO SECTION: Bold Crimson/Black Action Headline -->
+          <div class="hero-headline-section">
+            <div class="headline-category-tag" id="full-category-tag">TƯ DUY KHẮC KỶ</div>
+            <h1 class="action-headline" id="full-action-headline">
+              LÀM CHỦ HIỆN TẠI, LÀM CHỦ CUỘC ĐỜI
+            </h1>
+          </div>
+
+          <!-- 2. MIDDLE SECTION: Elegant Geometric / Mandala Minimalist Illustration Badge -->
+          <div class="middle-badge-section">
+            <div class="mandala-container" id="mandala-badge" aria-label="Biểu tượng hình học mandala">
+              <!-- Dynamically generated SVG geometric mandala inserted by JS -->
+            </div>
+          </div>
+
+          <!-- 3. BOTTOM SECTION: Glassmorphism / Crisp Card -->
+          <div class="bottom-quote-card">
+            
+            <!-- Date & Day Index Line -->
+            <div class="card-meta-row">
+              <div class="card-date-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span id="card-formatted-date">Thứ Hai, 28 Tháng 9, 2026</span>
+              </div>
+              <span id="card-day-indicator" class="card-day-index">Ngày 271 / 365</span>
+            </div>
+
+            <!-- Full Profound Quote -->
+            <div class="quote-text-wrapper">
+              <span class="opening-quote-mark">“</span>
+              <p id="full-quote-text" class="quote-body">
+                Hôm nay, hãy thôi chờ đợi một thời điểm hoàn hảo. Món quà duy nhất bạn thực sự nắm giữ là khoảnh khắc này: hãy sống trọn vẹn, hành động dứt khoát và giữ tâm hồn tĩnh tại trước mọi phong ba.
+              </p>
+              <span class="closing-quote-mark">”</span>
+            </div>
+
+            <!-- Author & Category -->
+            <div class="quote-author-row">
+              <div class="author-signature">
+                <span class="author-accent-dash"></span>
+                <span id="full-author-name" class="author-name">Marcus Aurelius</span>
+              </div>
+              <span id="full-category-pill" class="category-pill">Khắc kỷ</span>
+            </div>
+
+            <!-- Year Completion Progress Bar (0% -> 100%) -->
+            <div class="year-progress-section">
+              <div class="progress-labels">
+                <span class="progress-title">Tiến trình năm 2026</span>
+                <span id="progress-percentage-label" class="progress-value">74.2%</span>
+              </div>
+              <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="74.2">
+                <div id="progress-fill-bar" class="progress-fill" style="width: 74.2%;">
+                  <span class="progress-light-tip"></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Bottom Controls & Navigation Deck -->
+        <footer class="full-nav-footer">
+          <!-- Navigation Controls: Swipe / Arrow navigation -->
+          <div class="nav-control-bar">
+            
+            <button id="btn-prev-day" class="nav-arrow-btn" title="Ngày hôm trước (hoặc vuốt sang phải)" aria-label="Ngày trước">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              <span class="btn-label-sub">Trước</span>
+            </button>
+
+            <!-- Jump to Today Button -->
+            <button id="btn-today" class="btn-today-pill" title="Trở về thời gian thực hôm nay">
+              <span class="today-pulse-indicator"></span>
+              <span class="today-text">HÔM NAY</span>
+            </button>
+
+            <!-- Direct Day Picker Modal Opener -->
+            <button id="btn-open-picker" class="icon-nav-btn" title="Chọn ngày trong năm (1 - 365)" aria-label="Chọn ngày">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </button>
+
+            <button id="btn-next-day" class="nav-arrow-btn" title="Ngày tiếp theo (hoặc vuốt sang trái)" aria-label="Ngày sau">
+              <span class="btn-label-sub">Sau</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+          </div>
+
+          <!-- Bottom Gesture Instruction -->
+          <div class="swipe-hint">
+            <span>&larr; Vuốt để chuyển trang &rarr;</span>
+          </div>
+        </footer>
+
+      </section>
+
+      <!-- ==============================================
+           3. MODAL: JUMP TO SPECIFIC DAY (1 - 365)
+           ============================================== -->
+      <div id="day-picker-modal" class="modal-backdrop hidden" aria-hidden="true" role="dialog">
+        <div class="modal-card">
+          <div class="modal-header">
+            <h3>Chọn ngày trong năm</h3>
+            <button id="btn-close-picker" class="icon-round-btn close-modal-btn" aria-label="Đóng">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="picker-tabs">
+              <button id="tab-btn-day-num" class="picker-tab active">Theo số ngày (1-365)</button>
+              <button id="tab-btn-calendar" class="picker-tab">Theo lịch năm</button>
+            </div>
+
+            <!-- Tab 1: Day Number Input & Quick Slider -->
+            <div id="tab-content-day-num" class="tab-pane active">
+              <div class="day-number-control">
+                <label for="day-slider-input" class="input-label">Ngày thứ: <strong id="slider-day-preview">271</strong> / 365</label>
+                <input type="range" id="day-slider-input" min="1" max="365" value="271" class="day-slider">
+                <div class="slider-marks">
+                  <span>Ngày 1 (01/01)</span>
+                  <span>Ngày 182 (Giữa năm)</span>
+                  <span>Ngày 365 (31/12)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Calendar Date Input -->
+            <div id="tab-content-calendar" class="tab-pane hidden">
+              <label for="calendar-date-input" class="input-label">Chọn ngày tháng bất kỳ:</label>
+              <input type="date" id="calendar-date-input" class="date-picker-input">
+            </div>
+
+            <div class="picker-quick-tags">
+              <button class="quick-jump-chip" data-jump="1">Ngày đầu năm</button>
+              <button class="quick-jump-chip" data-jump="today">Hôm nay</button>
+              <button class="quick-jump-chip" data-jump="100">Ngày 100</button>
+              <button class="quick-jump-chip" data-jump="200">Ngày 200</button>
+              <button class="quick-jump-chip" data-jump="365">Ngày cuối năm</button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="btn-apply-day" class="btn-primary-action">Lật đến ngày này</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feedback Toast Notification -->
+      <div id="app-toast" class="toast-popup" role="status" aria-live="polite">
+        <span id="toast-message">Đã sao chép câu trích dẫn!</span>
+      </div>
+
+    </div><!-- /app-container -->
+  </div><!-- /device-wrapper -->
+
+  <script src="js/app.js"></script>
+</body>
+</html>

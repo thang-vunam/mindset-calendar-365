@@ -1,0 +1,22 @@
+{
+  "name": "desk-calendar-365-mindset-pwa",
+  "version": "1.0.0",
+  "description": "365-Day Desk Calendar & Daily Mindset Fuel PWA optimized for iPhone portrait view",
+  "main": "serve.js",
+  "scripts": {
+    "start": "node serve.js",
+    "test": "node test-e2e.js",
+    "build:quotes": "node build-quotes.js",
+    "build:icons": "node generate-icons.js"
+  },
+  "keywords": [
+    "pwa",
+    "desk-calendar",
+    "stoicism",
+    "mindset",
+    "iphone",
+    "vietnamese"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}

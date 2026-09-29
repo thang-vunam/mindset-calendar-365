@@ -1,0 +1,2922 @@
+[
+  {
+    "id": 1,
+    "day": 1,
+    "headline": "HÓA ĐƠN CỦA SỰ DỄ DÃI",
+    "quote": "Sự túng thiếu và chật vật hôm nay chính là cái giá phải trả cho những lần bạn chọn thỏa hiệp và trì hoãn trong quá khứ.",
+    "author": "Chiêm nghiệm thực chiến",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 2,
+    "day": 2,
+    "headline": "HÀNH ĐỘNG NGAY BÂY GIỜ",
+    "quote": "Bất cứ thứ gì bạn đang có trong tay, hãy dùng hết; bất cứ điều gì bạn làm hôm nay, hãy làm bằng tất cả sức lực.",
+    "author": "Marcus Tullius Cicero",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 3,
+    "day": 3,
+    "headline": "BẢO VỆ THANH KHOẢN",
+    "quote": "Cá nhân hay doanh nghiệp sụp đổ không phải vì lỗ trên danh nghĩa, mà vì cạn kiệt thanh khoản tiền mặt. Giữ chặt dòng tiền bằng mọi giá.",
+    "author": "Nguyên lý sống còn",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 4,
+    "day": 4,
+    "headline": "VÙNG KIỂM SOÁT",
+    "quote": "Bạn không thể điều khiển thị trường hay thái độ của thiên hạ, nhưng bạn toàn quyền làm chủ sự tập trung, thái độ và kỷ luật làm việc của chính mình.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 5,
+    "day": 5,
+    "headline": "MÙA ĐÔNG RỒI SẼ QUA",
+    "quote": "Không có mùa đông nào kéo dài mãi mãi. Những ai kiên gan chịu đựng được giá lạnh sẽ là người đầu tiên tận hưởng mùa xuân rực rỡ nhất.",
+    "author": "Quy luật chu kỳ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 6,
+    "day": 6,
+    "headline": "BẪY CỦA SỰ GÂY MÊ",
+    "quote": "Mỗi giờ lướt màn hình vô thức là một giờ bạn tự tay dìm tương lai tài chính của chính mình và người thân xuống vũng lầy.",
+    "author": "Lời cảnh tỉnh",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 7,
+    "day": 7,
+    "headline": "QUY TẮC 5 PHÚT",
+    "quote": "Đừng chờ cảm hứng xuất hiện mới làm việc. Hãy ép mình ngồi xuống làm đúng 5 phút, đà quán tính sẽ tự khắc kéo sự tập trung tới.",
+    "author": "Tâm lý học hiệu suất",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 8,
+    "day": 8,
+    "headline": "HẠ CÁI TÔI, LẤY Ô-XY",
+    "quote": "Khi dòng tiền bị bóp nghẹt, người mang cái tôi danh giá sẽ gục ngã đầu tiên. Cúi mình nhận những việc nhỏ nhất để mang dòng tiền tươi về tài khoản.",
+    "author": "Tư duy thực dụng",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 9,
+    "day": 9,
+    "headline": "TRỞ NGẠI LÀ ĐƯỜNG ĐI",
+    "quote": "Những trở ngại cản bước không làm ta dừng lại. Cách ta phản ứng và vượt qua chướng ngại vật sẽ trở thành chính con đường dẫn tới mục tiêu.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 10,
+    "day": 10,
+    "headline": "KHO BÁU BẢN LĨNH",
+    "quote": "Khó khăn tài chính chỉ là khúc trũng tạm thời. Kiến thức, kinh nghiệm và mạng lưới bạn đã tích lũy hơn 20 năm qua mới là tài sản vô giá.",
+    "author": "Định vị bản thân",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 11,
+    "day": 11,
+    "headline": "NHÌN VÀO THỜI GIAN ĐÃ MẤT",
+    "quote": "Tiền bạc mất đi còn kiếm lại được, nhưng những tháng ngày buông xuôi và tự lừa dối bản thân sẽ vĩnh viễn không bao giờ quay lại.",
+    "author": "Tự vấn nội tâm",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 12,
+    "day": 12,
+    "headline": "MỘT CUỘC ĐIỆN THOẠI",
+    "quote": "Cơ hội không tự rơi xuống đầu kẻ chờ đợi. Hãy chủ động mở danh bạ, gửi một tin nhắn, gọi một cuộc điện thoại kết nối ngay buổi sáng nay.",
+    "author": "Kỷ luật thực thi",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 13,
+    "day": 13,
+    "headline": "CẮT BỎ NHỮNG PHÙ PHIẾM",
+    "quote": "Không ai nghèo đi vì sống tằn tiện, nhưng vô số người khánh kiệt vì cố duy trì vỏ bọc thành đạt trước những người không nuôi sống mình.",
+    "author": "Sự thật tài chính",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 14,
+    "day": 14,
+    "headline": "TĨNH LẶNG GIỮA BÃO TỐ",
+    "quote": "Hãy như vách đá sừng sững trước sóng biển: bão táp gầm rú đánh vào rồi cũng vỡ tan bọt nước, còn vách đá vẫn hiên ngang đứng vững.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 15,
+    "day": 15,
+    "headline": "ĐIỂM TỰA CỦA GIA ĐÌNH",
+    "quote": "Hãy ngẩng cao đầu bước tiếp, vì sự kiên cường và vững chãi của bạn chính là bóng râm che chở bình yên cho những người thân yêu.",
+    "author": "Trách nhiệm trụ cột",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 16,
+    "day": 16,
+    "headline": "ĐAU ĐỚN LÀ THƯỚC ĐO",
+    "quote": "Cú ngã đau điếng này xuất hiện là để phơi bày những lỗ hổng chết người trong tư duy. Nếu không chịu sửa, bạn sẽ còn phải trả giá đắt hơn.",
+    "author": "Bài học xương máu",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 17,
+    "day": 17,
+    "headline": "CHIẾN THẮNG 3 VIỆC NHỎ",
+    "quote": "Đừng để gánh nặng cả năm làm tê liệt tâm trí. Chọn ra đúng 3 việc quan trọng nhất cho hôm nay và làm xong trước khi trời tối.",
+    "author": "Chiến thuật sinh tồn",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 18,
+    "day": 18,
+    "headline": "CẮT LỖ KHÔNG DO DỰ",
+    "quote": "Trong đầu tư cũng như trong vận hành cuộc sống, dũng cảm cắt lỗ đúng lúc là kỹ năng sống còn để bảo vệ số vốn còn lại.",
+    "author": "Kỷ luật thị trường",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 19,
+    "day": 19,
+    "headline": "KHÔNG THAN KHÓ",
+    "quote": "Than thở không mang tiền về tài khoản, phàn nàn không giải quyết được nợ nần. Hãy nuốt lời than vào trong và biến thành sức mạnh cày cuốc.",
+    "author": "Bản lĩnh Khắc kỷ",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 20,
+    "day": 20,
+    "headline": "ĐÁY VỰC LÀ BÀN ĐẠP",
+    "quote": "Khi bạn đã chạm tới đáy sâu nhất của thử thách, mọi hướng đi tiếp theo đều chỉ có thể là hướng đi lên. Tự tin bước tiếp.",
+    "author": "Triết lý sống sót",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 21,
+    "day": 21,
+    "headline": "KHÔNG CÓ AI ĐẾN CỨU",
+    "quote": "Sẽ không có phép màu nào xuất hiện nếu bạn tiếp tục nằm im. Người duy nhất đủ sức kéo bạn ra khỏi cảnh bế tắc này chỉ có thể là bạn.",
+    "author": "Thực tế trần trụi",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 22,
+    "day": 22,
+    "headline": "HOÀN THÀNH HƠN HOÀN HẢO",
+    "quote": "Một kế hoạch còn thô ráp nhưng được mang ra thực thi hôm nay đáng giá hơn một kế hoạch hoàn hảo nằm mãi trong ngăn kéo.",
+    "author": "Tư duy hành động",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 23,
+    "day": 23,
+    "headline": "MỖI KHOẢN TIẾT KIỆM LÀ ĐỆM ĐỠ",
+    "quote": "Một đồng chi phí thừa bạn dứt khoát cắt bỏ hôm nay tương đương với một đồng lợi nhuận ròng giúp bạn kéo dài thời gian sống sót.",
+    "author": "Quản trị dòng tiền",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 24,
+    "day": 24,
+    "headline": "ĐAU KHỔ TRONG TÂM TƯỞNG",
+    "quote": "Chúng ta thường chịu đựng nỗi đau do chính trí tưởng tượng phóng đại lên nhiều hơn là sự khốc liệt của thực tế đang xảy ra.",
+    "author": "Seneca",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 25,
+    "day": 25,
+    "headline": "HẠT MẦM DƯỚI BÃO TUYẾT",
+    "quote": "Những nỗ lực âm thầm, cắn răng làm việc trong bóng tối hôm nay đang bám rễ sâu vào lòng đất để chuẩn bị cho một ngày bứt phá ngoạn mục.",
+    "author": "Quy luật tích lũy",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 26,
+    "day": 26,
+    "headline": "VẾT THƯƠNG TỰ TRỌNG",
+    "quote": "Cảm giác nghẹn đắng vì túi tiền trống rỗng hôm nay phải được khắc sâu vào tâm can để làm mồi lửa hành động, tuyệt đối không dùng để tự thương hại.",
+    "author": "Bản lĩnh cá nhân",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 27,
+    "day": 27,
+    "headline": "LÀM VIỆC KHÓ TRƯỚC TIÊN",
+    "quote": "Nuốt con ếch to nhất vào đầu ngày. Giải quyết công việc khiến bạn lo lắng và muốn né tránh nhất trước 9 giờ sáng.",
+    "author": "Brian Tracy",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 28,
+    "day": 28,
+    "headline": "SỐNG DƯỚI MỨC THU NHẬP",
+    "quote": "Dù kiếm được bao nhiêu tiền, luôn ép bản thân sống dưới mức đó một bậc. Sự dư thừa thanh khoản là nguồn gốc duy nhất của sự tự do.",
+    "author": "Warren Buffett",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 29,
+    "day": 29,
+    "headline": "QUYỀN TỰ DO CUỐI CÙNG",
+    "quote": "Người đời có thể lấy đi danh vọng, tiền bạc của bạn, nhưng không ai có thể tước đoạt quyền tự do chọn lựa thái độ đối mặt của bạn.",
+    "author": "Viktor Frankl",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 30,
+    "day": 30,
+    "headline": "BẢN THÂN LÀ TỔNG THỂ VƯỢT TRỘI",
+    "quote": "Đừng đánh đồng một giai đoạn bế tắc tài chính với sự thất bại của một kiếp người. Bạn sinh ra để vượt qua sóng lớn.",
+    "author": "Niềm tin nội tại",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 31,
+    "day": 31,
+    "headline": "CÁI GIÁ CỦA SỰ CHỦ QUAN",
+    "quote": "Ảo tưởng về những chiến thắng cũ đã khiến bạn lơ là kỷ luật phòng thủ. Hãy nuốt trọn vị đắng hôm nay để không bao giờ chủ quan thêm lần nào nữa.",
+    "author": "Chiêm nghiệm thị trường",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 32,
+    "day": 32,
+    "headline": "BƯỚC CHÂN VI MÔ",
+    "quote": "Đường xa vạn dặm không vượt qua bằng việc nhìn ngắm đỉnh núi, mà bằng việc kiên quyết đặt từng bước chân vững chãi lên mặt đất.",
+    "author": "Lão Tử",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 33,
+    "day": 33,
+    "headline": "ĐO LƯỜNG TỪNG CON SỐ",
+    "quote": "Không thể quản trị những gì bạn không đo lường. Hãy nhìn thẳng vào bảng thu chi thực tế mỗi ngày, không né tránh bất kỳ con số nào.",
+    "author": "Peter Drucker",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 34,
+    "day": 34,
+    "headline": "CHẤP NHẬN SỰ THẬT KHÁCH QUAN",
+    "quote": "Mọi biến cố xảy ra đều trung tính. Ý nghĩa tiêu cực hay tích cực hoàn toàn do lăng kính chủ quan của bạn gán cho nó.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 35,
+    "day": 35,
+    "headline": "BƯỚC NGOẶT ĐANG ĐẾN GẦN",
+    "quote": "Chỉ cần kiên trì gõ cửa, cánh cửa đúng đắn sẽ mở ra. Khoảnh khắc ngay trước bình minh luôn là thời điểm tăm tối nhất.",
+    "author": "Quy luật bền bỉ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 36,
+    "day": 36,
+    "headline": "NGƯNG TỰ DẰN VẶT",
+    "quote": "Dằn vặt bản thân năm 20 tuổi bằng nhận thức của tuổi chín muồi là vô nghĩa. Hãy tha thứ cho người cũ và gánh vác trách nhiệm dọn dẹp hiện tại.",
+    "author": "Chữa lành & Tỉnh thức",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 37,
+    "day": 37,
+    "headline": "HÀNH ĐỘNG DẬP TẮT NỖI SỢ",
+    "quote": "Sự sợ hãi và lo âu phát triển mạnh nhất khi bạn ngồi yên suy nghĩ. Liều thuốc duy nhất để tiêu diệt nỗi sợ là lao vào hành động.",
+    "author": "Dale Carnegie",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 38,
+    "day": 38,
+    "headline": "TRÁNH XA NỢ TIÊU DÙNG",
+    "quote": "Vay mượn để chi tiêu cho cảm xúc tức thời là hành động tự tra cùm vào chân mình. Chỉ chạm vào nợ khi nó trực tiếp tạo ra dòng tiền dương.",
+    "author": "Nguyên tắc đòn bẩy",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 39,
+    "day": 39,
+    "headline": "GIỮ GÌN PHẨM GIÁ",
+    "quote": "Dù hoàn cảnh có bức bách đến đâu, tuyệt đối không đánh đổi sự chính trực. Tiền có thể kiếm lại, nhân phẩm đánh mất là mất tất cả.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 40,
+    "day": 40,
+    "headline": "KHỞI ĐẦU TỪ HÔM NAY",
+    "quote": "Bạn không thể quay lại để sửa điểm xuất phát, nhưng bạn có toàn quyền bắt đầu ngay lúc này để viết nên một cái kết rực rỡ hơn.",
+    "author": "C.S. Lewis",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 41,
+    "day": 41,
+    "headline": "HÓA ĐƠN CỦA SỰ DỄ DÃI",
+    "quote": "Sự túng thiếu và chật vật hôm nay chính là cái giá phải trả cho những lần bạn chọn thỏa hiệp và trì hoãn trong quá khứ.",
+    "author": "Chiêm nghiệm thực chiến",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 42,
+    "day": 42,
+    "headline": "HÀNH ĐỘNG NGAY BÂY GIỜ",
+    "quote": "Bất cứ thứ gì bạn đang có trong tay, hãy dùng hết; bất cứ điều gì bạn làm hôm nay, hãy làm bằng tất cả sức lực.",
+    "author": "Marcus Tullius Cicero",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 43,
+    "day": 43,
+    "headline": "BẢO VỆ THANH KHOẢN",
+    "quote": "Cá nhân hay doanh nghiệp sụp đổ không phải vì lỗ trên danh nghĩa, mà vì cạn kiệt thanh khoản tiền mặt. Giữ chặt dòng tiền bằng mọi giá.",
+    "author": "Nguyên lý sống còn",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 44,
+    "day": 44,
+    "headline": "VÙNG KIỂM SOÁT",
+    "quote": "Bạn không thể điều khiển thị trường hay thái độ của thiên hạ, nhưng bạn toàn quyền làm chủ sự tập trung, thái độ và kỷ luật làm việc của chính mình.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 45,
+    "day": 45,
+    "headline": "MÙA ĐÔNG RỒI SẼ QUA",
+    "quote": "Không có mùa đông nào kéo dài mãi mãi. Những ai kiên gan chịu đựng được giá lạnh sẽ là người đầu tiên tận hưởng mùa xuân rực rỡ nhất.",
+    "author": "Quy luật chu kỳ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 46,
+    "day": 46,
+    "headline": "BẪY CỦA SỰ GÂY MÊ",
+    "quote": "Mỗi giờ lướt màn hình vô thức là một giờ bạn tự tay dìm tương lai tài chính của chính mình và người thân xuống vũng lầy.",
+    "author": "Lời cảnh tỉnh",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 47,
+    "day": 47,
+    "headline": "QUY TẮC 5 PHÚT",
+    "quote": "Đừng chờ cảm hứng xuất hiện mới làm việc. Hãy ép mình ngồi xuống làm đúng 5 phút, đà quán tính sẽ tự khắc kéo sự tập trung tới.",
+    "author": "Tâm lý học hiệu suất",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 48,
+    "day": 48,
+    "headline": "HẠ CÁI TÔI, LẤY Ô-XY",
+    "quote": "Khi dòng tiền bị bóp nghẹt, người mang cái tôi danh giá sẽ gục ngã đầu tiên. Cúi mình nhận những việc nhỏ nhất để mang dòng tiền tươi về tài khoản.",
+    "author": "Tư duy thực dụng",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 49,
+    "day": 49,
+    "headline": "TRỞ NGẠI LÀ ĐƯỜNG ĐI",
+    "quote": "Những trở ngại cản bước không làm ta dừng lại. Cách ta phản ứng và vượt qua chướng ngại vật sẽ trở thành chính con đường dẫn tới mục tiêu.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 50,
+    "day": 50,
+    "headline": "KHO BÁU BẢN LĨNH",
+    "quote": "Khó khăn tài chính chỉ là khúc trũng tạm thời. Kiến thức, kinh nghiệm và mạng lưới bạn đã tích lũy hơn 20 năm qua mới là tài sản vô giá.",
+    "author": "Định vị bản thân",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 51,
+    "day": 51,
+    "headline": "NHÌN VÀO THỜI GIAN ĐÃ MẤT",
+    "quote": "Tiền bạc mất đi còn kiếm lại được, nhưng những tháng ngày buông xuôi và tự lừa dối bản thân sẽ vĩnh viễn không bao giờ quay lại.",
+    "author": "Tự vấn nội tâm",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 52,
+    "day": 52,
+    "headline": "MỘT CUỘC ĐIỆN THOẠI",
+    "quote": "Cơ hội không tự rơi xuống đầu kẻ chờ đợi. Hãy chủ động mở danh bạ, gửi một tin nhắn, gọi một cuộc điện thoại kết nối ngay buổi sáng nay.",
+    "author": "Kỷ luật thực thi",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 53,
+    "day": 53,
+    "headline": "CẮT BỎ NHỮNG PHÙ PHIẾM",
+    "quote": "Không ai nghèo đi vì sống tằn tiện, nhưng vô số người khánh kiệt vì cố duy trì vỏ bọc thành đạt trước những người không nuôi sống mình.",
+    "author": "Sự thật tài chính",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 54,
+    "day": 54,
+    "headline": "TĨNH LẶNG GIỮA BÃO TỐ",
+    "quote": "Hãy như vách đá sừng sững trước sóng biển: bão táp gầm rú đánh vào rồi cũng vỡ tan bọt nước, còn vách đá vẫn hiên ngang đứng vững.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 55,
+    "day": 55,
+    "headline": "ĐIỂM TỰA CỦA GIA ĐÌNH",
+    "quote": "Hãy ngẩng cao đầu bước tiếp, vì sự kiên cường và vững chãi của bạn chính là bóng râm che chở bình yên cho những người thân yêu.",
+    "author": "Trách nhiệm trụ cột",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 56,
+    "day": 56,
+    "headline": "ĐAU ĐỚN LÀ THƯỚC ĐO",
+    "quote": "Cú ngã đau điếng này xuất hiện là để phơi bày những lỗ hổng chết người trong tư duy. Nếu không chịu sửa, bạn sẽ còn phải trả giá đắt hơn.",
+    "author": "Bài học xương máu",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 57,
+    "day": 57,
+    "headline": "CHIẾN THẮNG 3 VIỆC NHỎ",
+    "quote": "Đừng để gánh nặng cả năm làm tê liệt tâm trí. Chọn ra đúng 3 việc quan trọng nhất cho hôm nay và làm xong trước khi trời tối.",
+    "author": "Chiến thuật sinh tồn",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 58,
+    "day": 58,
+    "headline": "CẮT LỖ KHÔNG DO DỰ",
+    "quote": "Trong đầu tư cũng như trong vận hành cuộc sống, dũng cảm cắt lỗ đúng lúc là kỹ năng sống còn để bảo vệ số vốn còn lại.",
+    "author": "Kỷ luật thị trường",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 59,
+    "day": 59,
+    "headline": "KHÔNG THAN KHÓ",
+    "quote": "Than thở không mang tiền về tài khoản, phàn nàn không giải quyết được nợ nần. Hãy nuốt lời than vào trong và biến thành sức mạnh cày cuốc.",
+    "author": "Bản lĩnh Khắc kỷ",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 60,
+    "day": 60,
+    "headline": "ĐÁY VỰC LÀ BÀN ĐẠP",
+    "quote": "Khi bạn đã chạm tới đáy sâu nhất của thử thách, mọi hướng đi tiếp theo đều chỉ có thể là hướng đi lên. Tự tin bước tiếp.",
+    "author": "Triết lý sống sót",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 61,
+    "day": 61,
+    "headline": "KHÔNG CÓ AI ĐẾN CỨU",
+    "quote": "Sẽ không có phép màu nào xuất hiện nếu bạn tiếp tục nằm im. Người duy nhất đủ sức kéo bạn ra khỏi cảnh bế tắc này chỉ có thể là bạn.",
+    "author": "Thực tế trần trụi",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 62,
+    "day": 62,
+    "headline": "HOÀN THÀNH HƠN HOÀN HẢO",
+    "quote": "Một kế hoạch còn thô ráp nhưng được mang ra thực thi hôm nay đáng giá hơn một kế hoạch hoàn hảo nằm mãi trong ngăn kéo.",
+    "author": "Tư duy hành động",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 63,
+    "day": 63,
+    "headline": "MỖI KHOẢN TIẾT KIỆM LÀ ĐỆM ĐỠ",
+    "quote": "Một đồng chi phí thừa bạn dứt khoát cắt bỏ hôm nay tương đương với một đồng lợi nhuận ròng giúp bạn kéo dài thời gian sống sót.",
+    "author": "Quản trị dòng tiền",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 64,
+    "day": 64,
+    "headline": "ĐAU KHỔ TRONG TÂM TƯỞNG",
+    "quote": "Chúng ta thường chịu đựng nỗi đau do chính trí tưởng tượng phóng đại lên nhiều hơn là sự khốc liệt của thực tế đang xảy ra.",
+    "author": "Seneca",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 65,
+    "day": 65,
+    "headline": "HẠT MẦM DƯỚI BÃO TUYẾT",
+    "quote": "Những nỗ lực âm thầm, cắn răng làm việc trong bóng tối hôm nay đang bám rễ sâu vào lòng đất để chuẩn bị cho một ngày bứt phá ngoạn mục.",
+    "author": "Quy luật tích lũy",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 66,
+    "day": 66,
+    "headline": "VẾT THƯƠNG TỰ TRỌNG",
+    "quote": "Cảm giác nghẹn đắng vì túi tiền trống rỗng hôm nay phải được khắc sâu vào tâm can để làm mồi lửa hành động, tuyệt đối không dùng để tự thương hại.",
+    "author": "Bản lĩnh cá nhân",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 67,
+    "day": 67,
+    "headline": "LÀM VIỆC KHÓ TRƯỚC TIÊN",
+    "quote": "Nuốt con ếch to nhất vào đầu ngày. Giải quyết công việc khiến bạn lo lắng và muốn né tránh nhất trước 9 giờ sáng.",
+    "author": "Brian Tracy",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 68,
+    "day": 68,
+    "headline": "SỐNG DƯỚI MỨC THU NHẬP",
+    "quote": "Dù kiếm được bao nhiêu tiền, luôn ép bản thân sống dưới mức đó một bậc. Sự dư thừa thanh khoản là nguồn gốc duy nhất của sự tự do.",
+    "author": "Warren Buffett",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 69,
+    "day": 69,
+    "headline": "QUYỀN TỰ DO CUỐI CÙNG",
+    "quote": "Người đời có thể lấy đi danh vọng, tiền bạc của bạn, nhưng không ai có thể tước đoạt quyền tự do chọn lựa thái độ đối mặt của bạn.",
+    "author": "Viktor Frankl",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 70,
+    "day": 70,
+    "headline": "BẢN THÂN LÀ TỔNG THỂ VƯỢT TRỘI",
+    "quote": "Đừng đánh đồng một giai đoạn bế tắc tài chính với sự thất bại của một kiếp người. Bạn sinh ra để vượt qua sóng lớn.",
+    "author": "Niềm tin nội tại",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 71,
+    "day": 71,
+    "headline": "CÁI GIÁ CỦA SỰ CHỦ QUAN",
+    "quote": "Ảo tưởng về những chiến thắng cũ đã khiến bạn lơ là kỷ luật phòng thủ. Hãy nuốt trọn vị đắng hôm nay để không bao giờ chủ quan thêm lần nào nữa.",
+    "author": "Chiêm nghiệm thị trường",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 72,
+    "day": 72,
+    "headline": "BƯỚC CHÂN VI MÔ",
+    "quote": "Đường xa vạn dặm không vượt qua bằng việc nhìn ngắm đỉnh núi, mà bằng việc kiên quyết đặt từng bước chân vững chãi lên mặt đất.",
+    "author": "Lão Tử",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 73,
+    "day": 73,
+    "headline": "ĐO LƯỜNG TỪNG CON SỐ",
+    "quote": "Không thể quản trị những gì bạn không đo lường. Hãy nhìn thẳng vào bảng thu chi thực tế mỗi ngày, không né tránh bất kỳ con số nào.",
+    "author": "Peter Drucker",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 74,
+    "day": 74,
+    "headline": "CHẤP NHẬN SỰ THẬT KHÁCH QUAN",
+    "quote": "Mọi biến cố xảy ra đều trung tính. Ý nghĩa tiêu cực hay tích cực hoàn toàn do lăng kính chủ quan của bạn gán cho nó.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 75,
+    "day": 75,
+    "headline": "BƯỚC NGOẶT ĐANG ĐẾN GẦN",
+    "quote": "Chỉ cần kiên trì gõ cửa, cánh cửa đúng đắn sẽ mở ra. Khoảnh khắc ngay trước bình minh luôn là thời điểm tăm tối nhất.",
+    "author": "Quy luật bền bỉ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 76,
+    "day": 76,
+    "headline": "NGƯNG TỰ DẰN VẶT",
+    "quote": "Dằn vặt bản thân năm 20 tuổi bằng nhận thức của tuổi chín muồi là vô nghĩa. Hãy tha thứ cho người cũ và gánh vác trách nhiệm dọn dẹp hiện tại.",
+    "author": "Chữa lành & Tỉnh thức",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 77,
+    "day": 77,
+    "headline": "HÀNH ĐỘNG DẬP TẮT NỖI SỢ",
+    "quote": "Sự sợ hãi và lo âu phát triển mạnh nhất khi bạn ngồi yên suy nghĩ. Liều thuốc duy nhất để tiêu diệt nỗi sợ là lao vào hành động.",
+    "author": "Dale Carnegie",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 78,
+    "day": 78,
+    "headline": "TRÁNH XA NỢ TIÊU DÙNG",
+    "quote": "Vay mượn để chi tiêu cho cảm xúc tức thời là hành động tự tra cùm vào chân mình. Chỉ chạm vào nợ khi nó trực tiếp tạo ra dòng tiền dương.",
+    "author": "Nguyên tắc đòn bẩy",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 79,
+    "day": 79,
+    "headline": "GIỮ GÌN PHẨM GIÁ",
+    "quote": "Dù hoàn cảnh có bức bách đến đâu, tuyệt đối không đánh đổi sự chính trực. Tiền có thể kiếm lại, nhân phẩm đánh mất là mất tất cả.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 80,
+    "day": 80,
+    "headline": "KHỞI ĐẦU TỪ HÔM NAY",
+    "quote": "Bạn không thể quay lại để sửa điểm xuất phát, nhưng bạn có toàn quyền bắt đầu ngay lúc này để viết nên một cái kết rực rỡ hơn.",
+    "author": "C.S. Lewis",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 81,
+    "day": 81,
+    "headline": "HÓA ĐƠN CỦA SỰ DỄ DÃI",
+    "quote": "Sự túng thiếu và chật vật hôm nay chính là cái giá phải trả cho những lần bạn chọn thỏa hiệp và trì hoãn trong quá khứ.",
+    "author": "Chiêm nghiệm thực chiến",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 82,
+    "day": 82,
+    "headline": "HÀNH ĐỘNG NGAY BÂY GIỜ",
+    "quote": "Bất cứ thứ gì bạn đang có trong tay, hãy dùng hết; bất cứ điều gì bạn làm hôm nay, hãy làm bằng tất cả sức lực.",
+    "author": "Marcus Tullius Cicero",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 83,
+    "day": 83,
+    "headline": "BẢO VỆ THANH KHOẢN",
+    "quote": "Cá nhân hay doanh nghiệp sụp đổ không phải vì lỗ trên danh nghĩa, mà vì cạn kiệt thanh khoản tiền mặt. Giữ chặt dòng tiền bằng mọi giá.",
+    "author": "Nguyên lý sống còn",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 84,
+    "day": 84,
+    "headline": "VÙNG KIỂM SOÁT",
+    "quote": "Bạn không thể điều khiển thị trường hay thái độ của thiên hạ, nhưng bạn toàn quyền làm chủ sự tập trung, thái độ và kỷ luật làm việc của chính mình.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 85,
+    "day": 85,
+    "headline": "MÙA ĐÔNG RỒI SẼ QUA",
+    "quote": "Không có mùa đông nào kéo dài mãi mãi. Những ai kiên gan chịu đựng được giá lạnh sẽ là người đầu tiên tận hưởng mùa xuân rực rỡ nhất.",
+    "author": "Quy luật chu kỳ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 86,
+    "day": 86,
+    "headline": "BẪY CỦA SỰ GÂY MÊ",
+    "quote": "Mỗi giờ lướt màn hình vô thức là một giờ bạn tự tay dìm tương lai tài chính của chính mình và người thân xuống vũng lầy.",
+    "author": "Lời cảnh tỉnh",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 87,
+    "day": 87,
+    "headline": "QUY TẮC 5 PHÚT",
+    "quote": "Đừng chờ cảm hứng xuất hiện mới làm việc. Hãy ép mình ngồi xuống làm đúng 5 phút, đà quán tính sẽ tự khắc kéo sự tập trung tới.",
+    "author": "Tâm lý học hiệu suất",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 88,
+    "day": 88,
+    "headline": "HẠ CÁI TÔI, LẤY Ô-XY",
+    "quote": "Khi dòng tiền bị bóp nghẹt, người mang cái tôi danh giá sẽ gục ngã đầu tiên. Cúi mình nhận những việc nhỏ nhất để mang dòng tiền tươi về tài khoản.",
+    "author": "Tư duy thực dụng",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 89,
+    "day": 89,
+    "headline": "TRỞ NGẠI LÀ ĐƯỜNG ĐI",
+    "quote": "Những trở ngại cản bước không làm ta dừng lại. Cách ta phản ứng và vượt qua chướng ngại vật sẽ trở thành chính con đường dẫn tới mục tiêu.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 90,
+    "day": 90,
+    "headline": "KHO BÁU BẢN LĨNH",
+    "quote": "Khó khăn tài chính chỉ là khúc trũng tạm thời. Kiến thức, kinh nghiệm và mạng lưới bạn đã tích lũy hơn 20 năm qua mới là tài sản vô giá.",
+    "author": "Định vị bản thân",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 91,
+    "day": 91,
+    "headline": "NHÌN VÀO THỜI GIAN ĐÃ MẤT",
+    "quote": "Tiền bạc mất đi còn kiếm lại được, nhưng những tháng ngày buông xuôi và tự lừa dối bản thân sẽ vĩnh viễn không bao giờ quay lại.",
+    "author": "Tự vấn nội tâm",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 92,
+    "day": 92,
+    "headline": "MỘT CUỘC ĐIỆN THOẠI",
+    "quote": "Cơ hội không tự rơi xuống đầu kẻ chờ đợi. Hãy chủ động mở danh bạ, gửi một tin nhắn, gọi một cuộc điện thoại kết nối ngay buổi sáng nay.",
+    "author": "Kỷ luật thực thi",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 93,
+    "day": 93,
+    "headline": "CẮT BỎ NHỮNG PHÙ PHIẾM",
+    "quote": "Không ai nghèo đi vì sống tằn tiện, nhưng vô số người khánh kiệt vì cố duy trì vỏ bọc thành đạt trước những người không nuôi sống mình.",
+    "author": "Sự thật tài chính",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 94,
+    "day": 94,
+    "headline": "TĨNH LẶNG GIỮA BÃO TỐ",
+    "quote": "Hãy như vách đá sừng sững trước sóng biển: bão táp gầm rú đánh vào rồi cũng vỡ tan bọt nước, còn vách đá vẫn hiên ngang đứng vững.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 95,
+    "day": 95,
+    "headline": "ĐIỂM TỰA CỦA GIA ĐÌNH",
+    "quote": "Hãy ngẩng cao đầu bước tiếp, vì sự kiên cường và vững chãi của bạn chính là bóng râm che chở bình yên cho những người thân yêu.",
+    "author": "Trách nhiệm trụ cột",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 96,
+    "day": 96,
+    "headline": "ĐAU ĐỚN LÀ THƯỚC ĐO",
+    "quote": "Cú ngã đau điếng này xuất hiện là để phơi bày những lỗ hổng chết người trong tư duy. Nếu không chịu sửa, bạn sẽ còn phải trả giá đắt hơn.",
+    "author": "Bài học xương máu",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 97,
+    "day": 97,
+    "headline": "CHIẾN THẮNG 3 VIỆC NHỎ",
+    "quote": "Đừng để gánh nặng cả năm làm tê liệt tâm trí. Chọn ra đúng 3 việc quan trọng nhất cho hôm nay và làm xong trước khi trời tối.",
+    "author": "Chiến thuật sinh tồn",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 98,
+    "day": 98,
+    "headline": "CẮT LỖ KHÔNG DO DỰ",
+    "quote": "Trong đầu tư cũng như trong vận hành cuộc sống, dũng cảm cắt lỗ đúng lúc là kỹ năng sống còn để bảo vệ số vốn còn lại.",
+    "author": "Kỷ luật thị trường",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 99,
+    "day": 99,
+    "headline": "KHÔNG THAN KHÓ",
+    "quote": "Than thở không mang tiền về tài khoản, phàn nàn không giải quyết được nợ nần. Hãy nuốt lời than vào trong và biến thành sức mạnh cày cuốc.",
+    "author": "Bản lĩnh Khắc kỷ",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 100,
+    "day": 100,
+    "headline": "ĐÁY VỰC LÀ BÀN ĐẠP",
+    "quote": "Khi bạn đã chạm tới đáy sâu nhất của thử thách, mọi hướng đi tiếp theo đều chỉ có thể là hướng đi lên. Tự tin bước tiếp.",
+    "author": "Triết lý sống sót",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 101,
+    "day": 101,
+    "headline": "KHÔNG CÓ AI ĐẾN CỨU",
+    "quote": "Sẽ không có phép màu nào xuất hiện nếu bạn tiếp tục nằm im. Người duy nhất đủ sức kéo bạn ra khỏi cảnh bế tắc này chỉ có thể là bạn.",
+    "author": "Thực tế trần trụi",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 102,
+    "day": 102,
+    "headline": "HOÀN THÀNH HƠN HOÀN HẢO",
+    "quote": "Một kế hoạch còn thô ráp nhưng được mang ra thực thi hôm nay đáng giá hơn một kế hoạch hoàn hảo nằm mãi trong ngăn kéo.",
+    "author": "Tư duy hành động",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 103,
+    "day": 103,
+    "headline": "MỖI KHOẢN TIẾT KIỆM LÀ ĐỆM ĐỠ",
+    "quote": "Một đồng chi phí thừa bạn dứt khoát cắt bỏ hôm nay tương đương với một đồng lợi nhuận ròng giúp bạn kéo dài thời gian sống sót.",
+    "author": "Quản trị dòng tiền",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 104,
+    "day": 104,
+    "headline": "ĐAU KHỔ TRONG TÂM TƯỞNG",
+    "quote": "Chúng ta thường chịu đựng nỗi đau do chính trí tưởng tượng phóng đại lên nhiều hơn là sự khốc liệt của thực tế đang xảy ra.",
+    "author": "Seneca",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 105,
+    "day": 105,
+    "headline": "HẠT MẦM DƯỚI BÃO TUYẾT",
+    "quote": "Những nỗ lực âm thầm, cắn răng làm việc trong bóng tối hôm nay đang bám rễ sâu vào lòng đất để chuẩn bị cho một ngày bứt phá ngoạn mục.",
+    "author": "Quy luật tích lũy",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 106,
+    "day": 106,
+    "headline": "VẾT THƯƠNG TỰ TRỌNG",
+    "quote": "Cảm giác nghẹn đắng vì túi tiền trống rỗng hôm nay phải được khắc sâu vào tâm can để làm mồi lửa hành động, tuyệt đối không dùng để tự thương hại.",
+    "author": "Bản lĩnh cá nhân",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 107,
+    "day": 107,
+    "headline": "LÀM VIỆC KHÓ TRƯỚC TIÊN",
+    "quote": "Nuốt con ếch to nhất vào đầu ngày. Giải quyết công việc khiến bạn lo lắng và muốn né tránh nhất trước 9 giờ sáng.",
+    "author": "Brian Tracy",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 108,
+    "day": 108,
+    "headline": "SỐNG DƯỚI MỨC THU NHẬP",
+    "quote": "Dù kiếm được bao nhiêu tiền, luôn ép bản thân sống dưới mức đó một bậc. Sự dư thừa thanh khoản là nguồn gốc duy nhất của sự tự do.",
+    "author": "Warren Buffett",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 109,
+    "day": 109,
+    "headline": "QUYỀN TỰ DO CUỐI CÙNG",
+    "quote": "Người đời có thể lấy đi danh vọng, tiền bạc của bạn, nhưng không ai có thể tước đoạt quyền tự do chọn lựa thái độ đối mặt của bạn.",
+    "author": "Viktor Frankl",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 110,
+    "day": 110,
+    "headline": "BẢN THÂN LÀ TỔNG THỂ VƯỢT TRỘI",
+    "quote": "Đừng đánh đồng một giai đoạn bế tắc tài chính với sự thất bại của một kiếp người. Bạn sinh ra để vượt qua sóng lớn.",
+    "author": "Niềm tin nội tại",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 111,
+    "day": 111,
+    "headline": "CÁI GIÁ CỦA SỰ CHỦ QUAN",
+    "quote": "Ảo tưởng về những chiến thắng cũ đã khiến bạn lơ là kỷ luật phòng thủ. Hãy nuốt trọn vị đắng hôm nay để không bao giờ chủ quan thêm lần nào nữa.",
+    "author": "Chiêm nghiệm thị trường",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 112,
+    "day": 112,
+    "headline": "BƯỚC CHÂN VI MÔ",
+    "quote": "Đường xa vạn dặm không vượt qua bằng việc nhìn ngắm đỉnh núi, mà bằng việc kiên quyết đặt từng bước chân vững chãi lên mặt đất.",
+    "author": "Lão Tử",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 113,
+    "day": 113,
+    "headline": "ĐO LƯỜNG TỪNG CON SỐ",
+    "quote": "Không thể quản trị những gì bạn không đo lường. Hãy nhìn thẳng vào bảng thu chi thực tế mỗi ngày, không né tránh bất kỳ con số nào.",
+    "author": "Peter Drucker",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 114,
+    "day": 114,
+    "headline": "CHẤP NHẬN SỰ THẬT KHÁCH QUAN",
+    "quote": "Mọi biến cố xảy ra đều trung tính. Ý nghĩa tiêu cực hay tích cực hoàn toàn do lăng kính chủ quan của bạn gán cho nó.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 115,
+    "day": 115,
+    "headline": "BƯỚC NGOẶT ĐANG ĐẾN GẦN",
+    "quote": "Chỉ cần kiên trì gõ cửa, cánh cửa đúng đắn sẽ mở ra. Khoảnh khắc ngay trước bình minh luôn là thời điểm tăm tối nhất.",
+    "author": "Quy luật bền bỉ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 116,
+    "day": 116,
+    "headline": "NGƯNG TỰ DẰN VẶT",
+    "quote": "Dằn vặt bản thân năm 20 tuổi bằng nhận thức của tuổi chín muồi là vô nghĩa. Hãy tha thứ cho người cũ và gánh vác trách nhiệm dọn dẹp hiện tại.",
+    "author": "Chữa lành & Tỉnh thức",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 117,
+    "day": 117,
+    "headline": "HÀNH ĐỘNG DẬP TẮT NỖI SỢ",
+    "quote": "Sự sợ hãi và lo âu phát triển mạnh nhất khi bạn ngồi yên suy nghĩ. Liều thuốc duy nhất để tiêu diệt nỗi sợ là lao vào hành động.",
+    "author": "Dale Carnegie",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 118,
+    "day": 118,
+    "headline": "TRÁNH XA NỢ TIÊU DÙNG",
+    "quote": "Vay mượn để chi tiêu cho cảm xúc tức thời là hành động tự tra cùm vào chân mình. Chỉ chạm vào nợ khi nó trực tiếp tạo ra dòng tiền dương.",
+    "author": "Nguyên tắc đòn bẩy",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 119,
+    "day": 119,
+    "headline": "GIỮ GÌN PHẨM GIÁ",
+    "quote": "Dù hoàn cảnh có bức bách đến đâu, tuyệt đối không đánh đổi sự chính trực. Tiền có thể kiếm lại, nhân phẩm đánh mất là mất tất cả.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 120,
+    "day": 120,
+    "headline": "KHỞI ĐẦU TỪ HÔM NAY",
+    "quote": "Bạn không thể quay lại để sửa điểm xuất phát, nhưng bạn có toàn quyền bắt đầu ngay lúc này để viết nên một cái kết rực rỡ hơn.",
+    "author": "C.S. Lewis",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 121,
+    "day": 121,
+    "headline": "HÓA ĐƠN CỦA SỰ DỄ DÃI",
+    "quote": "Sự túng thiếu và chật vật hôm nay chính là cái giá phải trả cho những lần bạn chọn thỏa hiệp và trì hoãn trong quá khứ.",
+    "author": "Chiêm nghiệm thực chiến",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 122,
+    "day": 122,
+    "headline": "HÀNH ĐỘNG NGAY BÂY GIỜ",
+    "quote": "Bất cứ thứ gì bạn đang có trong tay, hãy dùng hết; bất cứ điều gì bạn làm hôm nay, hãy làm bằng tất cả sức lực.",
+    "author": "Marcus Tullius Cicero",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 123,
+    "day": 123,
+    "headline": "BẢO VỆ THANH KHOẢN",
+    "quote": "Cá nhân hay doanh nghiệp sụp đổ không phải vì lỗ trên danh nghĩa, mà vì cạn kiệt thanh khoản tiền mặt. Giữ chặt dòng tiền bằng mọi giá.",
+    "author": "Nguyên lý sống còn",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 124,
+    "day": 124,
+    "headline": "VÙNG KIỂM SOÁT",
+    "quote": "Bạn không thể điều khiển thị trường hay thái độ của thiên hạ, nhưng bạn toàn quyền làm chủ sự tập trung, thái độ và kỷ luật làm việc của chính mình.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 125,
+    "day": 125,
+    "headline": "MÙA ĐÔNG RỒI SẼ QUA",
+    "quote": "Không có mùa đông nào kéo dài mãi mãi. Những ai kiên gan chịu đựng được giá lạnh sẽ là người đầu tiên tận hưởng mùa xuân rực rỡ nhất.",
+    "author": "Quy luật chu kỳ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 126,
+    "day": 126,
+    "headline": "BẪY CỦA SỰ GÂY MÊ",
+    "quote": "Mỗi giờ lướt màn hình vô thức là một giờ bạn tự tay dìm tương lai tài chính của chính mình và người thân xuống vũng lầy.",
+    "author": "Lời cảnh tỉnh",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 127,
+    "day": 127,
+    "headline": "QUY TẮC 5 PHÚT",
+    "quote": "Đừng chờ cảm hứng xuất hiện mới làm việc. Hãy ép mình ngồi xuống làm đúng 5 phút, đà quán tính sẽ tự khắc kéo sự tập trung tới.",
+    "author": "Tâm lý học hiệu suất",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 128,
+    "day": 128,
+    "headline": "HẠ CÁI TÔI, LẤY Ô-XY",
+    "quote": "Khi dòng tiền bị bóp nghẹt, người mang cái tôi danh giá sẽ gục ngã đầu tiên. Cúi mình nhận những việc nhỏ nhất để mang dòng tiền tươi về tài khoản.",
+    "author": "Tư duy thực dụng",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 129,
+    "day": 129,
+    "headline": "TRỞ NGẠI LÀ ĐƯỜNG ĐI",
+    "quote": "Những trở ngại cản bước không làm ta dừng lại. Cách ta phản ứng và vượt qua chướng ngại vật sẽ trở thành chính con đường dẫn tới mục tiêu.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 130,
+    "day": 130,
+    "headline": "KHO BÁU BẢN LĨNH",
+    "quote": "Khó khăn tài chính chỉ là khúc trũng tạm thời. Kiến thức, kinh nghiệm và mạng lưới bạn đã tích lũy hơn 20 năm qua mới là tài sản vô giá.",
+    "author": "Định vị bản thân",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 131,
+    "day": 131,
+    "headline": "NHÌN VÀO THỜI GIAN ĐÃ MẤT",
+    "quote": "Tiền bạc mất đi còn kiếm lại được, nhưng những tháng ngày buông xuôi và tự lừa dối bản thân sẽ vĩnh viễn không bao giờ quay lại.",
+    "author": "Tự vấn nội tâm",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 132,
+    "day": 132,
+    "headline": "MỘT CUỘC ĐIỆN THOẠI",
+    "quote": "Cơ hội không tự rơi xuống đầu kẻ chờ đợi. Hãy chủ động mở danh bạ, gửi một tin nhắn, gọi một cuộc điện thoại kết nối ngay buổi sáng nay.",
+    "author": "Kỷ luật thực thi",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 133,
+    "day": 133,
+    "headline": "CẮT BỎ NHỮNG PHÙ PHIẾM",
+    "quote": "Không ai nghèo đi vì sống tằn tiện, nhưng vô số người khánh kiệt vì cố duy trì vỏ bọc thành đạt trước những người không nuôi sống mình.",
+    "author": "Sự thật tài chính",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 134,
+    "day": 134,
+    "headline": "TĨNH LẶNG GIỮA BÃO TỐ",
+    "quote": "Hãy như vách đá sừng sững trước sóng biển: bão táp gầm rú đánh vào rồi cũng vỡ tan bọt nước, còn vách đá vẫn hiên ngang đứng vững.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 135,
+    "day": 135,
+    "headline": "ĐIỂM TỰA CỦA GIA ĐÌNH",
+    "quote": "Hãy ngẩng cao đầu bước tiếp, vì sự kiên cường và vững chãi của bạn chính là bóng râm che chở bình yên cho những người thân yêu.",
+    "author": "Trách nhiệm trụ cột",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 136,
+    "day": 136,
+    "headline": "ĐAU ĐỚN LÀ THƯỚC ĐO",
+    "quote": "Cú ngã đau điếng này xuất hiện là để phơi bày những lỗ hổng chết người trong tư duy. Nếu không chịu sửa, bạn sẽ còn phải trả giá đắt hơn.",
+    "author": "Bài học xương máu",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 137,
+    "day": 137,
+    "headline": "CHIẾN THẮNG 3 VIỆC NHỎ",
+    "quote": "Đừng để gánh nặng cả năm làm tê liệt tâm trí. Chọn ra đúng 3 việc quan trọng nhất cho hôm nay và làm xong trước khi trời tối.",
+    "author": "Chiến thuật sinh tồn",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 138,
+    "day": 138,
+    "headline": "CẮT LỖ KHÔNG DO DỰ",
+    "quote": "Trong đầu tư cũng như trong vận hành cuộc sống, dũng cảm cắt lỗ đúng lúc là kỹ năng sống còn để bảo vệ số vốn còn lại.",
+    "author": "Kỷ luật thị trường",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 139,
+    "day": 139,
+    "headline": "KHÔNG THAN KHÓ",
+    "quote": "Than thở không mang tiền về tài khoản, phàn nàn không giải quyết được nợ nần. Hãy nuốt lời than vào trong và biến thành sức mạnh cày cuốc.",
+    "author": "Bản lĩnh Khắc kỷ",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 140,
+    "day": 140,
+    "headline": "ĐÁY VỰC LÀ BÀN ĐẠP",
+    "quote": "Khi bạn đã chạm tới đáy sâu nhất của thử thách, mọi hướng đi tiếp theo đều chỉ có thể là hướng đi lên. Tự tin bước tiếp.",
+    "author": "Triết lý sống sót",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 141,
+    "day": 141,
+    "headline": "KHÔNG CÓ AI ĐẾN CỨU",
+    "quote": "Sẽ không có phép màu nào xuất hiện nếu bạn tiếp tục nằm im. Người duy nhất đủ sức kéo bạn ra khỏi cảnh bế tắc này chỉ có thể là bạn.",
+    "author": "Thực tế trần trụi",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 142,
+    "day": 142,
+    "headline": "HOÀN THÀNH HƠN HOÀN HẢO",
+    "quote": "Một kế hoạch còn thô ráp nhưng được mang ra thực thi hôm nay đáng giá hơn một kế hoạch hoàn hảo nằm mãi trong ngăn kéo.",
+    "author": "Tư duy hành động",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 143,
+    "day": 143,
+    "headline": "MỖI KHOẢN TIẾT KIỆM LÀ ĐỆM ĐỠ",
+    "quote": "Một đồng chi phí thừa bạn dứt khoát cắt bỏ hôm nay tương đương với một đồng lợi nhuận ròng giúp bạn kéo dài thời gian sống sót.",
+    "author": "Quản trị dòng tiền",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 144,
+    "day": 144,
+    "headline": "ĐAU KHỔ TRONG TÂM TƯỞNG",
+    "quote": "Chúng ta thường chịu đựng nỗi đau do chính trí tưởng tượng phóng đại lên nhiều hơn là sự khốc liệt của thực tế đang xảy ra.",
+    "author": "Seneca",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 145,
+    "day": 145,
+    "headline": "HẠT MẦM DƯỚI BÃO TUYẾT",
+    "quote": "Những nỗ lực âm thầm, cắn răng làm việc trong bóng tối hôm nay đang bám rễ sâu vào lòng đất để chuẩn bị cho một ngày bứt phá ngoạn mục.",
+    "author": "Quy luật tích lũy",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 146,
+    "day": 146,
+    "headline": "VẾT THƯƠNG TỰ TRỌNG",
+    "quote": "Cảm giác nghẹn đắng vì túi tiền trống rỗng hôm nay phải được khắc sâu vào tâm can để làm mồi lửa hành động, tuyệt đối không dùng để tự thương hại.",
+    "author": "Bản lĩnh cá nhân",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 147,
+    "day": 147,
+    "headline": "LÀM VIỆC KHÓ TRƯỚC TIÊN",
+    "quote": "Nuốt con ếch to nhất vào đầu ngày. Giải quyết công việc khiến bạn lo lắng và muốn né tránh nhất trước 9 giờ sáng.",
+    "author": "Brian Tracy",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 148,
+    "day": 148,
+    "headline": "SỐNG DƯỚI MỨC THU NHẬP",
+    "quote": "Dù kiếm được bao nhiêu tiền, luôn ép bản thân sống dưới mức đó một bậc. Sự dư thừa thanh khoản là nguồn gốc duy nhất của sự tự do.",
+    "author": "Warren Buffett",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 149,
+    "day": 149,
+    "headline": "QUYỀN TỰ DO CUỐI CÙNG",
+    "quote": "Người đời có thể lấy đi danh vọng, tiền bạc của bạn, nhưng không ai có thể tước đoạt quyền tự do chọn lựa thái độ đối mặt của bạn.",
+    "author": "Viktor Frankl",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 150,
+    "day": 150,
+    "headline": "BẢN THÂN LÀ TỔNG THỂ VƯỢT TRỘI",
+    "quote": "Đừng đánh đồng một giai đoạn bế tắc tài chính với sự thất bại của một kiếp người. Bạn sinh ra để vượt qua sóng lớn.",
+    "author": "Niềm tin nội tại",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 151,
+    "day": 151,
+    "headline": "CÁI GIÁ CỦA SỰ CHỦ QUAN",
+    "quote": "Ảo tưởng về những chiến thắng cũ đã khiến bạn lơ là kỷ luật phòng thủ. Hãy nuốt trọn vị đắng hôm nay để không bao giờ chủ quan thêm lần nào nữa.",
+    "author": "Chiêm nghiệm thị trường",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 152,
+    "day": 152,
+    "headline": "BƯỚC CHÂN VI MÔ",
+    "quote": "Đường xa vạn dặm không vượt qua bằng việc nhìn ngắm đỉnh núi, mà bằng việc kiên quyết đặt từng bước chân vững chãi lên mặt đất.",
+    "author": "Lão Tử",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 153,
+    "day": 153,
+    "headline": "ĐO LƯỜNG TỪNG CON SỐ",
+    "quote": "Không thể quản trị những gì bạn không đo lường. Hãy nhìn thẳng vào bảng thu chi thực tế mỗi ngày, không né tránh bất kỳ con số nào.",
+    "author": "Peter Drucker",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 154,
+    "day": 154,
+    "headline": "CHẤP NHẬN SỰ THẬT KHÁCH QUAN",
+    "quote": "Mọi biến cố xảy ra đều trung tính. Ý nghĩa tiêu cực hay tích cực hoàn toàn do lăng kính chủ quan của bạn gán cho nó.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 155,
+    "day": 155,
+    "headline": "BƯỚC NGOẶT ĐANG ĐẾN GẦN",
+    "quote": "Chỉ cần kiên trì gõ cửa, cánh cửa đúng đắn sẽ mở ra. Khoảnh khắc ngay trước bình minh luôn là thời điểm tăm tối nhất.",
+    "author": "Quy luật bền bỉ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 156,
+    "day": 156,
+    "headline": "NGƯNG TỰ DẰN VẶT",
+    "quote": "Dằn vặt bản thân năm 20 tuổi bằng nhận thức của tuổi chín muồi là vô nghĩa. Hãy tha thứ cho người cũ và gánh vác trách nhiệm dọn dẹp hiện tại.",
+    "author": "Chữa lành & Tỉnh thức",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 157,
+    "day": 157,
+    "headline": "HÀNH ĐỘNG DẬP TẮT NỖI SỢ",
+    "quote": "Sự sợ hãi và lo âu phát triển mạnh nhất khi bạn ngồi yên suy nghĩ. Liều thuốc duy nhất để tiêu diệt nỗi sợ là lao vào hành động.",
+    "author": "Dale Carnegie",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 158,
+    "day": 158,
+    "headline": "TRÁNH XA NỢ TIÊU DÙNG",
+    "quote": "Vay mượn để chi tiêu cho cảm xúc tức thời là hành động tự tra cùm vào chân mình. Chỉ chạm vào nợ khi nó trực tiếp tạo ra dòng tiền dương.",
+    "author": "Nguyên tắc đòn bẩy",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 159,
+    "day": 159,
+    "headline": "GIỮ GÌN PHẨM GIÁ",
+    "quote": "Dù hoàn cảnh có bức bách đến đâu, tuyệt đối không đánh đổi sự chính trực. Tiền có thể kiếm lại, nhân phẩm đánh mất là mất tất cả.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 160,
+    "day": 160,
+    "headline": "KHỞI ĐẦU TỪ HÔM NAY",
+    "quote": "Bạn không thể quay lại để sửa điểm xuất phát, nhưng bạn có toàn quyền bắt đầu ngay lúc này để viết nên một cái kết rực rỡ hơn.",
+    "author": "C.S. Lewis",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 161,
+    "day": 161,
+    "headline": "HÓA ĐƠN CỦA SỰ DỄ DÃI",
+    "quote": "Sự túng thiếu và chật vật hôm nay chính là cái giá phải trả cho những lần bạn chọn thỏa hiệp và trì hoãn trong quá khứ.",
+    "author": "Chiêm nghiệm thực chiến",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 162,
+    "day": 162,
+    "headline": "HÀNH ĐỘNG NGAY BÂY GIỜ",
+    "quote": "Bất cứ thứ gì bạn đang có trong tay, hãy dùng hết; bất cứ điều gì bạn làm hôm nay, hãy làm bằng tất cả sức lực.",
+    "author": "Marcus Tullius Cicero",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 163,
+    "day": 163,
+    "headline": "BẢO VỆ THANH KHOẢN",
+    "quote": "Cá nhân hay doanh nghiệp sụp đổ không phải vì lỗ trên danh nghĩa, mà vì cạn kiệt thanh khoản tiền mặt. Giữ chặt dòng tiền bằng mọi giá.",
+    "author": "Nguyên lý sống còn",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 164,
+    "day": 164,
+    "headline": "VÙNG KIỂM SOÁT",
+    "quote": "Bạn không thể điều khiển thị trường hay thái độ của thiên hạ, nhưng bạn toàn quyền làm chủ sự tập trung, thái độ và kỷ luật làm việc của chính mình.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 165,
+    "day": 165,
+    "headline": "MÙA ĐÔNG RỒI SẼ QUA",
+    "quote": "Không có mùa đông nào kéo dài mãi mãi. Những ai kiên gan chịu đựng được giá lạnh sẽ là người đầu tiên tận hưởng mùa xuân rực rỡ nhất.",
+    "author": "Quy luật chu kỳ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 166,
+    "day": 166,
+    "headline": "BẪY CỦA SỰ GÂY MÊ",
+    "quote": "Mỗi giờ lướt màn hình vô thức là một giờ bạn tự tay dìm tương lai tài chính của chính mình và người thân xuống vũng lầy.",
+    "author": "Lời cảnh tỉnh",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 167,
+    "day": 167,
+    "headline": "QUY TẮC 5 PHÚT",
+    "quote": "Đừng chờ cảm hứng xuất hiện mới làm việc. Hãy ép mình ngồi xuống làm đúng 5 phút, đà quán tính sẽ tự khắc kéo sự tập trung tới.",
+    "author": "Tâm lý học hiệu suất",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 168,
+    "day": 168,
+    "headline": "HẠ CÁI TÔI, LẤY Ô-XY",
+    "quote": "Khi dòng tiền bị bóp nghẹt, người mang cái tôi danh giá sẽ gục ngã đầu tiên. Cúi mình nhận những việc nhỏ nhất để mang dòng tiền tươi về tài khoản.",
+    "author": "Tư duy thực dụng",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 169,
+    "day": 169,
+    "headline": "TRỞ NGẠI LÀ ĐƯỜNG ĐI",
+    "quote": "Những trở ngại cản bước không làm ta dừng lại. Cách ta phản ứng và vượt qua chướng ngại vật sẽ trở thành chính con đường dẫn tới mục tiêu.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 170,
+    "day": 170,
+    "headline": "KHO BÁU BẢN LĨNH",
+    "quote": "Khó khăn tài chính chỉ là khúc trũng tạm thời. Kiến thức, kinh nghiệm và mạng lưới bạn đã tích lũy hơn 20 năm qua mới là tài sản vô giá.",
+    "author": "Định vị bản thân",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 171,
+    "day": 171,
+    "headline": "NHÌN VÀO THỜI GIAN ĐÃ MẤT",
+    "quote": "Tiền bạc mất đi còn kiếm lại được, nhưng những tháng ngày buông xuôi và tự lừa dối bản thân sẽ vĩnh viễn không bao giờ quay lại.",
+    "author": "Tự vấn nội tâm",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 172,
+    "day": 172,
+    "headline": "MỘT CUỘC ĐIỆN THOẠI",
+    "quote": "Cơ hội không tự rơi xuống đầu kẻ chờ đợi. Hãy chủ động mở danh bạ, gửi một tin nhắn, gọi một cuộc điện thoại kết nối ngay buổi sáng nay.",
+    "author": "Kỷ luật thực thi",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 173,
+    "day": 173,
+    "headline": "CẮT BỎ NHỮNG PHÙ PHIẾM",
+    "quote": "Không ai nghèo đi vì sống tằn tiện, nhưng vô số người khánh kiệt vì cố duy trì vỏ bọc thành đạt trước những người không nuôi sống mình.",
+    "author": "Sự thật tài chính",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 174,
+    "day": 174,
+    "headline": "TĨNH LẶNG GIỮA BÃO TỐ",
+    "quote": "Hãy như vách đá sừng sững trước sóng biển: bão táp gầm rú đánh vào rồi cũng vỡ tan bọt nước, còn vách đá vẫn hiên ngang đứng vững.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 175,
+    "day": 175,
+    "headline": "ĐIỂM TỰA CỦA GIA ĐÌNH",
+    "quote": "Hãy ngẩng cao đầu bước tiếp, vì sự kiên cường và vững chãi của bạn chính là bóng râm che chở bình yên cho những người thân yêu.",
+    "author": "Trách nhiệm trụ cột",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 176,
+    "day": 176,
+    "headline": "ĐAU ĐỚN LÀ THƯỚC ĐO",
+    "quote": "Cú ngã đau điếng này xuất hiện là để phơi bày những lỗ hổng chết người trong tư duy. Nếu không chịu sửa, bạn sẽ còn phải trả giá đắt hơn.",
+    "author": "Bài học xương máu",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 177,
+    "day": 177,
+    "headline": "CHIẾN THẮNG 3 VIỆC NHỎ",
+    "quote": "Đừng để gánh nặng cả năm làm tê liệt tâm trí. Chọn ra đúng 3 việc quan trọng nhất cho hôm nay và làm xong trước khi trời tối.",
+    "author": "Chiến thuật sinh tồn",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 178,
+    "day": 178,
+    "headline": "CẮT LỖ KHÔNG DO DỰ",
+    "quote": "Trong đầu tư cũng như trong vận hành cuộc sống, dũng cảm cắt lỗ đúng lúc là kỹ năng sống còn để bảo vệ số vốn còn lại.",
+    "author": "Kỷ luật thị trường",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 179,
+    "day": 179,
+    "headline": "KHÔNG THAN KHÓ",
+    "quote": "Than thở không mang tiền về tài khoản, phàn nàn không giải quyết được nợ nần. Hãy nuốt lời than vào trong và biến thành sức mạnh cày cuốc.",
+    "author": "Bản lĩnh Khắc kỷ",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 180,
+    "day": 180,
+    "headline": "ĐÁY VỰC LÀ BÀN ĐẠP",
+    "quote": "Khi bạn đã chạm tới đáy sâu nhất của thử thách, mọi hướng đi tiếp theo đều chỉ có thể là hướng đi lên. Tự tin bước tiếp.",
+    "author": "Triết lý sống sót",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 181,
+    "day": 181,
+    "headline": "KHÔNG CÓ AI ĐẾN CỨU",
+    "quote": "Sẽ không có phép màu nào xuất hiện nếu bạn tiếp tục nằm im. Người duy nhất đủ sức kéo bạn ra khỏi cảnh bế tắc này chỉ có thể là bạn.",
+    "author": "Thực tế trần trụi",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 182,
+    "day": 182,
+    "headline": "HOÀN THÀNH HƠN HOÀN HẢO",
+    "quote": "Một kế hoạch còn thô ráp nhưng được mang ra thực thi hôm nay đáng giá hơn một kế hoạch hoàn hảo nằm mãi trong ngăn kéo.",
+    "author": "Tư duy hành động",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 183,
+    "day": 183,
+    "headline": "MỖI KHOẢN TIẾT KIỆM LÀ ĐỆM ĐỠ",
+    "quote": "Một đồng chi phí thừa bạn dứt khoát cắt bỏ hôm nay tương đương với một đồng lợi nhuận ròng giúp bạn kéo dài thời gian sống sót.",
+    "author": "Quản trị dòng tiền",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 184,
+    "day": 184,
+    "headline": "ĐAU KHỔ TRONG TÂM TƯỞNG",
+    "quote": "Chúng ta thường chịu đựng nỗi đau do chính trí tưởng tượng phóng đại lên nhiều hơn là sự khốc liệt của thực tế đang xảy ra.",
+    "author": "Seneca",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 185,
+    "day": 185,
+    "headline": "HẠT MẦM DƯỚI BÃO TUYẾT",
+    "quote": "Những nỗ lực âm thầm, cắn răng làm việc trong bóng tối hôm nay đang bám rễ sâu vào lòng đất để chuẩn bị cho một ngày bứt phá ngoạn mục.",
+    "author": "Quy luật tích lũy",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 186,
+    "day": 186,
+    "headline": "VẾT THƯƠNG TỰ TRỌNG",
+    "quote": "Cảm giác nghẹn đắng vì túi tiền trống rỗng hôm nay phải được khắc sâu vào tâm can để làm mồi lửa hành động, tuyệt đối không dùng để tự thương hại.",
+    "author": "Bản lĩnh cá nhân",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 187,
+    "day": 187,
+    "headline": "LÀM VIỆC KHÓ TRƯỚC TIÊN",
+    "quote": "Nuốt con ếch to nhất vào đầu ngày. Giải quyết công việc khiến bạn lo lắng và muốn né tránh nhất trước 9 giờ sáng.",
+    "author": "Brian Tracy",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 188,
+    "day": 188,
+    "headline": "SỐNG DƯỚI MỨC THU NHẬP",
+    "quote": "Dù kiếm được bao nhiêu tiền, luôn ép bản thân sống dưới mức đó một bậc. Sự dư thừa thanh khoản là nguồn gốc duy nhất của sự tự do.",
+    "author": "Warren Buffett",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 189,
+    "day": 189,
+    "headline": "QUYỀN TỰ DO CUỐI CÙNG",
+    "quote": "Người đời có thể lấy đi danh vọng, tiền bạc của bạn, nhưng không ai có thể tước đoạt quyền tự do chọn lựa thái độ đối mặt của bạn.",
+    "author": "Viktor Frankl",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 190,
+    "day": 190,
+    "headline": "BẢN THÂN LÀ TỔNG THỂ VƯỢT TRỘI",
+    "quote": "Đừng đánh đồng một giai đoạn bế tắc tài chính với sự thất bại của một kiếp người. Bạn sinh ra để vượt qua sóng lớn.",
+    "author": "Niềm tin nội tại",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 191,
+    "day": 191,
+    "headline": "CÁI GIÁ CỦA SỰ CHỦ QUAN",
+    "quote": "Ảo tưởng về những chiến thắng cũ đã khiến bạn lơ là kỷ luật phòng thủ. Hãy nuốt trọn vị đắng hôm nay để không bao giờ chủ quan thêm lần nào nữa.",
+    "author": "Chiêm nghiệm thị trường",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 192,
+    "day": 192,
+    "headline": "BƯỚC CHÂN VI MÔ",
+    "quote": "Đường xa vạn dặm không vượt qua bằng việc nhìn ngắm đỉnh núi, mà bằng việc kiên quyết đặt từng bước chân vững chãi lên mặt đất.",
+    "author": "Lão Tử",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 193,
+    "day": 193,
+    "headline": "ĐO LƯỜNG TỪNG CON SỐ",
+    "quote": "Không thể quản trị những gì bạn không đo lường. Hãy nhìn thẳng vào bảng thu chi thực tế mỗi ngày, không né tránh bất kỳ con số nào.",
+    "author": "Peter Drucker",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 194,
+    "day": 194,
+    "headline": "CHẤP NHẬN SỰ THẬT KHÁCH QUAN",
+    "quote": "Mọi biến cố xảy ra đều trung tính. Ý nghĩa tiêu cực hay tích cực hoàn toàn do lăng kính chủ quan của bạn gán cho nó.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 195,
+    "day": 195,
+    "headline": "BƯỚC NGOẶT ĐANG ĐẾN GẦN",
+    "quote": "Chỉ cần kiên trì gõ cửa, cánh cửa đúng đắn sẽ mở ra. Khoảnh khắc ngay trước bình minh luôn là thời điểm tăm tối nhất.",
+    "author": "Quy luật bền bỉ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 196,
+    "day": 196,
+    "headline": "NGƯNG TỰ DẰN VẶT",
+    "quote": "Dằn vặt bản thân năm 20 tuổi bằng nhận thức của tuổi chín muồi là vô nghĩa. Hãy tha thứ cho người cũ và gánh vác trách nhiệm dọn dẹp hiện tại.",
+    "author": "Chữa lành & Tỉnh thức",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 197,
+    "day": 197,
+    "headline": "HÀNH ĐỘNG DẬP TẮT NỖI SỢ",
+    "quote": "Sự sợ hãi và lo âu phát triển mạnh nhất khi bạn ngồi yên suy nghĩ. Liều thuốc duy nhất để tiêu diệt nỗi sợ là lao vào hành động.",
+    "author": "Dale Carnegie",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 198,
+    "day": 198,
+    "headline": "TRÁNH XA NỢ TIÊU DÙNG",
+    "quote": "Vay mượn để chi tiêu cho cảm xúc tức thời là hành động tự tra cùm vào chân mình. Chỉ chạm vào nợ khi nó trực tiếp tạo ra dòng tiền dương.",
+    "author": "Nguyên tắc đòn bẩy",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 199,
+    "day": 199,
+    "headline": "GIỮ GÌN PHẨM GIÁ",
+    "quote": "Dù hoàn cảnh có bức bách đến đâu, tuyệt đối không đánh đổi sự chính trực. Tiền có thể kiếm lại, nhân phẩm đánh mất là mất tất cả.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 200,
+    "day": 200,
+    "headline": "KHỞI ĐẦU TỪ HÔM NAY",
+    "quote": "Bạn không thể quay lại để sửa điểm xuất phát, nhưng bạn có toàn quyền bắt đầu ngay lúc này để viết nên một cái kết rực rỡ hơn.",
+    "author": "C.S. Lewis",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 201,
+    "day": 201,
+    "headline": "HÓA ĐƠN CỦA SỰ DỄ DÃI",
+    "quote": "Sự túng thiếu và chật vật hôm nay chính là cái giá phải trả cho những lần bạn chọn thỏa hiệp và trì hoãn trong quá khứ.",
+    "author": "Chiêm nghiệm thực chiến",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 202,
+    "day": 202,
+    "headline": "HÀNH ĐỘNG NGAY BÂY GIỜ",
+    "quote": "Bất cứ thứ gì bạn đang có trong tay, hãy dùng hết; bất cứ điều gì bạn làm hôm nay, hãy làm bằng tất cả sức lực.",
+    "author": "Marcus Tullius Cicero",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 203,
+    "day": 203,
+    "headline": "BẢO VỆ THANH KHOẢN",
+    "quote": "Cá nhân hay doanh nghiệp sụp đổ không phải vì lỗ trên danh nghĩa, mà vì cạn kiệt thanh khoản tiền mặt. Giữ chặt dòng tiền bằng mọi giá.",
+    "author": "Nguyên lý sống còn",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 204,
+    "day": 204,
+    "headline": "VÙNG KIỂM SOÁT",
+    "quote": "Bạn không thể điều khiển thị trường hay thái độ của thiên hạ, nhưng bạn toàn quyền làm chủ sự tập trung, thái độ và kỷ luật làm việc của chính mình.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 205,
+    "day": 205,
+    "headline": "MÙA ĐÔNG RỒI SẼ QUA",
+    "quote": "Không có mùa đông nào kéo dài mãi mãi. Những ai kiên gan chịu đựng được giá lạnh sẽ là người đầu tiên tận hưởng mùa xuân rực rỡ nhất.",
+    "author": "Quy luật chu kỳ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 206,
+    "day": 206,
+    "headline": "BẪY CỦA SỰ GÂY MÊ",
+    "quote": "Mỗi giờ lướt màn hình vô thức là một giờ bạn tự tay dìm tương lai tài chính của chính mình và người thân xuống vũng lầy.",
+    "author": "Lời cảnh tỉnh",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 207,
+    "day": 207,
+    "headline": "QUY TẮC 5 PHÚT",
+    "quote": "Đừng chờ cảm hứng xuất hiện mới làm việc. Hãy ép mình ngồi xuống làm đúng 5 phút, đà quán tính sẽ tự khắc kéo sự tập trung tới.",
+    "author": "Tâm lý học hiệu suất",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 208,
+    "day": 208,
+    "headline": "HẠ CÁI TÔI, LẤY Ô-XY",
+    "quote": "Khi dòng tiền bị bóp nghẹt, người mang cái tôi danh giá sẽ gục ngã đầu tiên. Cúi mình nhận những việc nhỏ nhất để mang dòng tiền tươi về tài khoản.",
+    "author": "Tư duy thực dụng",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 209,
+    "day": 209,
+    "headline": "TRỞ NGẠI LÀ ĐƯỜNG ĐI",
+    "quote": "Những trở ngại cản bước không làm ta dừng lại. Cách ta phản ứng và vượt qua chướng ngại vật sẽ trở thành chính con đường dẫn tới mục tiêu.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 210,
+    "day": 210,
+    "headline": "KHO BÁU BẢN LĨNH",
+    "quote": "Khó khăn tài chính chỉ là khúc trũng tạm thời. Kiến thức, kinh nghiệm và mạng lưới bạn đã tích lũy hơn 20 năm qua mới là tài sản vô giá.",
+    "author": "Định vị bản thân",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 211,
+    "day": 211,
+    "headline": "NHÌN VÀO THỜI GIAN ĐÃ MẤT",
+    "quote": "Tiền bạc mất đi còn kiếm lại được, nhưng những tháng ngày buông xuôi và tự lừa dối bản thân sẽ vĩnh viễn không bao giờ quay lại.",
+    "author": "Tự vấn nội tâm",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 212,
+    "day": 212,
+    "headline": "MỘT CUỘC ĐIỆN THOẠI",
+    "quote": "Cơ hội không tự rơi xuống đầu kẻ chờ đợi. Hãy chủ động mở danh bạ, gửi một tin nhắn, gọi một cuộc điện thoại kết nối ngay buổi sáng nay.",
+    "author": "Kỷ luật thực thi",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 213,
+    "day": 213,
+    "headline": "CẮT BỎ NHỮNG PHÙ PHIẾM",
+    "quote": "Không ai nghèo đi vì sống tằn tiện, nhưng vô số người khánh kiệt vì cố duy trì vỏ bọc thành đạt trước những người không nuôi sống mình.",
+    "author": "Sự thật tài chính",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 214,
+    "day": 214,
+    "headline": "TĨNH LẶNG GIỮA BÃO TỐ",
+    "quote": "Hãy như vách đá sừng sững trước sóng biển: bão táp gầm rú đánh vào rồi cũng vỡ tan bọt nước, còn vách đá vẫn hiên ngang đứng vững.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 215,
+    "day": 215,
+    "headline": "ĐIỂM TỰA CỦA GIA ĐÌNH",
+    "quote": "Hãy ngẩng cao đầu bước tiếp, vì sự kiên cường và vững chãi của bạn chính là bóng râm che chở bình yên cho những người thân yêu.",
+    "author": "Trách nhiệm trụ cột",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 216,
+    "day": 216,
+    "headline": "ĐAU ĐỚN LÀ THƯỚC ĐO",
+    "quote": "Cú ngã đau điếng này xuất hiện là để phơi bày những lỗ hổng chết người trong tư duy. Nếu không chịu sửa, bạn sẽ còn phải trả giá đắt hơn.",
+    "author": "Bài học xương máu",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 217,
+    "day": 217,
+    "headline": "CHIẾN THẮNG 3 VIỆC NHỎ",
+    "quote": "Đừng để gánh nặng cả năm làm tê liệt tâm trí. Chọn ra đúng 3 việc quan trọng nhất cho hôm nay và làm xong trước khi trời tối.",
+    "author": "Chiến thuật sinh tồn",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 218,
+    "day": 218,
+    "headline": "CẮT LỖ KHÔNG DO DỰ",
+    "quote": "Trong đầu tư cũng như trong vận hành cuộc sống, dũng cảm cắt lỗ đúng lúc là kỹ năng sống còn để bảo vệ số vốn còn lại.",
+    "author": "Kỷ luật thị trường",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 219,
+    "day": 219,
+    "headline": "KHÔNG THAN KHÓ",
+    "quote": "Than thở không mang tiền về tài khoản, phàn nàn không giải quyết được nợ nần. Hãy nuốt lời than vào trong và biến thành sức mạnh cày cuốc.",
+    "author": "Bản lĩnh Khắc kỷ",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 220,
+    "day": 220,
+    "headline": "ĐÁY VỰC LÀ BÀN ĐẠP",
+    "quote": "Khi bạn đã chạm tới đáy sâu nhất của thử thách, mọi hướng đi tiếp theo đều chỉ có thể là hướng đi lên. Tự tin bước tiếp.",
+    "author": "Triết lý sống sót",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 221,
+    "day": 221,
+    "headline": "KHÔNG CÓ AI ĐẾN CỨU",
+    "quote": "Sẽ không có phép màu nào xuất hiện nếu bạn tiếp tục nằm im. Người duy nhất đủ sức kéo bạn ra khỏi cảnh bế tắc này chỉ có thể là bạn.",
+    "author": "Thực tế trần trụi",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 222,
+    "day": 222,
+    "headline": "HOÀN THÀNH HƠN HOÀN HẢO",
+    "quote": "Một kế hoạch còn thô ráp nhưng được mang ra thực thi hôm nay đáng giá hơn một kế hoạch hoàn hảo nằm mãi trong ngăn kéo.",
+    "author": "Tư duy hành động",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 223,
+    "day": 223,
+    "headline": "MỖI KHOẢN TIẾT KIỆM LÀ ĐỆM ĐỠ",
+    "quote": "Một đồng chi phí thừa bạn dứt khoát cắt bỏ hôm nay tương đương với một đồng lợi nhuận ròng giúp bạn kéo dài thời gian sống sót.",
+    "author": "Quản trị dòng tiền",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 224,
+    "day": 224,
+    "headline": "ĐAU KHỔ TRONG TÂM TƯỞNG",
+    "quote": "Chúng ta thường chịu đựng nỗi đau do chính trí tưởng tượng phóng đại lên nhiều hơn là sự khốc liệt của thực tế đang xảy ra.",
+    "author": "Seneca",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 225,
+    "day": 225,
+    "headline": "HẠT MẦM DƯỚI BÃO TUYẾT",
+    "quote": "Những nỗ lực âm thầm, cắn răng làm việc trong bóng tối hôm nay đang bám rễ sâu vào lòng đất để chuẩn bị cho một ngày bứt phá ngoạn mục.",
+    "author": "Quy luật tích lũy",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 226,
+    "day": 226,
+    "headline": "VẾT THƯƠNG TỰ TRỌNG",
+    "quote": "Cảm giác nghẹn đắng vì túi tiền trống rỗng hôm nay phải được khắc sâu vào tâm can để làm mồi lửa hành động, tuyệt đối không dùng để tự thương hại.",
+    "author": "Bản lĩnh cá nhân",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 227,
+    "day": 227,
+    "headline": "LÀM VIỆC KHÓ TRƯỚC TIÊN",
+    "quote": "Nuốt con ếch to nhất vào đầu ngày. Giải quyết công việc khiến bạn lo lắng và muốn né tránh nhất trước 9 giờ sáng.",
+    "author": "Brian Tracy",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 228,
+    "day": 228,
+    "headline": "SỐNG DƯỚI MỨC THU NHẬP",
+    "quote": "Dù kiếm được bao nhiêu tiền, luôn ép bản thân sống dưới mức đó một bậc. Sự dư thừa thanh khoản là nguồn gốc duy nhất của sự tự do.",
+    "author": "Warren Buffett",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 229,
+    "day": 229,
+    "headline": "QUYỀN TỰ DO CUỐI CÙNG",
+    "quote": "Người đời có thể lấy đi danh vọng, tiền bạc của bạn, nhưng không ai có thể tước đoạt quyền tự do chọn lựa thái độ đối mặt của bạn.",
+    "author": "Viktor Frankl",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 230,
+    "day": 230,
+    "headline": "BẢN THÂN LÀ TỔNG THỂ VƯỢT TRỘI",
+    "quote": "Đừng đánh đồng một giai đoạn bế tắc tài chính với sự thất bại của một kiếp người. Bạn sinh ra để vượt qua sóng lớn.",
+    "author": "Niềm tin nội tại",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 231,
+    "day": 231,
+    "headline": "CÁI GIÁ CỦA SỰ CHỦ QUAN",
+    "quote": "Ảo tưởng về những chiến thắng cũ đã khiến bạn lơ là kỷ luật phòng thủ. Hãy nuốt trọn vị đắng hôm nay để không bao giờ chủ quan thêm lần nào nữa.",
+    "author": "Chiêm nghiệm thị trường",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 232,
+    "day": 232,
+    "headline": "BƯỚC CHÂN VI MÔ",
+    "quote": "Đường xa vạn dặm không vượt qua bằng việc nhìn ngắm đỉnh núi, mà bằng việc kiên quyết đặt từng bước chân vững chãi lên mặt đất.",
+    "author": "Lão Tử",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 233,
+    "day": 233,
+    "headline": "ĐO LƯỜNG TỪNG CON SỐ",
+    "quote": "Không thể quản trị những gì bạn không đo lường. Hãy nhìn thẳng vào bảng thu chi thực tế mỗi ngày, không né tránh bất kỳ con số nào.",
+    "author": "Peter Drucker",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 234,
+    "day": 234,
+    "headline": "CHẤP NHẬN SỰ THẬT KHÁCH QUAN",
+    "quote": "Mọi biến cố xảy ra đều trung tính. Ý nghĩa tiêu cực hay tích cực hoàn toàn do lăng kính chủ quan của bạn gán cho nó.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 235,
+    "day": 235,
+    "headline": "BƯỚC NGOẶT ĐANG ĐẾN GẦN",
+    "quote": "Chỉ cần kiên trì gõ cửa, cánh cửa đúng đắn sẽ mở ra. Khoảnh khắc ngay trước bình minh luôn là thời điểm tăm tối nhất.",
+    "author": "Quy luật bền bỉ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 236,
+    "day": 236,
+    "headline": "NGƯNG TỰ DẰN VẶT",
+    "quote": "Dằn vặt bản thân năm 20 tuổi bằng nhận thức của tuổi chín muồi là vô nghĩa. Hãy tha thứ cho người cũ và gánh vác trách nhiệm dọn dẹp hiện tại.",
+    "author": "Chữa lành & Tỉnh thức",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 237,
+    "day": 237,
+    "headline": "HÀNH ĐỘNG DẬP TẮT NỖI SỢ",
+    "quote": "Sự sợ hãi và lo âu phát triển mạnh nhất khi bạn ngồi yên suy nghĩ. Liều thuốc duy nhất để tiêu diệt nỗi sợ là lao vào hành động.",
+    "author": "Dale Carnegie",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 238,
+    "day": 238,
+    "headline": "TRÁNH XA NỢ TIÊU DÙNG",
+    "quote": "Vay mượn để chi tiêu cho cảm xúc tức thời là hành động tự tra cùm vào chân mình. Chỉ chạm vào nợ khi nó trực tiếp tạo ra dòng tiền dương.",
+    "author": "Nguyên tắc đòn bẩy",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 239,
+    "day": 239,
+    "headline": "GIỮ GÌN PHẨM GIÁ",
+    "quote": "Dù hoàn cảnh có bức bách đến đâu, tuyệt đối không đánh đổi sự chính trực. Tiền có thể kiếm lại, nhân phẩm đánh mất là mất tất cả.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 240,
+    "day": 240,
+    "headline": "KHỞI ĐẦU TỪ HÔM NAY",
+    "quote": "Bạn không thể quay lại để sửa điểm xuất phát, nhưng bạn có toàn quyền bắt đầu ngay lúc này để viết nên một cái kết rực rỡ hơn.",
+    "author": "C.S. Lewis",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 241,
+    "day": 241,
+    "headline": "HÓA ĐƠN CỦA SỰ DỄ DÃI",
+    "quote": "Sự túng thiếu và chật vật hôm nay chính là cái giá phải trả cho những lần bạn chọn thỏa hiệp và trì hoãn trong quá khứ.",
+    "author": "Chiêm nghiệm thực chiến",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 242,
+    "day": 242,
+    "headline": "HÀNH ĐỘNG NGAY BÂY GIỜ",
+    "quote": "Bất cứ thứ gì bạn đang có trong tay, hãy dùng hết; bất cứ điều gì bạn làm hôm nay, hãy làm bằng tất cả sức lực.",
+    "author": "Marcus Tullius Cicero",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 243,
+    "day": 243,
+    "headline": "BẢO VỆ THANH KHOẢN",
+    "quote": "Cá nhân hay doanh nghiệp sụp đổ không phải vì lỗ trên danh nghĩa, mà vì cạn kiệt thanh khoản tiền mặt. Giữ chặt dòng tiền bằng mọi giá.",
+    "author": "Nguyên lý sống còn",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 244,
+    "day": 244,
+    "headline": "VÙNG KIỂM SOÁT",
+    "quote": "Bạn không thể điều khiển thị trường hay thái độ của thiên hạ, nhưng bạn toàn quyền làm chủ sự tập trung, thái độ và kỷ luật làm việc của chính mình.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 245,
+    "day": 245,
+    "headline": "MÙA ĐÔNG RỒI SẼ QUA",
+    "quote": "Không có mùa đông nào kéo dài mãi mãi. Những ai kiên gan chịu đựng được giá lạnh sẽ là người đầu tiên tận hưởng mùa xuân rực rỡ nhất.",
+    "author": "Quy luật chu kỳ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 246,
+    "day": 246,
+    "headline": "BẪY CỦA SỰ GÂY MÊ",
+    "quote": "Mỗi giờ lướt màn hình vô thức là một giờ bạn tự tay dìm tương lai tài chính của chính mình và người thân xuống vũng lầy.",
+    "author": "Lời cảnh tỉnh",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 247,
+    "day": 247,
+    "headline": "QUY TẮC 5 PHÚT",
+    "quote": "Đừng chờ cảm hứng xuất hiện mới làm việc. Hãy ép mình ngồi xuống làm đúng 5 phút, đà quán tính sẽ tự khắc kéo sự tập trung tới.",
+    "author": "Tâm lý học hiệu suất",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 248,
+    "day": 248,
+    "headline": "HẠ CÁI TÔI, LẤY Ô-XY",
+    "quote": "Khi dòng tiền bị bóp nghẹt, người mang cái tôi danh giá sẽ gục ngã đầu tiên. Cúi mình nhận những việc nhỏ nhất để mang dòng tiền tươi về tài khoản.",
+    "author": "Tư duy thực dụng",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 249,
+    "day": 249,
+    "headline": "TRỞ NGẠI LÀ ĐƯỜNG ĐI",
+    "quote": "Những trở ngại cản bước không làm ta dừng lại. Cách ta phản ứng và vượt qua chướng ngại vật sẽ trở thành chính con đường dẫn tới mục tiêu.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 250,
+    "day": 250,
+    "headline": "KHO BÁU BẢN LĨNH",
+    "quote": "Khó khăn tài chính chỉ là khúc trũng tạm thời. Kiến thức, kinh nghiệm và mạng lưới bạn đã tích lũy hơn 20 năm qua mới là tài sản vô giá.",
+    "author": "Định vị bản thân",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 251,
+    "day": 251,
+    "headline": "NHÌN VÀO THỜI GIAN ĐÃ MẤT",
+    "quote": "Tiền bạc mất đi còn kiếm lại được, nhưng những tháng ngày buông xuôi và tự lừa dối bản thân sẽ vĩnh viễn không bao giờ quay lại.",
+    "author": "Tự vấn nội tâm",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 252,
+    "day": 252,
+    "headline": "MỘT CUỘC ĐIỆN THOẠI",
+    "quote": "Cơ hội không tự rơi xuống đầu kẻ chờ đợi. Hãy chủ động mở danh bạ, gửi một tin nhắn, gọi một cuộc điện thoại kết nối ngay buổi sáng nay.",
+    "author": "Kỷ luật thực thi",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 253,
+    "day": 253,
+    "headline": "CẮT BỎ NHỮNG PHÙ PHIẾM",
+    "quote": "Không ai nghèo đi vì sống tằn tiện, nhưng vô số người khánh kiệt vì cố duy trì vỏ bọc thành đạt trước những người không nuôi sống mình.",
+    "author": "Sự thật tài chính",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 254,
+    "day": 254,
+    "headline": "TĨNH LẶNG GIỮA BÃO TỐ",
+    "quote": "Hãy như vách đá sừng sững trước sóng biển: bão táp gầm rú đánh vào rồi cũng vỡ tan bọt nước, còn vách đá vẫn hiên ngang đứng vững.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 255,
+    "day": 255,
+    "headline": "ĐIỂM TỰA CỦA GIA ĐÌNH",
+    "quote": "Hãy ngẩng cao đầu bước tiếp, vì sự kiên cường và vững chãi của bạn chính là bóng râm che chở bình yên cho những người thân yêu.",
+    "author": "Trách nhiệm trụ cột",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 256,
+    "day": 256,
+    "headline": "ĐAU ĐỚN LÀ THƯỚC ĐO",
+    "quote": "Cú ngã đau điếng này xuất hiện là để phơi bày những lỗ hổng chết người trong tư duy. Nếu không chịu sửa, bạn sẽ còn phải trả giá đắt hơn.",
+    "author": "Bài học xương máu",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 257,
+    "day": 257,
+    "headline": "CHIẾN THẮNG 3 VIỆC NHỎ",
+    "quote": "Đừng để gánh nặng cả năm làm tê liệt tâm trí. Chọn ra đúng 3 việc quan trọng nhất cho hôm nay và làm xong trước khi trời tối.",
+    "author": "Chiến thuật sinh tồn",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 258,
+    "day": 258,
+    "headline": "CẮT LỖ KHÔNG DO DỰ",
+    "quote": "Trong đầu tư cũng như trong vận hành cuộc sống, dũng cảm cắt lỗ đúng lúc là kỹ năng sống còn để bảo vệ số vốn còn lại.",
+    "author": "Kỷ luật thị trường",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 259,
+    "day": 259,
+    "headline": "KHÔNG THAN KHÓ",
+    "quote": "Than thở không mang tiền về tài khoản, phàn nàn không giải quyết được nợ nần. Hãy nuốt lời than vào trong và biến thành sức mạnh cày cuốc.",
+    "author": "Bản lĩnh Khắc kỷ",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 260,
+    "day": 260,
+    "headline": "ĐÁY VỰC LÀ BÀN ĐẠP",
+    "quote": "Khi bạn đã chạm tới đáy sâu nhất của thử thách, mọi hướng đi tiếp theo đều chỉ có thể là hướng đi lên. Tự tin bước tiếp.",
+    "author": "Triết lý sống sót",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 261,
+    "day": 261,
+    "headline": "KHÔNG CÓ AI ĐẾN CỨU",
+    "quote": "Sẽ không có phép màu nào xuất hiện nếu bạn tiếp tục nằm im. Người duy nhất đủ sức kéo bạn ra khỏi cảnh bế tắc này chỉ có thể là bạn.",
+    "author": "Thực tế trần trụi",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 262,
+    "day": 262,
+    "headline": "HOÀN THÀNH HƠN HOÀN HẢO",
+    "quote": "Một kế hoạch còn thô ráp nhưng được mang ra thực thi hôm nay đáng giá hơn một kế hoạch hoàn hảo nằm mãi trong ngăn kéo.",
+    "author": "Tư duy hành động",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 263,
+    "day": 263,
+    "headline": "MỖI KHOẢN TIẾT KIỆM LÀ ĐỆM ĐỠ",
+    "quote": "Một đồng chi phí thừa bạn dứt khoát cắt bỏ hôm nay tương đương với một đồng lợi nhuận ròng giúp bạn kéo dài thời gian sống sót.",
+    "author": "Quản trị dòng tiền",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 264,
+    "day": 264,
+    "headline": "ĐAU KHỔ TRONG TÂM TƯỞNG",
+    "quote": "Chúng ta thường chịu đựng nỗi đau do chính trí tưởng tượng phóng đại lên nhiều hơn là sự khốc liệt của thực tế đang xảy ra.",
+    "author": "Seneca",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 265,
+    "day": 265,
+    "headline": "HẠT MẦM DƯỚI BÃO TUYẾT",
+    "quote": "Những nỗ lực âm thầm, cắn răng làm việc trong bóng tối hôm nay đang bám rễ sâu vào lòng đất để chuẩn bị cho một ngày bứt phá ngoạn mục.",
+    "author": "Quy luật tích lũy",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 266,
+    "day": 266,
+    "headline": "VẾT THƯƠNG TỰ TRỌNG",
+    "quote": "Cảm giác nghẹn đắng vì túi tiền trống rỗng hôm nay phải được khắc sâu vào tâm can để làm mồi lửa hành động, tuyệt đối không dùng để tự thương hại.",
+    "author": "Bản lĩnh cá nhân",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 267,
+    "day": 267,
+    "headline": "LÀM VIỆC KHÓ TRƯỚC TIÊN",
+    "quote": "Nuốt con ếch to nhất vào đầu ngày. Giải quyết công việc khiến bạn lo lắng và muốn né tránh nhất trước 9 giờ sáng.",
+    "author": "Brian Tracy",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 268,
+    "day": 268,
+    "headline": "SỐNG DƯỚI MỨC THU NHẬP",
+    "quote": "Dù kiếm được bao nhiêu tiền, luôn ép bản thân sống dưới mức đó một bậc. Sự dư thừa thanh khoản là nguồn gốc duy nhất của sự tự do.",
+    "author": "Warren Buffett",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 269,
+    "day": 269,
+    "headline": "QUYỀN TỰ DO CUỐI CÙNG",
+    "quote": "Người đời có thể lấy đi danh vọng, tiền bạc của bạn, nhưng không ai có thể tước đoạt quyền tự do chọn lựa thái độ đối mặt của bạn.",
+    "author": "Viktor Frankl",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 270,
+    "day": 270,
+    "headline": "BẢN THÂN LÀ TỔNG THỂ VƯỢT TRỘI",
+    "quote": "Đừng đánh đồng một giai đoạn bế tắc tài chính với sự thất bại của một kiếp người. Bạn sinh ra để vượt qua sóng lớn.",
+    "author": "Niềm tin nội tại",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 271,
+    "day": 271,
+    "headline": "CÁI GIÁ CỦA SỰ CHỦ QUAN",
+    "quote": "Ảo tưởng về những chiến thắng cũ đã khiến bạn lơ là kỷ luật phòng thủ. Hãy nuốt trọn vị đắng hôm nay để không bao giờ chủ quan thêm lần nào nữa.",
+    "author": "Chiêm nghiệm thị trường",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 272,
+    "day": 272,
+    "headline": "BƯỚC CHÂN VI MÔ",
+    "quote": "Đường xa vạn dặm không vượt qua bằng việc nhìn ngắm đỉnh núi, mà bằng việc kiên quyết đặt từng bước chân vững chãi lên mặt đất.",
+    "author": "Lão Tử",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 273,
+    "day": 273,
+    "headline": "ĐO LƯỜNG TỪNG CON SỐ",
+    "quote": "Không thể quản trị những gì bạn không đo lường. Hãy nhìn thẳng vào bảng thu chi thực tế mỗi ngày, không né tránh bất kỳ con số nào.",
+    "author": "Peter Drucker",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 274,
+    "day": 274,
+    "headline": "CHẤP NHẬN SỰ THẬT KHÁCH QUAN",
+    "quote": "Mọi biến cố xảy ra đều trung tính. Ý nghĩa tiêu cực hay tích cực hoàn toàn do lăng kính chủ quan của bạn gán cho nó.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 275,
+    "day": 275,
+    "headline": "BƯỚC NGOẶT ĐANG ĐẾN GẦN",
+    "quote": "Chỉ cần kiên trì gõ cửa, cánh cửa đúng đắn sẽ mở ra. Khoảnh khắc ngay trước bình minh luôn là thời điểm tăm tối nhất.",
+    "author": "Quy luật bền bỉ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 276,
+    "day": 276,
+    "headline": "NGƯNG TỰ DẰN VẶT",
+    "quote": "Dằn vặt bản thân năm 20 tuổi bằng nhận thức của tuổi chín muồi là vô nghĩa. Hãy tha thứ cho người cũ và gánh vác trách nhiệm dọn dẹp hiện tại.",
+    "author": "Chữa lành & Tỉnh thức",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 277,
+    "day": 277,
+    "headline": "HÀNH ĐỘNG DẬP TẮT NỖI SỢ",
+    "quote": "Sự sợ hãi và lo âu phát triển mạnh nhất khi bạn ngồi yên suy nghĩ. Liều thuốc duy nhất để tiêu diệt nỗi sợ là lao vào hành động.",
+    "author": "Dale Carnegie",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 278,
+    "day": 278,
+    "headline": "TRÁNH XA NỢ TIÊU DÙNG",
+    "quote": "Vay mượn để chi tiêu cho cảm xúc tức thời là hành động tự tra cùm vào chân mình. Chỉ chạm vào nợ khi nó trực tiếp tạo ra dòng tiền dương.",
+    "author": "Nguyên tắc đòn bẩy",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 279,
+    "day": 279,
+    "headline": "GIỮ GÌN PHẨM GIÁ",
+    "quote": "Dù hoàn cảnh có bức bách đến đâu, tuyệt đối không đánh đổi sự chính trực. Tiền có thể kiếm lại, nhân phẩm đánh mất là mất tất cả.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 280,
+    "day": 280,
+    "headline": "KHỞI ĐẦU TỪ HÔM NAY",
+    "quote": "Bạn không thể quay lại để sửa điểm xuất phát, nhưng bạn có toàn quyền bắt đầu ngay lúc này để viết nên một cái kết rực rỡ hơn.",
+    "author": "C.S. Lewis",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 281,
+    "day": 281,
+    "headline": "HÓA ĐƠN CỦA SỰ DỄ DÃI",
+    "quote": "Sự túng thiếu và chật vật hôm nay chính là cái giá phải trả cho những lần bạn chọn thỏa hiệp và trì hoãn trong quá khứ.",
+    "author": "Chiêm nghiệm thực chiến",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 282,
+    "day": 282,
+    "headline": "HÀNH ĐỘNG NGAY BÂY GIỜ",
+    "quote": "Bất cứ thứ gì bạn đang có trong tay, hãy dùng hết; bất cứ điều gì bạn làm hôm nay, hãy làm bằng tất cả sức lực.",
+    "author": "Marcus Tullius Cicero",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 283,
+    "day": 283,
+    "headline": "BẢO VỆ THANH KHOẢN",
+    "quote": "Cá nhân hay doanh nghiệp sụp đổ không phải vì lỗ trên danh nghĩa, mà vì cạn kiệt thanh khoản tiền mặt. Giữ chặt dòng tiền bằng mọi giá.",
+    "author": "Nguyên lý sống còn",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 284,
+    "day": 284,
+    "headline": "VÙNG KIỂM SOÁT",
+    "quote": "Bạn không thể điều khiển thị trường hay thái độ của thiên hạ, nhưng bạn toàn quyền làm chủ sự tập trung, thái độ và kỷ luật làm việc của chính mình.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 285,
+    "day": 285,
+    "headline": "MÙA ĐÔNG RỒI SẼ QUA",
+    "quote": "Không có mùa đông nào kéo dài mãi mãi. Những ai kiên gan chịu đựng được giá lạnh sẽ là người đầu tiên tận hưởng mùa xuân rực rỡ nhất.",
+    "author": "Quy luật chu kỳ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 286,
+    "day": 286,
+    "headline": "BẪY CỦA SỰ GÂY MÊ",
+    "quote": "Mỗi giờ lướt màn hình vô thức là một giờ bạn tự tay dìm tương lai tài chính của chính mình và người thân xuống vũng lầy.",
+    "author": "Lời cảnh tỉnh",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 287,
+    "day": 287,
+    "headline": "QUY TẮC 5 PHÚT",
+    "quote": "Đừng chờ cảm hứng xuất hiện mới làm việc. Hãy ép mình ngồi xuống làm đúng 5 phút, đà quán tính sẽ tự khắc kéo sự tập trung tới.",
+    "author": "Tâm lý học hiệu suất",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 288,
+    "day": 288,
+    "headline": "HẠ CÁI TÔI, LẤY Ô-XY",
+    "quote": "Khi dòng tiền bị bóp nghẹt, người mang cái tôi danh giá sẽ gục ngã đầu tiên. Cúi mình nhận những việc nhỏ nhất để mang dòng tiền tươi về tài khoản.",
+    "author": "Tư duy thực dụng",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 289,
+    "day": 289,
+    "headline": "TRỞ NGẠI LÀ ĐƯỜNG ĐI",
+    "quote": "Những trở ngại cản bước không làm ta dừng lại. Cách ta phản ứng và vượt qua chướng ngại vật sẽ trở thành chính con đường dẫn tới mục tiêu.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 290,
+    "day": 290,
+    "headline": "KHO BÁU BẢN LĨNH",
+    "quote": "Khó khăn tài chính chỉ là khúc trũng tạm thời. Kiến thức, kinh nghiệm và mạng lưới bạn đã tích lũy hơn 20 năm qua mới là tài sản vô giá.",
+    "author": "Định vị bản thân",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 291,
+    "day": 291,
+    "headline": "NHÌN VÀO THỜI GIAN ĐÃ MẤT",
+    "quote": "Tiền bạc mất đi còn kiếm lại được, nhưng những tháng ngày buông xuôi và tự lừa dối bản thân sẽ vĩnh viễn không bao giờ quay lại.",
+    "author": "Tự vấn nội tâm",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 292,
+    "day": 292,
+    "headline": "MỘT CUỘC ĐIỆN THOẠI",
+    "quote": "Cơ hội không tự rơi xuống đầu kẻ chờ đợi. Hãy chủ động mở danh bạ, gửi một tin nhắn, gọi một cuộc điện thoại kết nối ngay buổi sáng nay.",
+    "author": "Kỷ luật thực thi",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 293,
+    "day": 293,
+    "headline": "CẮT BỎ NHỮNG PHÙ PHIẾM",
+    "quote": "Không ai nghèo đi vì sống tằn tiện, nhưng vô số người khánh kiệt vì cố duy trì vỏ bọc thành đạt trước những người không nuôi sống mình.",
+    "author": "Sự thật tài chính",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 294,
+    "day": 294,
+    "headline": "TĨNH LẶNG GIỮA BÃO TỐ",
+    "quote": "Hãy như vách đá sừng sững trước sóng biển: bão táp gầm rú đánh vào rồi cũng vỡ tan bọt nước, còn vách đá vẫn hiên ngang đứng vững.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 295,
+    "day": 295,
+    "headline": "ĐIỂM TỰA CỦA GIA ĐÌNH",
+    "quote": "Hãy ngẩng cao đầu bước tiếp, vì sự kiên cường và vững chãi của bạn chính là bóng râm che chở bình yên cho những người thân yêu.",
+    "author": "Trách nhiệm trụ cột",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 296,
+    "day": 296,
+    "headline": "ĐAU ĐỚN LÀ THƯỚC ĐO",
+    "quote": "Cú ngã đau điếng này xuất hiện là để phơi bày những lỗ hổng chết người trong tư duy. Nếu không chịu sửa, bạn sẽ còn phải trả giá đắt hơn.",
+    "author": "Bài học xương máu",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 297,
+    "day": 297,
+    "headline": "CHIẾN THẮNG 3 VIỆC NHỎ",
+    "quote": "Đừng để gánh nặng cả năm làm tê liệt tâm trí. Chọn ra đúng 3 việc quan trọng nhất cho hôm nay và làm xong trước khi trời tối.",
+    "author": "Chiến thuật sinh tồn",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 298,
+    "day": 298,
+    "headline": "CẮT LỖ KHÔNG DO DỰ",
+    "quote": "Trong đầu tư cũng như trong vận hành cuộc sống, dũng cảm cắt lỗ đúng lúc là kỹ năng sống còn để bảo vệ số vốn còn lại.",
+    "author": "Kỷ luật thị trường",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 299,
+    "day": 299,
+    "headline": "KHÔNG THAN KHÓ",
+    "quote": "Than thở không mang tiền về tài khoản, phàn nàn không giải quyết được nợ nần. Hãy nuốt lời than vào trong và biến thành sức mạnh cày cuốc.",
+    "author": "Bản lĩnh Khắc kỷ",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 300,
+    "day": 300,
+    "headline": "ĐÁY VỰC LÀ BÀN ĐẠP",
+    "quote": "Khi bạn đã chạm tới đáy sâu nhất của thử thách, mọi hướng đi tiếp theo đều chỉ có thể là hướng đi lên. Tự tin bước tiếp.",
+    "author": "Triết lý sống sót",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 301,
+    "day": 301,
+    "headline": "KHÔNG CÓ AI ĐẾN CỨU",
+    "quote": "Sẽ không có phép màu nào xuất hiện nếu bạn tiếp tục nằm im. Người duy nhất đủ sức kéo bạn ra khỏi cảnh bế tắc này chỉ có thể là bạn.",
+    "author": "Thực tế trần trụi",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 302,
+    "day": 302,
+    "headline": "HOÀN THÀNH HƠN HOÀN HẢO",
+    "quote": "Một kế hoạch còn thô ráp nhưng được mang ra thực thi hôm nay đáng giá hơn một kế hoạch hoàn hảo nằm mãi trong ngăn kéo.",
+    "author": "Tư duy hành động",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 303,
+    "day": 303,
+    "headline": "MỖI KHOẢN TIẾT KIỆM LÀ ĐỆM ĐỠ",
+    "quote": "Một đồng chi phí thừa bạn dứt khoát cắt bỏ hôm nay tương đương với một đồng lợi nhuận ròng giúp bạn kéo dài thời gian sống sót.",
+    "author": "Quản trị dòng tiền",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 304,
+    "day": 304,
+    "headline": "ĐAU KHỔ TRONG TÂM TƯỞNG",
+    "quote": "Chúng ta thường chịu đựng nỗi đau do chính trí tưởng tượng phóng đại lên nhiều hơn là sự khốc liệt của thực tế đang xảy ra.",
+    "author": "Seneca",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 305,
+    "day": 305,
+    "headline": "HẠT MẦM DƯỚI BÃO TUYẾT",
+    "quote": "Những nỗ lực âm thầm, cắn răng làm việc trong bóng tối hôm nay đang bám rễ sâu vào lòng đất để chuẩn bị cho một ngày bứt phá ngoạn mục.",
+    "author": "Quy luật tích lũy",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 306,
+    "day": 306,
+    "headline": "VẾT THƯƠNG TỰ TRỌNG",
+    "quote": "Cảm giác nghẹn đắng vì túi tiền trống rỗng hôm nay phải được khắc sâu vào tâm can để làm mồi lửa hành động, tuyệt đối không dùng để tự thương hại.",
+    "author": "Bản lĩnh cá nhân",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 307,
+    "day": 307,
+    "headline": "LÀM VIỆC KHÓ TRƯỚC TIÊN",
+    "quote": "Nuốt con ếch to nhất vào đầu ngày. Giải quyết công việc khiến bạn lo lắng và muốn né tránh nhất trước 9 giờ sáng.",
+    "author": "Brian Tracy",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 308,
+    "day": 308,
+    "headline": "SỐNG DƯỚI MỨC THU NHẬP",
+    "quote": "Dù kiếm được bao nhiêu tiền, luôn ép bản thân sống dưới mức đó một bậc. Sự dư thừa thanh khoản là nguồn gốc duy nhất của sự tự do.",
+    "author": "Warren Buffett",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 309,
+    "day": 309,
+    "headline": "QUYỀN TỰ DO CUỐI CÙNG",
+    "quote": "Người đời có thể lấy đi danh vọng, tiền bạc của bạn, nhưng không ai có thể tước đoạt quyền tự do chọn lựa thái độ đối mặt của bạn.",
+    "author": "Viktor Frankl",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 310,
+    "day": 310,
+    "headline": "BẢN THÂN LÀ TỔNG THỂ VƯỢT TRỘI",
+    "quote": "Đừng đánh đồng một giai đoạn bế tắc tài chính với sự thất bại của một kiếp người. Bạn sinh ra để vượt qua sóng lớn.",
+    "author": "Niềm tin nội tại",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 311,
+    "day": 311,
+    "headline": "CÁI GIÁ CỦA SỰ CHỦ QUAN",
+    "quote": "Ảo tưởng về những chiến thắng cũ đã khiến bạn lơ là kỷ luật phòng thủ. Hãy nuốt trọn vị đắng hôm nay để không bao giờ chủ quan thêm lần nào nữa.",
+    "author": "Chiêm nghiệm thị trường",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 312,
+    "day": 312,
+    "headline": "BƯỚC CHÂN VI MÔ",
+    "quote": "Đường xa vạn dặm không vượt qua bằng việc nhìn ngắm đỉnh núi, mà bằng việc kiên quyết đặt từng bước chân vững chãi lên mặt đất.",
+    "author": "Lão Tử",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 313,
+    "day": 313,
+    "headline": "ĐO LƯỜNG TỪNG CON SỐ",
+    "quote": "Không thể quản trị những gì bạn không đo lường. Hãy nhìn thẳng vào bảng thu chi thực tế mỗi ngày, không né tránh bất kỳ con số nào.",
+    "author": "Peter Drucker",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 314,
+    "day": 314,
+    "headline": "CHẤP NHẬN SỰ THẬT KHÁCH QUAN",
+    "quote": "Mọi biến cố xảy ra đều trung tính. Ý nghĩa tiêu cực hay tích cực hoàn toàn do lăng kính chủ quan của bạn gán cho nó.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 315,
+    "day": 315,
+    "headline": "BƯỚC NGOẶT ĐANG ĐẾN GẦN",
+    "quote": "Chỉ cần kiên trì gõ cửa, cánh cửa đúng đắn sẽ mở ra. Khoảnh khắc ngay trước bình minh luôn là thời điểm tăm tối nhất.",
+    "author": "Quy luật bền bỉ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 316,
+    "day": 316,
+    "headline": "NGƯNG TỰ DẰN VẶT",
+    "quote": "Dằn vặt bản thân năm 20 tuổi bằng nhận thức của tuổi chín muồi là vô nghĩa. Hãy tha thứ cho người cũ và gánh vác trách nhiệm dọn dẹp hiện tại.",
+    "author": "Chữa lành & Tỉnh thức",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 317,
+    "day": 317,
+    "headline": "HÀNH ĐỘNG DẬP TẮT NỖI SỢ",
+    "quote": "Sự sợ hãi và lo âu phát triển mạnh nhất khi bạn ngồi yên suy nghĩ. Liều thuốc duy nhất để tiêu diệt nỗi sợ là lao vào hành động.",
+    "author": "Dale Carnegie",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 318,
+    "day": 318,
+    "headline": "TRÁNH XA NỢ TIÊU DÙNG",
+    "quote": "Vay mượn để chi tiêu cho cảm xúc tức thời là hành động tự tra cùm vào chân mình. Chỉ chạm vào nợ khi nó trực tiếp tạo ra dòng tiền dương.",
+    "author": "Nguyên tắc đòn bẩy",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 319,
+    "day": 319,
+    "headline": "GIỮ GÌN PHẨM GIÁ",
+    "quote": "Dù hoàn cảnh có bức bách đến đâu, tuyệt đối không đánh đổi sự chính trực. Tiền có thể kiếm lại, nhân phẩm đánh mất là mất tất cả.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 320,
+    "day": 320,
+    "headline": "KHỞI ĐẦU TỪ HÔM NAY",
+    "quote": "Bạn không thể quay lại để sửa điểm xuất phát, nhưng bạn có toàn quyền bắt đầu ngay lúc này để viết nên một cái kết rực rỡ hơn.",
+    "author": "C.S. Lewis",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 321,
+    "day": 321,
+    "headline": "HÓA ĐƠN CỦA SỰ DỄ DÃI",
+    "quote": "Sự túng thiếu và chật vật hôm nay chính là cái giá phải trả cho những lần bạn chọn thỏa hiệp và trì hoãn trong quá khứ.",
+    "author": "Chiêm nghiệm thực chiến",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 322,
+    "day": 322,
+    "headline": "HÀNH ĐỘNG NGAY BÂY GIỜ",
+    "quote": "Bất cứ thứ gì bạn đang có trong tay, hãy dùng hết; bất cứ điều gì bạn làm hôm nay, hãy làm bằng tất cả sức lực.",
+    "author": "Marcus Tullius Cicero",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 323,
+    "day": 323,
+    "headline": "BẢO VỆ THANH KHOẢN",
+    "quote": "Cá nhân hay doanh nghiệp sụp đổ không phải vì lỗ trên danh nghĩa, mà vì cạn kiệt thanh khoản tiền mặt. Giữ chặt dòng tiền bằng mọi giá.",
+    "author": "Nguyên lý sống còn",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 324,
+    "day": 324,
+    "headline": "VÙNG KIỂM SOÁT",
+    "quote": "Bạn không thể điều khiển thị trường hay thái độ của thiên hạ, nhưng bạn toàn quyền làm chủ sự tập trung, thái độ và kỷ luật làm việc của chính mình.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 325,
+    "day": 325,
+    "headline": "MÙA ĐÔNG RỒI SẼ QUA",
+    "quote": "Không có mùa đông nào kéo dài mãi mãi. Những ai kiên gan chịu đựng được giá lạnh sẽ là người đầu tiên tận hưởng mùa xuân rực rỡ nhất.",
+    "author": "Quy luật chu kỳ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 326,
+    "day": 326,
+    "headline": "BẪY CỦA SỰ GÂY MÊ",
+    "quote": "Mỗi giờ lướt màn hình vô thức là một giờ bạn tự tay dìm tương lai tài chính của chính mình và người thân xuống vũng lầy.",
+    "author": "Lời cảnh tỉnh",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 327,
+    "day": 327,
+    "headline": "QUY TẮC 5 PHÚT",
+    "quote": "Đừng chờ cảm hứng xuất hiện mới làm việc. Hãy ép mình ngồi xuống làm đúng 5 phút, đà quán tính sẽ tự khắc kéo sự tập trung tới.",
+    "author": "Tâm lý học hiệu suất",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 328,
+    "day": 328,
+    "headline": "HẠ CÁI TÔI, LẤY Ô-XY",
+    "quote": "Khi dòng tiền bị bóp nghẹt, người mang cái tôi danh giá sẽ gục ngã đầu tiên. Cúi mình nhận những việc nhỏ nhất để mang dòng tiền tươi về tài khoản.",
+    "author": "Tư duy thực dụng",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 329,
+    "day": 329,
+    "headline": "TRỞ NGẠI LÀ ĐƯỜNG ĐI",
+    "quote": "Những trở ngại cản bước không làm ta dừng lại. Cách ta phản ứng và vượt qua chướng ngại vật sẽ trở thành chính con đường dẫn tới mục tiêu.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 330,
+    "day": 330,
+    "headline": "KHO BÁU BẢN LĨNH",
+    "quote": "Khó khăn tài chính chỉ là khúc trũng tạm thời. Kiến thức, kinh nghiệm và mạng lưới bạn đã tích lũy hơn 20 năm qua mới là tài sản vô giá.",
+    "author": "Định vị bản thân",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 331,
+    "day": 331,
+    "headline": "NHÌN VÀO THỜI GIAN ĐÃ MẤT",
+    "quote": "Tiền bạc mất đi còn kiếm lại được, nhưng những tháng ngày buông xuôi và tự lừa dối bản thân sẽ vĩnh viễn không bao giờ quay lại.",
+    "author": "Tự vấn nội tâm",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 332,
+    "day": 332,
+    "headline": "MỘT CUỘC ĐIỆN THOẠI",
+    "quote": "Cơ hội không tự rơi xuống đầu kẻ chờ đợi. Hãy chủ động mở danh bạ, gửi một tin nhắn, gọi một cuộc điện thoại kết nối ngay buổi sáng nay.",
+    "author": "Kỷ luật thực thi",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 333,
+    "day": 333,
+    "headline": "CẮT BỎ NHỮNG PHÙ PHIẾM",
+    "quote": "Không ai nghèo đi vì sống tằn tiện, nhưng vô số người khánh kiệt vì cố duy trì vỏ bọc thành đạt trước những người không nuôi sống mình.",
+    "author": "Sự thật tài chính",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 334,
+    "day": 334,
+    "headline": "TĨNH LẶNG GIỮA BÃO TỐ",
+    "quote": "Hãy như vách đá sừng sững trước sóng biển: bão táp gầm rú đánh vào rồi cũng vỡ tan bọt nước, còn vách đá vẫn hiên ngang đứng vững.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 335,
+    "day": 335,
+    "headline": "ĐIỂM TỰA CỦA GIA ĐÌNH",
+    "quote": "Hãy ngẩng cao đầu bước tiếp, vì sự kiên cường và vững chãi của bạn chính là bóng râm che chở bình yên cho những người thân yêu.",
+    "author": "Trách nhiệm trụ cột",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 336,
+    "day": 336,
+    "headline": "ĐAU ĐỚN LÀ THƯỚC ĐO",
+    "quote": "Cú ngã đau điếng này xuất hiện là để phơi bày những lỗ hổng chết người trong tư duy. Nếu không chịu sửa, bạn sẽ còn phải trả giá đắt hơn.",
+    "author": "Bài học xương máu",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 337,
+    "day": 337,
+    "headline": "CHIẾN THẮNG 3 VIỆC NHỎ",
+    "quote": "Đừng để gánh nặng cả năm làm tê liệt tâm trí. Chọn ra đúng 3 việc quan trọng nhất cho hôm nay và làm xong trước khi trời tối.",
+    "author": "Chiến thuật sinh tồn",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 338,
+    "day": 338,
+    "headline": "CẮT LỖ KHÔNG DO DỰ",
+    "quote": "Trong đầu tư cũng như trong vận hành cuộc sống, dũng cảm cắt lỗ đúng lúc là kỹ năng sống còn để bảo vệ số vốn còn lại.",
+    "author": "Kỷ luật thị trường",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 339,
+    "day": 339,
+    "headline": "KHÔNG THAN KHÓ",
+    "quote": "Than thở không mang tiền về tài khoản, phàn nàn không giải quyết được nợ nần. Hãy nuốt lời than vào trong và biến thành sức mạnh cày cuốc.",
+    "author": "Bản lĩnh Khắc kỷ",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 340,
+    "day": 340,
+    "headline": "ĐÁY VỰC LÀ BÀN ĐẠP",
+    "quote": "Khi bạn đã chạm tới đáy sâu nhất của thử thách, mọi hướng đi tiếp theo đều chỉ có thể là hướng đi lên. Tự tin bước tiếp.",
+    "author": "Triết lý sống sót",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 341,
+    "day": 341,
+    "headline": "KHÔNG CÓ AI ĐẾN CỨU",
+    "quote": "Sẽ không có phép màu nào xuất hiện nếu bạn tiếp tục nằm im. Người duy nhất đủ sức kéo bạn ra khỏi cảnh bế tắc này chỉ có thể là bạn.",
+    "author": "Thực tế trần trụi",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 342,
+    "day": 342,
+    "headline": "HOÀN THÀNH HƠN HOÀN HẢO",
+    "quote": "Một kế hoạch còn thô ráp nhưng được mang ra thực thi hôm nay đáng giá hơn một kế hoạch hoàn hảo nằm mãi trong ngăn kéo.",
+    "author": "Tư duy hành động",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 343,
+    "day": 343,
+    "headline": "MỖI KHOẢN TIẾT KIỆM LÀ ĐỆM ĐỠ",
+    "quote": "Một đồng chi phí thừa bạn dứt khoát cắt bỏ hôm nay tương đương với một đồng lợi nhuận ròng giúp bạn kéo dài thời gian sống sót.",
+    "author": "Quản trị dòng tiền",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 344,
+    "day": 344,
+    "headline": "ĐAU KHỔ TRONG TÂM TƯỞNG",
+    "quote": "Chúng ta thường chịu đựng nỗi đau do chính trí tưởng tượng phóng đại lên nhiều hơn là sự khốc liệt của thực tế đang xảy ra.",
+    "author": "Seneca",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 345,
+    "day": 345,
+    "headline": "HẠT MẦM DƯỚI BÃO TUYẾT",
+    "quote": "Những nỗ lực âm thầm, cắn răng làm việc trong bóng tối hôm nay đang bám rễ sâu vào lòng đất để chuẩn bị cho một ngày bứt phá ngoạn mục.",
+    "author": "Quy luật tích lũy",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 346,
+    "day": 346,
+    "headline": "VẾT THƯƠNG TỰ TRỌNG",
+    "quote": "Cảm giác nghẹn đắng vì túi tiền trống rỗng hôm nay phải được khắc sâu vào tâm can để làm mồi lửa hành động, tuyệt đối không dùng để tự thương hại.",
+    "author": "Bản lĩnh cá nhân",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 347,
+    "day": 347,
+    "headline": "LÀM VIỆC KHÓ TRƯỚC TIÊN",
+    "quote": "Nuốt con ếch to nhất vào đầu ngày. Giải quyết công việc khiến bạn lo lắng và muốn né tránh nhất trước 9 giờ sáng.",
+    "author": "Brian Tracy",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 348,
+    "day": 348,
+    "headline": "SỐNG DƯỚI MỨC THU NHẬP",
+    "quote": "Dù kiếm được bao nhiêu tiền, luôn ép bản thân sống dưới mức đó một bậc. Sự dư thừa thanh khoản là nguồn gốc duy nhất của sự tự do.",
+    "author": "Warren Buffett",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 349,
+    "day": 349,
+    "headline": "QUYỀN TỰ DO CUỐI CÙNG",
+    "quote": "Người đời có thể lấy đi danh vọng, tiền bạc của bạn, nhưng không ai có thể tước đoạt quyền tự do chọn lựa thái độ đối mặt của bạn.",
+    "author": "Viktor Frankl",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 350,
+    "day": 350,
+    "headline": "BẢN THÂN LÀ TỔNG THỂ VƯỢT TRỘI",
+    "quote": "Đừng đánh đồng một giai đoạn bế tắc tài chính với sự thất bại của một kiếp người. Bạn sinh ra để vượt qua sóng lớn.",
+    "author": "Niềm tin nội tại",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 351,
+    "day": 351,
+    "headline": "CÁI GIÁ CỦA SỰ CHỦ QUAN",
+    "quote": "Ảo tưởng về những chiến thắng cũ đã khiến bạn lơ là kỷ luật phòng thủ. Hãy nuốt trọn vị đắng hôm nay để không bao giờ chủ quan thêm lần nào nữa.",
+    "author": "Chiêm nghiệm thị trường",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 352,
+    "day": 352,
+    "headline": "BƯỚC CHÂN VI MÔ",
+    "quote": "Đường xa vạn dặm không vượt qua bằng việc nhìn ngắm đỉnh núi, mà bằng việc kiên quyết đặt từng bước chân vững chãi lên mặt đất.",
+    "author": "Lão Tử",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 353,
+    "day": 353,
+    "headline": "ĐO LƯỜNG TỪNG CON SỐ",
+    "quote": "Không thể quản trị những gì bạn không đo lường. Hãy nhìn thẳng vào bảng thu chi thực tế mỗi ngày, không né tránh bất kỳ con số nào.",
+    "author": "Peter Drucker",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 354,
+    "day": 354,
+    "headline": "CHẤP NHẬN SỰ THẬT KHÁCH QUAN",
+    "quote": "Mọi biến cố xảy ra đều trung tính. Ý nghĩa tiêu cực hay tích cực hoàn toàn do lăng kính chủ quan của bạn gán cho nó.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 355,
+    "day": 355,
+    "headline": "BƯỚC NGOẶT ĐANG ĐẾN GẦN",
+    "quote": "Chỉ cần kiên trì gõ cửa, cánh cửa đúng đắn sẽ mở ra. Khoảnh khắc ngay trước bình minh luôn là thời điểm tăm tối nhất.",
+    "author": "Quy luật bền bỉ",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 356,
+    "day": 356,
+    "headline": "NGƯNG TỰ DẰN VẶT",
+    "quote": "Dằn vặt bản thân năm 20 tuổi bằng nhận thức của tuổi chín muồi là vô nghĩa. Hãy tha thứ cho người cũ và gánh vác trách nhiệm dọn dẹp hiện tại.",
+    "author": "Chữa lành & Tỉnh thức",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 357,
+    "day": 357,
+    "headline": "HÀNH ĐỘNG DẬP TẮT NỖI SỢ",
+    "quote": "Sự sợ hãi và lo âu phát triển mạnh nhất khi bạn ngồi yên suy nghĩ. Liều thuốc duy nhất để tiêu diệt nỗi sợ là lao vào hành động.",
+    "author": "Dale Carnegie",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 358,
+    "day": 358,
+    "headline": "TRÁNH XA NỢ TIÊU DÙNG",
+    "quote": "Vay mượn để chi tiêu cho cảm xúc tức thời là hành động tự tra cùm vào chân mình. Chỉ chạm vào nợ khi nó trực tiếp tạo ra dòng tiền dương.",
+    "author": "Nguyên tắc đòn bẩy",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 359,
+    "day": 359,
+    "headline": "GIỮ GÌN PHẨM GIÁ",
+    "quote": "Dù hoàn cảnh có bức bách đến đâu, tuyệt đối không đánh đổi sự chính trực. Tiền có thể kiếm lại, nhân phẩm đánh mất là mất tất cả.",
+    "author": "Marcus Aurelius",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 360,
+    "day": 360,
+    "headline": "KHỞI ĐẦU TỪ HÔM NAY",
+    "quote": "Bạn không thể quay lại để sửa điểm xuất phát, nhưng bạn có toàn quyền bắt đầu ngay lúc này để viết nên một cái kết rực rỡ hơn.",
+    "author": "C.S. Lewis",
+    "category": "Niềm tin tương lai"
+  },
+  {
+    "id": 361,
+    "day": 361,
+    "headline": "HÓA ĐƠN CỦA SỰ DỄ DÃI",
+    "quote": "Sự túng thiếu và chật vật hôm nay chính là cái giá phải trả cho những lần bạn chọn thỏa hiệp và trì hoãn trong quá khứ.",
+    "author": "Chiêm nghiệm thực chiến",
+    "category": "Nhắc nhớ nỗi đau"
+  },
+  {
+    "id": 362,
+    "day": 362,
+    "headline": "HÀNH ĐỘNG NGAY BÂY GIỜ",
+    "quote": "Bất cứ thứ gì bạn đang có trong tay, hãy dùng hết; bất cứ điều gì bạn làm hôm nay, hãy làm bằng tất cả sức lực.",
+    "author": "Marcus Tullius Cicero",
+    "category": "Thúc đẩy hành động"
+  },
+  {
+    "id": 363,
+    "day": 363,
+    "headline": "BẢO VỆ THANH KHOẢN",
+    "quote": "Cá nhân hay doanh nghiệp sụp đổ không phải vì lỗ trên danh nghĩa, mà vì cạn kiệt thanh khoản tiền mặt. Giữ chặt dòng tiền bằng mọi giá.",
+    "author": "Nguyên lý sống còn",
+    "category": "Kỷ luật tài chính"
+  },
+  {
+    "id": 364,
+    "day": 364,
+    "headline": "VÙNG KIỂM SOÁT",
+    "quote": "Bạn không thể điều khiển thị trường hay thái độ của thiên hạ, nhưng bạn toàn quyền làm chủ sự tập trung, thái độ và kỷ luật làm việc của chính mình.",
+    "author": "Epictetus",
+    "category": "Tư duy Khắc kỷ"
+  },
+  {
+    "id": 365,
+    "day": 365,
+    "headline": "MÙA ĐÔNG RỒI SẼ QUA",
+    "quote": "Không có mùa đông nào kéo dài mãi mãi. Những ai kiên gan chịu đựng được giá lạnh sẽ là người đầu tiên tận hưởng mùa xuân rực rỡ nhất.",
+    "author": "Quy luật chu kỳ",
+    "category": "Niềm tin tương lai"
+  }
+]

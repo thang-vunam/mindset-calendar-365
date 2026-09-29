@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2b5c" />
+      <stop offset="50%" stop-color="#060f22" />
+      <stop offset="100%" stop-color="#02050c" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f0f9ff" />
+    </linearGradient>
+    <linearGradient id="oceanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1" />
+      <stop offset="35%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.65" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Calendar Page Body -->
+  <g filter="url(#shadow)">
+    <!-- Base stand edge -->
+    <path d="M 96 420 L 416 420 L 440 450 L 72 450 Z" fill="#0b1b36" opacity="0.9" />
+    
+    <!-- White Calendar Page -->
+    <rect x="88" y="110" width="336" height="310" rx="20" fill="url(#cardGrad)" />
+    
+    <!-- Ocean Blue Top Header -->
+    <path d="M 88 130 Q 88 110 108 110 L 404 110 Q 424 110 424 130 L 424 190 L 88 190 Z" fill="url(#oceanGrad)" />
+  </g>
+
+  <!-- Spiral Rings -->
+  <rect x="130" y="86" width="16" height="48" rx="8" fill="url(#ringGrad)" stroke="#0b172a" stroke-width="1.5" />
+  <circle cx="138" cy="110" r="5" fill="#0f2b5c" opacity="0.5" />
+  
+  <rect x="202" y="86" width="16" height="48" rx="8" fill="url(#ringGrad)" stroke="#0b172a" stroke-width="1.5" />
+  <circle cx="210" cy="110" r="5" fill="#0f2b5c" opacity="0.5" />
+
+  <rect x="294" y="86" width="16" height="48" rx="8" fill="url(#ringGrad)" stroke="#0b172a" stroke-width="1.5" />
+  <circle cx="302" cy="110" r="5" fill="#0f2b5c" opacity="0.5" />
+
+  <rect x="366" y="86" width="16" height="48" rx="8" fill="url(#ringGrad)" stroke="#0b172a" stroke-width="1.5" />
+  <circle cx="374" cy="110" r="5" fill="#0f2b5c" opacity="0.5" />
+
+  <!-- Calendar Content: "365" and Daily Mindset Fuel -->
+  <text x="256" y="162" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" letter-spacing="3">MINDSET FUEL</text>
+
+  <text x="256" y="300" text-anchor="middle" fill="#061229" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="96" font-weight="900" letter-spacing="-2">365</text>
+  
+  <text x="256" y="342" text-anchor="middle" fill="#0284c7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" letter-spacing="4">NGÀY BẢN LĨNH</text>
+
+  <!-- Geometric accent line -->
+  <circle cx="256" cy="380" r="5" fill="#38bdf8" />
+  <line x1="160" y1="380" x2="236" y2="380" stroke="#bae6fd" stroke-width="2" stroke-linecap="round" />
+  <line x1="276" y1="380" x2="352" y2="380" stroke="#bae6fd" stroke-width="2" stroke-linecap="round" />
+</svg>
