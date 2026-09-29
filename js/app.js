@@ -858,9 +858,9 @@
         };
       }
 
-      // Show ONLY the headline and quote content
-      const notifTitle = quoteItem.headline;
-      const notifBody = `"${quoteItem.quote}"\n— ${quoteItem.author}`;
+      // Show ONLY the quote content and author (no headline)
+      const notifTitle = `"${quoteItem.quote}"`;
+      const notifBody = `— ${quoteItem.author}`;
 
       // 1. Show instant notification on current device via Service Worker with full quote
       if ('serviceWorker' in navigator) {
