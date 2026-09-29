@@ -3,12 +3,27 @@ const fs = require('fs');
 const path = require('path');
 const webpush = require('web-push');
 
-const vapidKeys = require('../api/vapid-keys.json');
-webpush.setVapidDetails(
-  vapidKeys.subject,
-  vapidKeys.publicKey,
-  vapidKeys.privateKey
-);
+let vapidKeys = {
+  publicKey: process.env.VAPID_PUBLIC_KEY || 'BJ6fr2VtgNn6m1N3pOXT0qgrL6fg-IxXI2AUbNcuiBuvhycdGESIA15DtpZ8Yc9Xh8r1TfOMZTB09jffUyJQOyM',
+  privateKey: process.env.VAPID_PRIVATE_KEY || '',
+  subject: process.env.VAPID_SUBJECT || 'mailto:support@mindset-calendar.app'
+};
+
+const localKeysPath = path.join(__dirname, '..', 'api', 'vapid-keys.json');
+if (fs.existsSync(localKeysPath)) {
+  try {
+    const loaded = JSON.parse(fs.readFileSync(localKeysPath, 'utf-8'));
+    vapidKeys = { ...vapidKeys, ...loaded };
+  } catch (e) {}
+}
+
+if (vapidKeys.publicKey && vapidKeys.privateKey) {
+  webpush.setVapidDetails(
+    vapidKeys.subject,
+    vapidKeys.publicKey,
+    vapidKeys.privateKey
+  );
+}
 
 // Calculate today's day of year (GMT+7)
 const now = new Date();
