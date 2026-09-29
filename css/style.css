@@ -1303,3 +1303,126 @@ html, body {
     gap: 8px;
   }
 }
+
+/* ==========================================================================
+   4. Notification Bell & Modal Styles
+   ========================================================================== */
+#btn-notify-toggle {
+  position: relative;
+}
+
+.bell-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 7px;
+  height: 7px;
+  background-color: var(--ocean-bright);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--ocean-bright);
+}
+
+.notify-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.notify-schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notify-slot-item {
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.slot-emoji {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.slot-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.slot-text strong {
+  font-size: 13.5px;
+  color: #f0f9ff;
+  font-weight: 700;
+}
+
+.slot-text p {
+  font-size: 11px;
+  color: #94a3b8;
+  line-height: 1.3;
+}
+
+.slot-tag {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--ocean-bright);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.notify-status-banner {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 14px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+.status-indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #64748b;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.status-indicator-dot.active {
+  background-color: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+.btn-test-push-action {
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: var(--ocean-bright);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-test-push-action:active {
+  transform: scale(0.98);
+  background: rgba(56, 189, 248, 0.25);
+}
+
