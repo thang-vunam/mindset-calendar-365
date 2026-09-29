@@ -4,11 +4,7 @@
   "crons": [
     {
       "path": "/api/send-push",
-      "schedule": "0 23 * * *"
-    },
-    {
-      "path": "/api/send-push",
-      "schedule": "0 7 * * *"
+      "schedule": "23 2 * * *"
     }
   ],
   "headers": [
