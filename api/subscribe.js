@@ -112,6 +112,49 @@ module.exports = async (req, res) => {
       console.warn('Could not persist to GitHub:', err.message);
     }
 
+    // Auto-update vercel.json on GitHub so Vercel crons match user's custom times!
+    if (settings && GITHUB_TOKEN) {
+      try {
+        const vercelData = await githubRequest('GET', `/repos/${OWNER}/${REPO}/contents/vercel.json`);
+        const vercelConfig = JSON.parse(Buffer.from(vercelData.content, 'base64').toString('utf-8'));
+
+        function toUtcCron(timeStr) {
+          const parts = (timeStr || '06:00').split(':').map(Number);
+          const h = isNaN(parts[0]) ? 6 : parts[0];
+          const m = isNaN(parts[1]) ? 0 : parts[1];
+          const utcH = (h - 7 + 24) % 24;
+          return `${m} ${utcH} * * *`;
+        }
+
+        const crons = [];
+        if (settings.enabled1 !== false && settings.time1) {
+          crons.push({
+            path: '/api/send-push',
+            schedule: toUtcCron(settings.time1)
+          });
+        }
+        if (settings.enabled2 !== false && settings.time2) {
+          crons.push({
+            path: '/api/send-push',
+            schedule: toUtcCron(settings.time2)
+          });
+        }
+
+        if (crons.length > 0) {
+          vercelConfig.crons = crons;
+          const updatedVercelBase64 = Buffer.from(JSON.stringify(vercelConfig, null, 2), 'utf-8').toString('base64');
+          await githubRequest('PUT', `/repos/${OWNER}/${REPO}/contents/vercel.json`, {
+            message: `Update Vercel Crons to [${settings.time1 || '06:00'}, ${settings.time2 || '14:00'}] VN`,
+            content: updatedVercelBase64,
+            sha: vercelData.sha
+          });
+          console.log('Successfully updated vercel.json cron schedule on GitHub!');
+        }
+      } catch (cronErr) {
+        console.warn('Could not auto-update vercel.json crons:', cronErr.message);
+      }
+    }
+
     // Also update local file if running locally
     try {
       const localFile = path.join(__dirname, '..', 'data', 'subscriptions.json');
