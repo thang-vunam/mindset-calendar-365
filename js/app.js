@@ -834,10 +834,28 @@
     showToast('Đang gửi câu quote hôm nay lên màn hình...');
     try {
       const todayDay = calculateCurrentDayOfYear();
-      const quoteItem = (quotesData && quotesData[todayDay - 1]) || state.currentQuote;
+      let quoteItem = (state.quotes && state.quotes.length > 0) ? state.quotes[todayDay - 1] : null;
+
+      // Fallback: If quotes not yet cached in state, fetch quotes.json
       if (!quoteItem) {
-        showToast('Chưa nạp được dữ liệu câu trích dẫn.');
-        return;
+        try {
+          const res = await fetch('quotes.json');
+          if (res.ok) {
+            state.quotes = await res.json();
+            quoteItem = state.quotes[todayDay - 1];
+          }
+        } catch (e) {}
+      }
+
+      // Safe fallback quote if network unavailable
+      if (!quoteItem) {
+        quoteItem = {
+          day: todayDay,
+          headline: 'BƯỚC CHÂN VI MÔ',
+          quote: 'Đường xa vạn dặm không vượt qua bằng việc nhìn ngắm đỉnh núi, mà bằng việc kiên quyết đặt từng bước chân vững chãi lên mặt đất.',
+          author: 'Lão Tử',
+          category: 'Thúc đẩy hành động'
+        };
       }
 
       const notifTitle = `🌅 Ngày ${quoteItem.day}/365 • ${quoteItem.headline}`;
