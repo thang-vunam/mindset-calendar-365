@@ -2,3 +2,7 @@ node_modules/
 .DS_Store
 *.log
 .token_found
+api/vapid-keys.json
+vapid-keys.json
+.env*
+sync-*.js
