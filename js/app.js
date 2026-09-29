@@ -833,8 +833,8 @@
   async function sendTestPush() {
     showToast('Đang gửi câu quote hôm nay lên màn hình...');
     try {
-      const todayDay = calculateCurrentDayOfYear();
-      let quoteItem = (state.quotes && state.quotes.length > 0) ? state.quotes[todayDay - 1] : null;
+      const { day } = calculateCurrentDayOfYear();
+      let quoteItem = (state.quotes && state.quotes.length > 0) ? state.quotes[day - 1] : null;
 
       // Fallback: If quotes not yet cached in state, fetch quotes.json
       if (!quoteItem) {
@@ -842,7 +842,7 @@
           const res = await fetch('quotes.json');
           if (res.ok) {
             state.quotes = await res.json();
-            quoteItem = state.quotes[todayDay - 1];
+            quoteItem = state.quotes[day - 1];
           }
         } catch (e) {}
       }
@@ -850,7 +850,7 @@
       // Safe fallback quote if network unavailable
       if (!quoteItem) {
         quoteItem = {
-          day: todayDay,
+          day: day,
           headline: 'BƯỚC CHÂN VI MÔ',
           quote: 'Đường xa vạn dặm không vượt qua bằng việc nhìn ngắm đỉnh núi, mà bằng việc kiên quyết đặt từng bước chân vững chãi lên mặt đất.',
           author: 'Lão Tử',
@@ -858,7 +858,8 @@
         };
       }
 
-      const notifTitle = `🌅 Ngày ${quoteItem.day}/365 • ${quoteItem.headline}`;
+      // Show ONLY the headline and quote content
+      const notifTitle = quoteItem.headline;
       const notifBody = `"${quoteItem.quote}"\n— ${quoteItem.author}`;
 
       // 1. Show instant notification on current device via Service Worker with full quote
@@ -871,8 +872,7 @@
           tag: 'daily-mindset-reminder',
           renotify: true,
           data: {
-            url: './index.html',
-            day: quoteItem.day
+            url: './index.html'
           }
         });
       }
@@ -883,9 +883,7 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           title: notifTitle,
-          body: notifBody,
-          day: quoteItem.day,
-          category: quoteItem.category
+          body: notifBody
         })
       }).catch(() => {});
 
