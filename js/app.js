@@ -682,7 +682,7 @@
   /**
    * 13. Web Push Notification Logic (06:00 & 14:00)
    */
-  const VAPID_PUBLIC_KEY = 'BDBCjDHMFw8gwxyDJKPoVskgGm0oSd46c1Nw6caC7ZFISwZVWtc5EhN-5cTOgNp7fOGXVAJypM5wX_3SyBDBreM';
+  const VAPID_PUBLIC_KEY = 'BJ6fr2VtgNn6m1N3pOXT0qgrL6fg-IxXI2AUbNcuiBuvhycdGESIA15DtpZ8Yc9Xh8r1TfOMZTB09jffUyJQOyM';
 
   function urlBase64ToUint8Array(base64String) {
     const padding = '='.repeat((4 - base64String.length % 4) % 4);
