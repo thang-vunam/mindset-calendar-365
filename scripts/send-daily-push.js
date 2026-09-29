@@ -6,7 +6,7 @@ const webpush = require('web-push');
 let vapidKeys = {
   publicKey: process.env.VAPID_PUBLIC_KEY || 'BJ6fr2VtgNn6m1N3pOXT0qgrL6fg-IxXI2AUbNcuiBuvhycdGESIA15DtpZ8Yc9Xh8r1TfOMZTB09jffUyJQOyM',
   privateKey: process.env.VAPID_PRIVATE_KEY || '',
-  subject: process.env.VAPID_SUBJECT || 'mailto:support@mindset-calendar.app'
+  subject: process.env.VAPID_SUBJECT || 'https://dong-luc-365.vercel.app'
 };
 
 const localKeysPath = path.join(__dirname, '..', 'api', 'vapid-keys.json');
