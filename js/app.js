@@ -32,6 +32,7 @@
     widgetDayBadge: document.getElementById('widget-day-badge'),
     widgetDateText: document.getElementById('widget-date-text'),
     widgetDayNumber: document.getElementById('widget-day-number'),
+    widgetMonthSublabel: document.getElementById('widget-month-sublabel'),
     widgetHeadline: document.getElementById('widget-headline-text'),
     widgetAuthor: document.getElementById('widget-author-text'),
     widgetProgressPercent: document.getElementById('widget-progress-percent'),
@@ -132,6 +133,8 @@
     
     return {
       date,
+      year,
+      dayName,
       formattedShort: `${dayName}, ${dayOfMonth.toString().padStart(2, '0')}/${month.toString().padStart(2, '0')}/${year}`,
       formattedLong: `${dayName}, ${dayOfMonth} Tháng ${month}, ${year}`,
       dayOfMonth,
@@ -365,9 +368,12 @@
 
     function applyDataToDOM() {
       // 1. Update Widget View
-      DOM.widgetDayBadge.textContent = `NGÀY ${data.day} / 365`;
-      DOM.widgetDateText.textContent = dateInfo.formattedShort;
-      DOM.widgetDayNumber.textContent = data.day;
+      DOM.widgetDayBadge.textContent = dateInfo.dayName ? dateInfo.dayName.toUpperCase() : `NGÀY ${data.day} / 365`;
+      DOM.widgetDateText.textContent = `NĂM ${dateInfo.year || state.currentYear}`;
+      DOM.widgetDayNumber.textContent = dateInfo.dayOfMonth;
+      if (DOM.widgetMonthSublabel) {
+        DOM.widgetMonthSublabel.textContent = `Tháng ${dateInfo.month} • Ngày ${data.day}/365`;
+      }
       DOM.widgetHeadline.textContent = data.headline;
       DOM.widgetAuthor.textContent = data.author;
       DOM.widgetProgressPercent.textContent = `${progressPercent}%`;
