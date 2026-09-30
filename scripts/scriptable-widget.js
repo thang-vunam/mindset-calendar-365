@@ -10,26 +10,27 @@
   const REPO_URL = "https://raw.githubusercontent.com/thang-vunam/mindset-calendar-365/main/quotes.json";
   const APP_URL = "https://dong-luc-365.vercel.app";
 
-  // 1. Tải danh sách 365 câu trích dẫn
+  // 1. Tải danh sách 365 câu trích dẫn (ưu tiên đọc cache nội bộ 0.001s, không nghẽn mạng)
   async function loadQuotes() {
     const fm = FileManager.local();
     const cachePath = fm.joinPath(fm.documentsDirectory(), "mindset-quotes-cache.json");
     
+    if (fm.fileExists(cachePath)) {
+      try {
+        const cached = JSON.parse(fm.readString(cachePath));
+        if (Array.isArray(cached) && cached.length > 0) return cached;
+      } catch (err) {}
+    }
+
     try {
       const req = new Request(REPO_URL);
-      req.timeoutInterval = 4;
+      req.timeoutInterval = 3;
       const data = await req.loadJSON();
       if (Array.isArray(data) && data.length > 0) {
         fm.writeString(cachePath, JSON.stringify(data));
         return data;
       }
-    } catch (e) {
-      if (fm.fileExists(cachePath)) {
-        try {
-          return JSON.parse(fm.readString(cachePath));
-        } catch (err) {}
-      }
-    }
+    } catch (e) {}
     
     return [
       {
@@ -101,7 +102,7 @@
     // B. Chế độ hiển thị & Đồng bộ: Lấy câu quote mới nhất từ Cloud Sync API
     let cloudSynced = false;
     try {
-      const syncReq = new Request(`${APP_URL}/api/sync-quote`);
+      const syncReq = new Request(`${APP_URL}/api/sync-quote?t=${Date.now()}`);
       syncReq.timeoutInterval = 3;
       const cloudData = await syncReq.loadJSON();
       if (cloudData && cloudData.day === dayOfYear && cloudData.quoteId) {
@@ -189,22 +190,26 @@
 
     // Nút 1-chạm [🔄 Sync]
     const syncPill = headerStack.addStack();
-    syncPill.setPadding(2, 6, 2, 6);
-    syncPill.backgroundColor = new Color("#334155", 0.6);
+    syncPill.setPadding(3, 7, 3, 7);
+    syncPill.backgroundColor = new Color("#334155", 0.85);
     syncPill.cornerRadius = 6;
+    syncPill.borderWidth = 0.5;
+    syncPill.borderColor = new Color("#64748b", 0.7);
     syncPill.url = `scriptable:///run?scriptName=${encodeURIComponent(scriptName)}&sync=1`;
     
     const syncTxt = syncPill.addText("🔄 Sync");
-    syncTxt.font = Font.boldSystemFont(9);
-    syncTxt.textColor = new Color("#cbd5e1");
+    syncTxt.font = Font.boldSystemFont(9.5);
+    syncTxt.textColor = new Color("#f1f5f9");
 
     headerStack.addSpacer(5);
     
     // Nút 1-chạm [🎲 Đổi]
     const refreshPill = headerStack.addStack();
-    refreshPill.setPadding(2, 6, 2, 6);
-    refreshPill.backgroundColor = new Color("#0284c7", 0.35);
+    refreshPill.setPadding(3, 7, 3, 7);
+    refreshPill.backgroundColor = new Color("#0284c7", 0.5);
     refreshPill.cornerRadius = 6;
+    refreshPill.borderWidth = 0.5;
+    refreshPill.borderColor = new Color("#38bdf8", 0.7);
     refreshPill.url = `scriptable:///run?scriptName=${encodeURIComponent(scriptName)}&refresh=1`;
     
     const refreshTxt = refreshPill.addText("🎲 Đổi");
@@ -249,13 +254,15 @@
 
   // Luôn gắn widget vào Script để iOS cập nhật WidgetKit
   Script.setWidget(widget);
+  Script.complete();
 
-  // Nếu người dùng kích hoạt 1-chạm (Sync hoặc Đổi), tự động đóng app và quay về màn hình chính
+  // Rung phản hồi xúc giác nhẹ (Haptic Feedback) khi người dùng bấm
   if (isRefreshAction || isSyncAction) {
+    try {
+      Device.lightImpact();
+    } catch (e) {}
     App.close();
   } else if (!config.runsInWidget) {
     widget.presentMedium();
   }
-
-  Script.complete();
 })();
