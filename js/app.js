@@ -1161,9 +1161,10 @@
     } catch (e) {}
 
     // Check URL parameters for day or quoteId (from Scriptable widget or shared link)
+    let hasExplicitQuoteParam = false;
     try {
       const urlParams = new URLSearchParams(window.location.search);
-      const quoteIdParam = urlParams.get('quoteId');
+      const quoteIdParam = urlParams.get('quoteId') || urlParams.get('id');
       const dayParam = urlParams.get('day');
       const randomParam = urlParams.get('random');
       
@@ -1171,7 +1172,9 @@
         const qId = parseInt(quoteIdParam, 10);
         const matched = state.quotes.find(q => q.id === qId);
         if (matched) {
+          hasExplicitQuoteParam = true;
           state.customQuotes[state.todayDayOfYear] = matched;
+          state.currentQuoteData = matched;
           try {
             localStorage.setItem(`mindset_quote_choice_${state.todayDayOfYear}`, JSON.stringify(matched));
           } catch (e) {}
@@ -1193,13 +1196,22 @@
 
     renderQuote(state.currentDay);
 
-    // 3-Way Cloud Sync Engine:
-    // Synchronize seamlessly with Scriptable Widget & other tabs in real-time
-    checkCloudQuoteSync();
+    // Khi người dùng bấm vào Widget để "xem tiếp tục", tự động mở rộng thẻ (expandView)
+    // để đọc toàn bộ câu nói, phân tích và xem hình Mandala mà không bị ghi đè!
+    if (hasExplicitQuoteParam) {
+      setTimeout(() => {
+        expandView();
+      }, 120);
+    } else {
+      checkCloudQuoteSync();
+    }
   }
 
   async function checkCloudQuoteSync() {
     try {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('quoteId') || urlParams.has('id')) return; // Không bao giờ ghi đè khi mở từ Widget
+      
       const res = await fetch('/api/sync-quote');
       if (!res.ok) return;
       const data = await res.json();
