@@ -64,8 +64,8 @@
   <!-- Header text -->
   <text x="256" y="156" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Roboto, sans-serif" font-size="20" font-weight="800" letter-spacing="4">ĐỘNG LỰC</text>
 
-  <!-- Giant Bold 365 Numbers in Royal Navy -->
-  <text x="256" y="315" text-anchor="middle" fill="#0a2558" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Roboto, sans-serif" font-size="124" font-weight="900" letter-spacing="-4">365</text>
+  <!-- Giant Bold 365 Numbers in Royal Navy (Optically Centered) -->
+  <text x="256" y="315" text-anchor="middle" fill="#0a2558" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif" font-size="124" font-weight="900" letter-spacing="0">365</text>
   
   <!-- Sub-label -->
   <text x="256" y="362" text-anchor="middle" fill="#0284c7" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Roboto, sans-serif" font-size="16" font-weight="800" letter-spacing="5">MỖI NGÀY</text>
