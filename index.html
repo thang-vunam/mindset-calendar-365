@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Cinzel:wght@600;700;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=10">
 </head>
 <body class="theme-ambient">
 
@@ -131,9 +131,13 @@
             <span id="widget-progress-percent" class="stat-value">74.2%</span>
           </div>
           <div class="stat-pill">
-            <span class="stat-label">Chủ đề hôm nay:</span>
+            <span class="stat-label">Chủ đề:</span>
             <span id="widget-category-label" class="stat-value highlight">Tư duy Khắc kỷ</span>
           </div>
+          <button id="btn-widget-random" class="stat-pill clickable-pill" title="Lật câu trích dẫn ngẫu nhiên" aria-label="Ngẫu nhiên">
+            <span class="stat-icon">🎲</span>
+            <span class="stat-label">Ngẫu nhiên</span>
+          </button>
         </div>
 
       </section>
@@ -154,6 +158,16 @@
           </div>
 
           <div class="top-actions-cluster">
+            <button id="btn-random-quote" class="icon-round-btn glass-btn" title="Khám phá câu trích dẫn ngẫu nhiên (hoặc phím R)" aria-label="Ngẫu nhiên">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                <circle cx="8" cy="8" r="1.5" fill="currentColor"></circle>
+                <circle cx="16" cy="8" r="1.5" fill="currentColor"></circle>
+                <circle cx="12" cy="12" r="1.5" fill="currentColor"></circle>
+                <circle cx="8" cy="16" r="1.5" fill="currentColor"></circle>
+                <circle cx="16" cy="16" r="1.5" fill="currentColor"></circle>
+              </svg>
+            </button>
             <button id="btn-favorite" class="icon-round-btn glass-btn" title="Lưu câu trích dẫn này" aria-label="Yêu thích">
               <svg id="favorite-heart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
             </button>
@@ -264,6 +278,18 @@
               <span class="today-text">HÔM NAY</span>
             </button>
 
+            <!-- Random Quote Button -->
+            <button id="btn-random-nav" class="icon-nav-btn" title="Khám phá câu ngẫu nhiên (hoặc phím R)" aria-label="Ngẫu nhiên">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                <circle cx="8" cy="8" r="1.5" fill="currentColor"></circle>
+                <circle cx="16" cy="8" r="1.5" fill="currentColor"></circle>
+                <circle cx="12" cy="12" r="1.5" fill="currentColor"></circle>
+                <circle cx="8" cy="16" r="1.5" fill="currentColor"></circle>
+                <circle cx="16" cy="16" r="1.5" fill="currentColor"></circle>
+              </svg>
+            </button>
+
             <!-- Direct Day Picker Modal Opener -->
             <button id="btn-open-picker" class="icon-nav-btn" title="Chọn ngày trong năm (1 - 365)" aria-label="Chọn ngày">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -321,6 +347,7 @@
             <div class="picker-quick-tags">
               <button class="quick-jump-chip" data-jump="1">Ngày đầu năm</button>
               <button class="quick-jump-chip" data-jump="today">Hôm nay</button>
+              <button class="quick-jump-chip highlight-chip" data-jump="random">🎲 Ngẫu nhiên</button>
               <button class="quick-jump-chip" data-jump="100">Ngày 100</button>
               <button class="quick-jump-chip" data-jump="200">Ngày 200</button>
               <button class="quick-jump-chip" data-jump="365">Ngày cuối năm</button>
@@ -409,6 +436,6 @@
     </div><!-- /app-container -->
   </div><!-- /device-wrapper -->
 
-  <script src="js/app.js?v=9"></script>
+  <script src="js/app.js?v=10"></script>
 </body>
 </html>
