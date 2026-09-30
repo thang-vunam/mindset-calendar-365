@@ -2,11 +2,11 @@
 // SCRIPTABLE WIDGET: ĐỘNG LỰC 365 (MINDSET 365)
 // Tác giả: Động Lực 365 (dong-luc-365.vercel.app)
 // Hỗ trợ: Cả Màn hình khóa (Lock Screen) và Màn hình chính (Home Screen)
-// Chế độ: Random (Ngẫu nhiên) & Daily (Theo ngày thực tế)
+// Tính năng: Đổi câu quote ngẫu nhiên nhưng VẪN GIỮ NGUYÊN NGÀY HÔM NAY!
 // =====================================================================
 
-// [CẤU HÌNH] Chế độ mặc định: "random" (ngẫu nhiên) hoặc "daily" (theo ngày)
-// Mẹo: Bạn cũng có thể điền trực tiếp "random" hoặc "daily" vào mục Parameter của Widget trên iOS!
+// [CẤU HÌNH] Chế độ mặc định: "random" (ngẫu nhiên câu quote) hoặc "daily" (câu gốc của ngày)
+// Mẹo: Bạn cũng có thể điền "random" hoặc "daily" vào mục Parameter của Widget trên iOS!
 const DEFAULT_MODE = "random"; 
 
 const REPO_URL = "https://raw.githubusercontent.com/thang-vunam/mindset-calendar-365/main/quotes.json";
@@ -33,49 +33,54 @@ async function loadQuotes() {
     }
   }
   
-  // Dữ liệu dự phòng nếu chưa có kết nối mạng lần đầu
   return [
     {
-      day: 1,
-      headline: "LÀM CHỦ HIỆN TẠI",
-      quote: "Hành trình vạn dặm bắt đầu từ một bước chân kiên định.",
-      author: "Lão Tử",
-      category: "Thúc đẩy hành động"
+      id: 273,
+      day: 273,
+      headline: "ĐO LƯỜNG TỪNG CON SỐ",
+      quote: "Không thể quản trị những gì bạn không đo lường. Hãy nhìn thẳng vào bảng thu chi thực tế mỗi ngày.",
+      author: "Peter Drucker",
+      category: "Kỷ luật tài chính"
     }
   ];
 }
 
 const quotes = await loadQuotes();
 
-// 2. Xác định chế độ hiển thị (Ưu tiên Parameter của widget, sau đó đến DEFAULT_MODE)
+// 2. Tính ngày thực tế hôm nay (Luôn giữ nguyên ngày hôm nay!)
+const now = new Date();
+const start = new Date(now.getFullYear(), 0, 0);
+const diff = now - start;
+const dayOfYear = Math.min(365, Math.max(1, Math.floor(diff / (1000 * 60 * 60 * 24))));
+
+const daysOfWeek = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
+const dayName = daysOfWeek[now.getDay()];
+const dayOfMonth = now.getDate();
+const month = now.getMonth() + 1;
+
+// 3. Xác định chế độ hiển thị ("random" hay "daily")
 const param = (args.widgetParameter && args.widgetParameter.trim().toLowerCase()) || DEFAULT_MODE;
 const isRandom = param === "random";
 
-// 3. Chọn câu trích dẫn
 let selectedQuote;
 let badgeText = "";
 
 if (isRandom) {
-  // Bốc ngẫu nhiên 1 câu trong kho 365 câu
+  // Bốc ngẫu nhiên 1 câu quote hợp tâm trạng, NHƯNG VẪN GIỮ NGUYÊN NGÀY HÔM NAY
   const randomIndex = Math.floor(Math.random() * quotes.length);
   selectedQuote = quotes[randomIndex];
-  badgeText = `🎲 NGẪU NHIÊN • NGÀY ${selectedQuote.day}/365`;
+  badgeText = `🎲 HÔM NAY (${dayOfMonth}/${month}) • NGÀY ${dayOfYear}/365`;
 } else {
-  // Lấy theo ngày thực tế trong năm (1-365)
-  const now = new Date();
-  const start = new Date(now.getFullYear(), 0, 0);
-  const diff = now - start;
-  const dayOfYear = Math.min(365, Math.max(1, Math.floor(diff / (1000 * 60 * 60 * 24))));
+  // Lấy câu gốc mặc định của ngày hôm nay
   selectedQuote = quotes[dayOfYear - 1] || quotes[0];
-  badgeText = `📅 HÔM NAY • NGÀY ${selectedQuote.day}/365`;
+  badgeText = `📅 HÔM NAY (${dayOfMonth}/${month}) • NGÀY ${dayOfYear}/365`;
 }
 
 // 4. Khởi tạo Widget
 const widget = new ListWidget();
-// Chạm vào widget sẽ mở ứng dụng đến đúng câu trích dẫn đó
-widget.url = `${APP_URL}?day=${selectedQuote.day}`;
+// Chạm vào widget sẽ mở Web App hiển thị đúng câu này trên nền ngày hôm nay
+widget.url = `${APP_URL}?quoteId=${selectedQuote.id}`;
 
-// Kiểm tra xem widget đang hiển thị ở Màn hình khóa hay Màn hình chính
 const isLockScreen = config.runsInAccessory;
 
 if (isLockScreen) {
@@ -109,7 +114,7 @@ if (isLockScreen) {
   ];
   widget.backgroundGradient = gradient;
 
-  // Thanh tiêu đề phía trên
+  // Thanh tiêu đề phía trên: Luôn hiển thị ngày hôm nay
   const headerStack = widget.addStack();
   headerStack.layoutHorizontally();
   
