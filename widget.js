@@ -2,7 +2,7 @@
 // SCRIPTABLE WIDGET: ĐỘNG LỰC 365 (MINDSET 365)
 // Tự động xoay vòng câu trích dẫn ngẫu nhiên sau mỗi ~60 phút
 // Tác giả: Động Lực 365 (dong-luc-365.vercel.app)
-// Hỗ trợ: Màn hình chính (Home Screen) & Màn hình khóa (Lock Screen)
+// Hỗ trợ: Màn hình chính (Small & Medium Widget) & Màn hình khóa
 // =====================================================================
 
 (async () => {
@@ -11,7 +11,7 @@
   const APP_URL = "https://dong-luc-365.vercel.app";
   const ROTATE_INTERVAL_MS = 60 * 60 * 1000; // 60 phút
 
-  // 1. Tải danh sách 365 câu trích dẫn (Ưu tiên nạp đệm cục bộ 0.001s)
+  // 1. Tải danh sách 365 câu trích dẫn (Ưu tiên đọc đệm cục bộ 0.001s)
   async function loadQuotes() {
     const fm = FileManager.local();
     const cachePath = fm.joinPath(fm.documentsDirectory(), "mindset-quotes-cache.json");
@@ -47,11 +47,17 @@
 
   const quotes = await loadQuotes();
 
-  // 2. Tính ngày tháng hiện tại
+  // 2. Tính ngày tháng hiện tại (Hiển thị ngày thực tế tiếng Việt)
   const now = new Date();
   const start = new Date(now.getFullYear(), 0, 0);
   const diff = now - start;
   const dayOfYear = Math.min(365, Math.max(1, Math.floor(diff / (1000 * 60 * 60 * 24))));
+  
+  const daysOfWeek = ["CHỦ NHẬT", "THỨ HAI", "THỨ BA", "THỨ TƯ", "THỨ NĂM", "THỨ SÁU", "THỨ BẢY"];
+  const dayName = daysOfWeek[now.getDay()];
+  const dayOfMonth = now.getDate();
+  const month = now.getMonth() + 1;
+  const currentDateText = `${dayName}, ${dayOfMonth}/${month}`;
 
   // 3. Cơ chế xoay vòng ngẫu nhiên mỗi 60 phút (Tránh trùng lặp gần nhau)
   const fm = FileManager.local();
@@ -72,7 +78,7 @@
   let selectedQuote = null;
 
   if (shouldPickNew) {
-    // Lọc bỏ 20 câu đã hiển thị gần nhất để không bao giờ bị lặp lại
+    // Lọc bỏ 25 câu đã hiển thị gần nhất để tránh lặp lại
     const recentSet = new Set(history.recentIds || []);
     let availableQuotes = quotes.filter(q => !recentSet.has(q.id));
     if (availableQuotes.length === 0) availableQuotes = quotes;
@@ -80,7 +86,7 @@
     const randomIndex = Math.floor(Math.random() * availableQuotes.length);
     selectedQuote = availableQuotes[randomIndex];
 
-    // Cập nhật lịch sử hiển thị
+    // Lưu vào lịch sử
     const updatedRecent = [selectedQuote.id, ...(history.recentIds || [])].slice(0, 25);
     try {
       fm.writeString(historyPath, JSON.stringify({
@@ -90,7 +96,7 @@
       }));
     } catch (e) {}
   } else {
-    // Trong khung giờ 60 phút hiện tại: Giữ nguyên câu đang hiển thị
+    // Trong khung giờ hiện tại: Giữ nguyên câu đang hiển thị
     selectedQuote = quotes.find(q => q.id === history.lastQuoteId) || quotes[dayOfYear - 1] || quotes[0];
   }
 
@@ -98,18 +104,16 @@
     selectedQuote = quotes[dayOfYear - 1] || quotes[0];
   }
 
-  const badgeText = `✨ TÂM THẾ MỖI GIỜ • NGÀY ${dayOfYear}/365`;
-
   // 4. Khởi tạo Widget
   const widget = new ListWidget();
-  // Chạm vào bất kỳ vị trí nào trên widget sẽ mở Web App xem chi tiết
   widget.url = `${APP_URL}?quoteId=${selectedQuote.id}`;
 
   const isLockScreen = config.runsInAccessory;
+  const isSmall = config.widgetFamily === "small";
 
   if (isLockScreen) {
     widget.addSpacer(1);
-    const headerTxt = widget.addText(`✨ NGÀY ${dayOfYear}/365`);
+    const headerTxt = widget.addText(currentDateText);
     headerTxt.font = Font.boldSystemFont(10);
     headerTxt.textColor = Color.white();
     
@@ -119,7 +123,8 @@
     quoteTxt.textColor = new Color("#e2e8f0");
     quoteTxt.lineLimit = 3;
   } else {
-    widget.setPadding(14, 16, 14, 16);
+    // Canh chỉnh lề tối ưu cho cả Small và Medium widget
+    widget.setPadding(isSmall ? 11 : 13, isSmall ? 12 : 16, isSmall ? 11 : 13, isSmall ? 12 : 16);
     
     const gradient = new LinearGradient();
     gradient.locations = [0, 0.5, 1];
@@ -130,60 +135,38 @@
     ];
     widget.backgroundGradient = gradient;
 
-    // Header Stack: Tinh tế & Không nút bấm
-    const headerStack = widget.addStack();
-    headerStack.layoutHorizontally();
-    headerStack.centerAlignContent();
-    
-    const badge = headerStack.addText(badgeText);
-    badge.font = Font.boldSystemFont(10);
+    // Header: Chỉ hiển thị Ngày hiện tại
+    const badge = widget.addText(currentDateText);
+    badge.font = Font.boldSystemFont(isSmall ? 10.5 : 11);
     badge.textColor = new Color("#38bdf8");
-    
-    headerStack.addSpacer();
 
-    const tagStack = headerStack.addStack();
-    tagStack.setPadding(2, 7, 2, 7);
-    tagStack.backgroundColor = new Color("#0369a1", 0.3);
-    tagStack.cornerRadius = 6;
-    tagStack.borderWidth = 0.5;
-    tagStack.borderColor = new Color("#0284c7", 0.4);
-
-    const tagText = tagStack.addText(selectedQuote.category || "Mindset");
-    tagText.font = Font.systemFont(9.5);
-    tagText.textColor = new Color("#7dd3fc");
-
-    widget.addSpacer(6);
+    widget.addSpacer(isSmall ? 5 : 6);
 
     // Tiêu đề hành động
     const headlineTxt = widget.addText(selectedQuote.headline.toUpperCase());
-    headlineTxt.font = Font.boldSystemFont(12.5);
+    headlineTxt.font = Font.boldSystemFont(isSmall ? 11.5 : 12.5);
     headlineTxt.textColor = Color.white();
-    headlineTxt.lineLimit = 1;
+    headlineTxt.lineLimit = isSmall ? 2 : 1;
 
-    widget.addSpacer(4);
+    widget.addSpacer(isSmall ? 3 : 4);
 
-    // Nội dung trích dẫn
+    // Nội dung câu trích dẫn
     const quoteTxt = widget.addText(`"${selectedQuote.quote}"`);
-    quoteTxt.font = Font.italicSystemFont(11.5);
+    quoteTxt.font = Font.italicSystemFont(isSmall ? 10.5 : 11.5);
     quoteTxt.textColor = new Color("#f1f5f9");
-    quoteTxt.lineLimit = 4;
+    quoteTxt.lineLimit = isSmall ? 4 : 4;
 
-    widget.addSpacer(4);
+    widget.addSpacer();
 
-    // Footer Stack: Tác giả & Nhãn chu kỳ
+    // Footer: Chỉ hiển thị Tác giả ở góc phải
     const footerStack = widget.addStack();
     footerStack.layoutHorizontally();
-    footerStack.centerAlignContent();
-    
-    const cycleLabel = footerStack.addText("⏱️ Đổi mỗi 60p");
-    cycleLabel.font = Font.systemFont(9);
-    cycleLabel.textColor = new Color("#64748b");
-    
     footerStack.addSpacer();
     
     const authorLabel = footerStack.addText(`— ${selectedQuote.author}`);
-    authorLabel.font = Font.boldSystemFont(10.5);
+    authorLabel.font = Font.boldSystemFont(isSmall ? 9.5 : 10.5);
     authorLabel.textColor = new Color("#38bdf8");
+    authorLabel.lineLimit = 1;
   }
 
   // 5. Cài đặt hẹn giờ cho iOS WidgetKit tự động làm mới sau đúng 60 phút
@@ -194,6 +177,10 @@
   Script.complete();
 
   if (!config.runsInWidget) {
-    widget.presentMedium();
+    if (isSmall) {
+      widget.presentSmall();
+    } else {
+      widget.presentMedium();
+    }
   }
 })();
