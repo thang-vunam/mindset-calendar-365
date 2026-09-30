@@ -65,15 +65,16 @@
     } catch (e) {}
   }
 
-  const isRefreshAction = (args.queryParameters && args.queryParameters.refresh === "1") || config.runsInApp;
+  const isRefreshAction = Boolean(args.queryParameters && args.queryParameters.refresh === "1");
+  const isSyncAction = Boolean(args.queryParameters && args.queryParameters.sync === "1");
   const param = (args.widgetParameter && args.widgetParameter.trim().toLowerCase()) || DEFAULT_MODE;
   const isRandom = param === "random" || isRefreshAction;
 
   let selectedQuote = null;
   let isCustomQuote = false;
 
-  if (isRefreshAction || (param === "random" && (!savedData || savedData.dayOfYear !== dayOfYear))) {
-    // A. Người dùng bấm [🎲 Đổi] trên Widget hoặc chạy thủ công
+  if (isRefreshAction || (isRandom && (!savedData || savedData.dayOfYear !== dayOfYear))) {
+    // A. Người dùng bấm [🎲 Đổi] trên Widget -> Bốc câu ngẫu nhiên mới
     const randomIndex = Math.floor(Math.random() * quotes.length);
     selectedQuote = quotes[randomIndex];
     isCustomQuote = true;
@@ -96,13 +97,8 @@
       postReq.timeoutInterval = 3;
       await postReq.load();
     } catch (e) {}
-
-    // Tự động đóng Scriptable quay về màn hình chính ngay lập tức
-    if (args.queryParameters && args.queryParameters.refresh === "1") {
-      App.close();
-    }
   } else {
-    // B. Chế độ hiển thị thông thường: Đồng bộ thời gian thực từ Cloud API
+    // B. Chế độ hiển thị & Đồng bộ: Lấy câu quote mới nhất từ Cloud Sync API
     let cloudSynced = false;
     try {
       const syncReq = new Request(`${APP_URL}/api/sync-quote`);
@@ -121,8 +117,17 @@
       }
     } catch (e) {}
 
-    // Nếu ngoại tuyến (không có mạng), dùng bộ nhớ cục bộ
-    if (!cloudSynced) {
+    if (cloudSynced && selectedQuote) {
+      // Cập nhật bộ nhớ đệm cục bộ với câu mới lấy từ đám mây
+      try {
+        fm.writeString(savedQuotePath, JSON.stringify({
+          dayOfYear: dayOfYear,
+          quote: selectedQuote,
+          isCustom: isCustomQuote
+        }));
+      } catch (e) {}
+    } else {
+      // Nếu ngoại tuyến hoặc lỗi mạng, dùng bộ nhớ cục bộ đã lưu trước đó
       if (savedData && savedData.dayOfYear === dayOfYear) {
         selectedQuote = savedData.quote;
         isCustomQuote = Boolean(savedData.isCustom);
@@ -181,6 +186,19 @@
     badge.textColor = new Color("#38bdf8");
     
     headerStack.addSpacer();
+
+    // Nút 1-chạm [🔄 Sync]
+    const syncPill = headerStack.addStack();
+    syncPill.setPadding(2, 6, 2, 6);
+    syncPill.backgroundColor = new Color("#334155", 0.6);
+    syncPill.cornerRadius = 6;
+    syncPill.url = `scriptable:///run?scriptName=${encodeURIComponent(scriptName)}&sync=1`;
+    
+    const syncTxt = syncPill.addText("🔄 Sync");
+    syncTxt.font = Font.boldSystemFont(9);
+    syncTxt.textColor = new Color("#cbd5e1");
+
+    headerStack.addSpacer(5);
     
     // Nút 1-chạm [🎲 Đổi]
     const refreshPill = headerStack.addStack();
@@ -226,9 +244,16 @@
     authorLabel.textColor = new Color("#38bdf8");
   }
 
-  if (config.runsInWidget) {
-    Script.setWidget(widget);
-  } else {
+  // Đặt lịch để iOS WidgetKit chủ động đánh thức widget và kéo dữ liệu mới từ Cloud
+  widget.refreshAfterDate = new Date(Date.now() + 1000 * 60 * 5); // 5 phút
+
+  // Luôn gắn widget vào Script để iOS cập nhật WidgetKit
+  Script.setWidget(widget);
+
+  // Nếu người dùng kích hoạt 1-chạm (Sync hoặc Đổi), tự động đóng app và quay về màn hình chính
+  if (isRefreshAction || isSyncAction) {
+    App.close();
+  } else if (!config.runsInWidget) {
     widget.presentMedium();
   }
 
