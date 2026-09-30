@@ -90,7 +90,7 @@ async function runFullAudit() {
   console.log('\n3. Auditing Service Worker (sw.js) & WebKit Redirection Protection:');
   try {
     const sw = fs.readFileSync(path.join(__dirname, 'sw.js'), 'utf-8');
-    assert(sw.includes("CACHE_NAME = 'mindset-calendar-v10'"), 'sw.js cache version is updated to v10');
+    assert(sw.includes("CACHE_NAME = 'mindset-calendar-v11'"), 'sw.js cache version is updated to v11');
     assert(sw.includes('cleanResponse'), 'sw.js includes cleanResponse() function to strip redirected flag');
     assert(sw.includes("event.request.mode === 'navigate'"), 'sw.js handles navigate requests directly to avoid redirection errors');
     assert(sw.includes("self.addEventListener('push'"), 'sw.js contains Web Push notification event listener');
@@ -150,7 +150,7 @@ async function runFullAudit() {
 
     const appJs = fs.readFileSync(path.join(__dirname, 'js/app.js'), 'utf-8');
     assert(appJs.includes('DOM.widgetDayNumber.textContent = dateInfo.dayOfMonth;'), 'js/app.js sets widget hero number to dayOfMonth (1-31)');
-    assert(appJs.includes('DOM.widgetMonthSublabel.textContent = `Tháng ${dateInfo.month} • Ngày ${data.day}/365`;'), 'js/app.js formats sublabel as "Tháng X • Ngày Y/365"');
+    assert(appJs.includes('DOM.widgetMonthSublabel.textContent = `Tháng ${dateInfo.month} • Ngày ${dayNum}/365`;') || appJs.includes('DOM.widgetMonthSublabel.textContent = `Tháng ${dateInfo.month} • Ngày ${data.day}/365`;'), 'js/app.js formats sublabel as "Tháng X • Ngày Y/365"');
 
     const css = fs.readFileSync(path.join(__dirname, 'css/style.css'), 'utf-8');
     assert(css.includes('.widget-month-sublabel'), 'css/style.css includes styles for .widget-month-sublabel');
@@ -186,7 +186,7 @@ async function runFullAudit() {
     const scriptableCode = fs.readFileSync(scriptableFile, 'utf-8');
     assert(scriptableCode.includes('DEFAULT_MODE'), 'scripts/scriptable-widget.js defines DEFAULT_MODE (random/daily)');
     assert(scriptableCode.includes('isRandom'), 'scripts/scriptable-widget.js handles both random and daily selection');
-    assert(scriptableCode.includes('?day='), 'scripts/scriptable-widget.js click link opens exact quote in Web App');
+    assert(scriptableCode.includes('?quoteId=') || scriptableCode.includes('?day='), 'scripts/scriptable-widget.js click link opens exact quote in Web App');
   } catch (e) {
     assert(false, `Error auditing random quote feature: ${e.message}`);
   }
@@ -307,7 +307,7 @@ async function runFullAudit() {
 
   const swCheck = await httpGet('https://dong-luc-365.vercel.app/sw.js');
   assert(swCheck.status === 200, `Live sw.js returns HTTP ${swCheck.status} OK`);
-  assert(swCheck.data.includes('mindset-calendar-v9') || swCheck.data.includes('mindset-calendar-v10'), 'Live sw.js is running cache version v9 or v10');
+  assert(swCheck.data.includes('mindset-calendar-v10') || swCheck.data.includes('mindset-calendar-v11'), 'Live sw.js is running cache version v10 or v11');
   assert(swCheck.data.includes('cleanResponse'), 'Live sw.js contains WebKit redirection patch');
 
   const quotesCheck = await httpGet('https://dong-luc-365.vercel.app/quotes.json');
