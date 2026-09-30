@@ -90,7 +90,7 @@ async function runFullAudit() {
   console.log('\n3. Auditing Service Worker (sw.js) & WebKit Redirection Protection:');
   try {
     const sw = fs.readFileSync(path.join(__dirname, 'sw.js'), 'utf-8');
-    assert(sw.includes("CACHE_NAME = 'mindset-calendar-v13'"), 'sw.js cache version is updated to v13');
+    assert(sw.includes("CACHE_NAME = 'mindset-calendar-v14'"), 'sw.js cache version is updated to v14');
     assert(sw.includes('cleanResponse'), 'sw.js includes cleanResponse() function to strip redirected flag');
     assert(sw.includes("event.request.mode === 'navigate'"), 'sw.js handles navigate requests directly to avoid redirection errors');
     assert(sw.includes("self.addEventListener('push'"), 'sw.js contains Web Push notification event listener');
@@ -308,7 +308,7 @@ async function runFullAudit() {
 
   const swCheck = await httpGet('https://dong-luc-365.vercel.app/sw.js');
   assert(swCheck.status === 200, `Live sw.js returns HTTP ${swCheck.status} OK`);
-  assert(swCheck.data.includes('mindset-calendar-v12') || swCheck.data.includes('mindset-calendar-v13'), 'Live sw.js is running cache version v12 or v13');
+  assert(swCheck.data.includes('mindset-calendar-v13') || swCheck.data.includes('mindset-calendar-v14'), 'Live sw.js is running cache version v13 or v14');
   assert(swCheck.data.includes('cleanResponse'), 'Live sw.js contains WebKit redirection patch');
 
   const quotesCheck = await httpGet('https://dong-luc-365.vercel.app/quotes.json');
