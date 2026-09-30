@@ -610,6 +610,32 @@ html, body {
   color: var(--ocean-bright);
 }
 
+.clickable-pill {
+  cursor: pointer;
+  background: rgba(2, 132, 199, 0.16);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38bdf8;
+  font-weight: 700;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+}
+
+.clickable-pill:hover,
+.clickable-pill:active {
+  background: rgba(2, 132, 199, 0.35);
+  color: #ffffff;
+  border-color: #38bdf8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+}
+
+.clickable-pill:active {
+  transform: translateY(0) scale(0.96);
+}
+
 /* ==========================================================================
    2. EXPANDED STATE: FULL APP VIEW (19.5:9 VERTICAL LAYOUT)
    ========================================================================== */
@@ -1248,6 +1274,28 @@ html, body {
   background: rgba(2, 132, 199, 0.35);
   color: #ffffff;
   border-color: rgba(56, 189, 248, 0.5);
+}
+
+.highlight-chip {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.4) 0%, rgba(56, 189, 248, 0.25) 100%);
+  border-color: rgba(56, 189, 248, 0.6);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.3);
+}
+
+.highlight-chip:hover {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.65) 0%, rgba(56, 189, 248, 0.45) 100%);
+  border-color: #38bdf8;
+  color: #ffffff;
+}
+
+/* Rolling animation on random dice click */
+#btn-random-quote:active svg,
+#btn-random-nav:active svg,
+#btn-widget-random:active .stat-icon {
+  transform: rotate(180deg) scale(0.85);
+  transition: transform 0.2s ease;
 }
 
 .btn-primary-action {
