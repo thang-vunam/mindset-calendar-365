@@ -37,11 +37,14 @@
     widgetAuthor: document.getElementById('widget-author-text'),
     widgetProgressPercent: document.getElementById('widget-progress-percent'),
     widgetCategoryLabel: document.getElementById('widget-category-label'),
+    btnWidgetRandom: document.getElementById('btn-widget-random'),
 
     // Full View
     fullView: document.getElementById('full-view'),
     btnCollapseView: document.getElementById('btn-collapse-view'),
     headerDayCounter: document.getElementById('header-day-counter'),
+    btnRandomQuote: document.getElementById('btn-random-quote'),
+    btnRandomNav: document.getElementById('btn-random-nav'),
     btnFavorite: document.getElementById('btn-favorite'),
     favoriteHeartIcon: document.getElementById('favorite-heart-icon'),
     btnShare: document.getElementById('btn-share'),
@@ -485,6 +488,21 @@
     }
     navigateDay(state.todayDayOfYear);
     showToast(`Đã trở về ngày hôm nay: ${getDateFromDayOfYear(state.todayDayOfYear).formattedShort}`);
+  }
+
+  /**
+   * Random Quote Selector (Gieo duyên / Khám phá ngẫu nhiên)
+   */
+  function pickRandomQuote() {
+    if (state.isAnimating) return;
+    const totalQuotes = (state.quotes && state.quotes.length > 0) ? state.quotes.length : 365;
+    let randomDay;
+    do {
+      randomDay = Math.floor(Math.random() * totalQuotes) + 1;
+    } while (randomDay === state.currentDay && totalQuotes > 1);
+
+    navigateDay(randomDay);
+    showToast(`🎲 Đã mở câu ngẫu nhiên: Ngày ${randomDay}/365`);
   }
 
   /**
@@ -949,6 +967,16 @@
     DOM.btnNextDay.addEventListener('click', () => navigateDay('next'));
     DOM.btnToday.addEventListener('click', jumpToToday);
 
+    // Random Quote triggers
+    if (DOM.btnRandomQuote) DOM.btnRandomQuote.addEventListener('click', pickRandomQuote);
+    if (DOM.btnRandomNav) DOM.btnRandomNav.addEventListener('click', pickRandomQuote);
+    if (DOM.btnWidgetRandom) {
+      DOM.btnWidgetRandom.addEventListener('click', (e) => {
+        e.stopPropagation();
+        pickRandomQuote();
+      });
+    }
+
     // Sound Toggles (if present)
     if (DOM.widgetSoundBtn) {
       DOM.widgetSoundBtn.addEventListener('click', (e) => {
@@ -967,11 +995,13 @@
     // Frame Toggle on Desktop
     DOM.toggleFrameBtn.addEventListener('click', toggleFrameMode);
 
-    // Keyboard Arrow navigation
+    // Keyboard Arrow navigation & 'R' for random
     window.addEventListener('keydown', (e) => {
       if (DOM.dayPickerModal && !DOM.dayPickerModal.classList.contains('hidden')) return;
+      if (DOM.notifyModal && !DOM.notifyModal.classList.contains('hidden')) return;
       if (e.key === 'ArrowRight') navigateDay('next');
       if (e.key === 'ArrowLeft') navigateDay('prev');
+      if (e.key === 'r' || e.key === 'R') pickRandomQuote();
       if (e.key === 'Escape' && state.isExpanded) collapseView();
     });
 
@@ -1007,6 +1037,11 @@
     document.querySelectorAll('.quick-jump-chip').forEach(chip => {
       chip.addEventListener('click', () => {
         const jump = chip.getAttribute('data-jump');
+        if (jump === 'random') {
+          closeDayPicker();
+          pickRandomQuote();
+          return;
+        }
         if (jump === 'today') {
           DOM.daySliderInput.value = state.todayDayOfYear;
           DOM.sliderDayPreview.textContent = state.todayDayOfYear;
@@ -1068,6 +1103,23 @@
     const { day } = calculateCurrentDayOfYear();
     state.todayDayOfYear = day;
     state.currentDay = day;
+
+    // Check URL parameters for day or random (e.g. from Scriptable widget tap or shared link)
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const dayParam = urlParams.get('day');
+      const randomParam = urlParams.get('random');
+      
+      if (randomParam === '1' || randomParam === 'true' || dayParam === 'random') {
+        const total = (state.quotes && state.quotes.length > 0) ? state.quotes.length : 365;
+        state.currentDay = Math.floor(Math.random() * total) + 1;
+      } else if (dayParam && !isNaN(parseInt(dayParam, 10))) {
+        const parsed = parseInt(dayParam, 10);
+        if (parsed >= 1 && parsed <= 365) {
+          state.currentDay = parsed;
+        }
+      }
+    } catch (e) {}
 
     renderQuote(state.currentDay);
   }
