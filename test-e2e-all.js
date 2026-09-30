@@ -90,7 +90,7 @@ async function runFullAudit() {
   console.log('\n3. Auditing Service Worker (sw.js) & WebKit Redirection Protection:');
   try {
     const sw = fs.readFileSync(path.join(__dirname, 'sw.js'), 'utf-8');
-    assert(sw.includes("CACHE_NAME = 'mindset-calendar-v11'"), 'sw.js cache version is updated to v11');
+    assert(sw.includes("CACHE_NAME = 'mindset-calendar-v12'"), 'sw.js cache version is updated to v12');
     assert(sw.includes('cleanResponse'), 'sw.js includes cleanResponse() function to strip redirected flag');
     assert(sw.includes("event.request.mode === 'navigate'"), 'sw.js handles navigate requests directly to avoid redirection errors');
     assert(sw.includes("self.addEventListener('push'"), 'sw.js contains Web Push notification event listener');
@@ -137,6 +137,7 @@ async function runFullAudit() {
   const genCode = fs.readFileSync(path.join(__dirname, 'generate-icons.js'), 'utf-8');
   assert(!genCode.includes('Math.abs(cx) < 0.22 && Math.abs(cy) < 0.12'), 'generate-icons.js has eliminated the dark square in calendar center');
   assert(genCode.includes('DIGITS'), 'generate-icons.js renders crisp 365 digits');
+  assert(genCode.includes('startX = 0.235'), 'generate-icons.js centers 365 digits with equal margin on left of 3 and right of 5');
 
   // ----------------------------------------------------------------
   // 5.5. DESK CALENDAR WIDGET LAYOUT (CÁCH 2 - REALISTIC DESK CALENDAR)
@@ -307,7 +308,7 @@ async function runFullAudit() {
 
   const swCheck = await httpGet('https://dong-luc-365.vercel.app/sw.js');
   assert(swCheck.status === 200, `Live sw.js returns HTTP ${swCheck.status} OK`);
-  assert(swCheck.data.includes('mindset-calendar-v10') || swCheck.data.includes('mindset-calendar-v11'), 'Live sw.js is running cache version v10 or v11');
+  assert(swCheck.data.includes('mindset-calendar-v11') || swCheck.data.includes('mindset-calendar-v12'), 'Live sw.js is running cache version v11 or v12');
   assert(swCheck.data.includes('cleanResponse'), 'Live sw.js contains WebKit redirection patch');
 
   const quotesCheck = await httpGet('https://dong-luc-365.vercel.app/quotes.json');
