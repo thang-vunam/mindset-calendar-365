@@ -1,5 +1,5 @@
 // sw.js - Service Worker for 365-Day Desk Calendar PWA with Web Push Notifications
-const CACHE_NAME = 'mindset-calendar-v10';
+const CACHE_NAME = 'mindset-calendar-v11';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
