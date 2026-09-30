@@ -2,6 +2,7 @@
 // SCRIPTABLE WIDGET: ĐỘNG LỰC 365 (MINDSET 365)
 // Tác giả: Động Lực 365 (dong-luc-365.vercel.app)
 // Hỗ trợ: Màn hình chính (Home Screen) & Màn hình khóa (Lock Screen)
+// Đồng bộ 3 chiều thời gian thực (Scriptable <-> Safari <-> PWA App)
 // =====================================================================
 
 (async () => {
@@ -16,7 +17,7 @@
     
     try {
       const req = new Request(REPO_URL);
-      req.timeoutInterval = 5;
+      req.timeoutInterval = 4;
       const data = await req.loadJSON();
       if (Array.isArray(data) && data.length > 0) {
         fm.writeString(cachePath, JSON.stringify(data));
@@ -68,16 +69,16 @@
   const param = (args.widgetParameter && args.widgetParameter.trim().toLowerCase()) || DEFAULT_MODE;
   const isRandom = param === "random" || isRefreshAction;
 
-  let selectedQuote;
+  let selectedQuote = null;
   let isCustomQuote = false;
 
   if (isRefreshAction || (param === "random" && (!savedData || savedData.dayOfYear !== dayOfYear))) {
-    // Người dùng bấm nút [🎲 Đổi] trên Widget hoặc chạy trong app
+    // A. Người dùng bấm [🎲 Đổi] trên Widget hoặc chạy thủ công
     const randomIndex = Math.floor(Math.random() * quotes.length);
     selectedQuote = quotes[randomIndex];
     isCustomQuote = true;
     
-    // Lưu câu mới vào máy để CỐ ĐỊNH cả ngày
+    // Lưu bộ nhớ đệm cục bộ
     try {
       fm.writeString(savedQuotePath, JSON.stringify({
         dayOfYear: dayOfYear,
@@ -86,25 +87,54 @@
       }));
     } catch (e) {}
 
-    // Nếu bấm từ nút trên Widget: Tự động đóng Scriptable quay về màn hình chính ngay lập tức!
+    // Đồng bộ lập tức lên Cloud Sync API để Safari và PWA App tự động khớp câu này
+    try {
+      const postReq = new Request(`${APP_URL}/api/sync-quote`);
+      postReq.method = "POST";
+      postReq.headers = { "Content-Type": "application/json" };
+      postReq.body = JSON.stringify({ day: dayOfYear, quoteId: selectedQuote.id, isCustom: true });
+      postReq.timeoutInterval = 3;
+      await postReq.load();
+    } catch (e) {}
+
+    // Tự động đóng Scriptable quay về màn hình chính ngay lập tức
     if (args.queryParameters && args.queryParameters.refresh === "1") {
       App.close();
     }
-  } else if (savedData && savedData.dayOfYear === dayOfYear) {
-    // Đã có câu lưu cho hôm nay: CỐ ĐỊNH CẢ NGÀY!
-    selectedQuote = savedData.quote;
-    isCustomQuote = Boolean(savedData.isCustom);
   } else {
-    // Bắt đầu ngày mới: Nạp câu chuẩn của ngày hôm nay và lưu lại
-    selectedQuote = quotes[dayOfYear - 1] || quotes[0];
-    isCustomQuote = false;
+    // B. Chế độ hiển thị thông thường: Đồng bộ thời gian thực từ Cloud API
+    let cloudSynced = false;
     try {
-      fm.writeString(savedQuotePath, JSON.stringify({
-        dayOfYear: dayOfYear,
-        quote: selectedQuote,
-        isCustom: false
-      }));
+      const syncReq = new Request(`${APP_URL}/api/sync-quote`);
+      syncReq.timeoutInterval = 3;
+      const cloudData = await syncReq.loadJSON();
+      if (cloudData && cloudData.day === dayOfYear && cloudData.quoteId) {
+        if (cloudData.isCustom && cloudData.quote) {
+          selectedQuote = cloudData.quote;
+          isCustomQuote = true;
+          cloudSynced = true;
+        } else if (!cloudData.isCustom) {
+          selectedQuote = quotes[dayOfYear - 1] || quotes[0];
+          isCustomQuote = false;
+          cloudSynced = true;
+        }
+      }
     } catch (e) {}
+
+    // Nếu ngoại tuyến (không có mạng), dùng bộ nhớ cục bộ
+    if (!cloudSynced) {
+      if (savedData && savedData.dayOfYear === dayOfYear) {
+        selectedQuote = savedData.quote;
+        isCustomQuote = Boolean(savedData.isCustom);
+      } else {
+        selectedQuote = quotes[dayOfYear - 1] || quotes[0];
+        isCustomQuote = false;
+      }
+    }
+  }
+
+  if (!selectedQuote) {
+    selectedQuote = quotes[dayOfYear - 1] || quotes[0];
   }
 
   const badgeIcon = isCustomQuote ? "🎲" : "📅";
@@ -113,6 +143,7 @@
 
   // 4. Khởi tạo Widget
   const widget = new ListWidget();
+  // Chạm vào thân Widget sẽ mở Web App đồng bộ đúng câu này
   widget.url = `${APP_URL}?quoteId=${selectedQuote.id}`;
 
   const isLockScreen = config.runsInAccessory;
