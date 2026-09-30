@@ -16,7 +16,9 @@
     soundEnabled: false,
     favorites: new Set(),
     isAnimating: false,
-    audioContext: null
+    audioContext: null,
+    customQuotes: {},   // Maps dayNum -> user selected quote for this day
+    currentQuoteData: null
   };
 
   // DOM Elements
@@ -335,17 +337,22 @@
   /**
    * 4. UI Rendering: Update both Collapsed and Expanded States
    */
-  function renderQuote(dayNum, animateDirection = null) {
+  function renderQuote(dayNum, animateDirection = null, quoteOverride = null) {
     if (!state.quotes || state.quotes.length === 0) return;
 
-    // Day is 1-indexed (1 to 365)
-    const quoteIndex = Math.max(0, Math.min(dayNum - 1, state.quotes.length - 1));
-    const data = state.quotes[quoteIndex];
-    if (!data) return;
+    // Day is 1-indexed (1 to 365) representing the real CALENDAR DATE
+    const defaultIndex = Math.max(0, Math.min(dayNum - 1, state.quotes.length - 1));
+    const defaultData = state.quotes[defaultIndex];
+    if (!defaultData) return;
 
-    state.currentDay = data.day;
-    const dateInfo = getDateFromDayOfYear(data.day, state.currentYear);
-    const progressPercent = ((data.day / 365) * 100).toFixed(1);
+    // The quote content: either override, or custom quote for this day, or default
+    const data = quoteOverride || (state.customQuotes && state.customQuotes[dayNum]) || defaultData;
+    state.currentQuoteData = data;
+    state.currentDay = dayNum;
+
+    // The calendar date info is ALWAYS strictly calculated based on dayNum (e.g. today)!
+    const dateInfo = getDateFromDayOfYear(dayNum, state.currentYear);
+    const progressPercent = ((dayNum / 365) * 100).toFixed(1);
 
     // Apply animation classes to Expanded Card if requested
     if (animateDirection && DOM.calendarCardFlipper) {
@@ -370,12 +377,12 @@
     }
 
     function applyDataToDOM() {
-      // 1. Update Widget View
-      DOM.widgetDayBadge.textContent = dateInfo.dayName ? dateInfo.dayName.toUpperCase() : `NGÀY ${data.day} / 365`;
+      // 1. Update Widget View (Date is strictly dayNum, quote content is data)
+      DOM.widgetDayBadge.textContent = dateInfo.dayName ? dateInfo.dayName.toUpperCase() : `NGÀY ${dayNum} / 365`;
       DOM.widgetDateText.textContent = `NĂM ${dateInfo.year || state.currentYear}`;
       DOM.widgetDayNumber.textContent = dateInfo.dayOfMonth;
       if (DOM.widgetMonthSublabel) {
-        DOM.widgetMonthSublabel.textContent = `Tháng ${dateInfo.month} • Ngày ${data.day}/365`;
+        DOM.widgetMonthSublabel.textContent = `Tháng ${dateInfo.month} • Ngày ${dayNum}/365`;
       }
       DOM.widgetHeadline.textContent = data.headline;
       DOM.widgetAuthor.textContent = data.author;
@@ -383,11 +390,11 @@
       DOM.widgetCategoryLabel.textContent = data.category;
 
       // 2. Update Full Expanded View
-      DOM.headerDayCounter.textContent = `NGÀY ${data.day} / 365`;
+      DOM.headerDayCounter.textContent = `NGÀY ${dayNum} / 365`;
       DOM.fullCategoryTag.textContent = data.category.toUpperCase();
       DOM.fullActionHeadline.textContent = data.headline;
       DOM.cardFormattedDate.textContent = dateInfo.formattedLong;
-      DOM.cardDayIndicator.textContent = `Ngày ${data.day} / 365`;
+      DOM.cardDayIndicator.textContent = `Ngày ${dayNum} / 365`;
       DOM.fullQuoteText.textContent = data.quote;
       DOM.fullAuthorName.textContent = data.author;
       DOM.fullCategoryPill.textContent = data.category;
@@ -396,10 +403,10 @@
       DOM.progressFillBar.parentElement.setAttribute('aria-valuenow', progressPercent);
 
       // 3. Render Mandala SVG
-      DOM.mandalaBadge.innerHTML = generateMandalaSVG(data.day, data.category);
+      DOM.mandalaBadge.innerHTML = generateMandalaSVG(data.id || dayNum, data.category);
 
       // 4. Update Favorite button state
-      const isFav = state.favorites.has(data.day);
+      const isFav = state.favorites.has(data.id || dayNum);
       if (isFav) {
         DOM.btnFavorite.classList.add('active');
         DOM.favoriteHeartIcon.setAttribute('fill', '#38bdf8');
@@ -409,7 +416,7 @@
       }
 
       // 5. Update Today Button State (glowing if away from today)
-      if (data.day === state.todayDayOfYear) {
+      if (dayNum === state.todayDayOfYear) {
         DOM.btnToday.style.opacity = '0.9';
         DOM.btnToday.querySelector('.today-text').textContent = 'HÔM NAY';
       } else {
@@ -418,8 +425,8 @@
       }
 
       // 6. Synchronize Modal input values
-      DOM.daySliderInput.value = data.day;
-      DOM.sliderDayPreview.textContent = data.day;
+      DOM.daySliderInput.value = dayNum;
+      DOM.sliderDayPreview.textContent = dayNum;
       DOM.calendarDateInput.value = dateInfo.isoDate;
     }
   }
@@ -482,8 +489,17 @@
   }
 
   function jumpToToday() {
+    const hasCustom = state.customQuotes && state.customQuotes[state.todayDayOfYear];
     if (state.currentDay === state.todayDayOfYear) {
-      showToast('Đang ở ngày hôm nay');
+      if (hasCustom) {
+        delete state.customQuotes[state.todayDayOfYear];
+        try { localStorage.removeItem(`mindset_quote_choice_${state.todayDayOfYear}`); } catch(e) {}
+        playPaperTurnSound();
+        renderQuote(state.todayDayOfYear, 'prev');
+        showToast('🔄 Đã khôi phục câu danh ngôn gốc của ngày hôm nay');
+      } else {
+        showToast('Đang ở ngày hôm nay');
+      }
       return;
     }
     navigateDay(state.todayDayOfYear);
@@ -491,18 +507,34 @@
   }
 
   /**
-   * Random Quote Selector (Gieo duyên / Khám phá ngẫu nhiên)
+   * Random Quote Selector (Đổi câu khác hợp tâm trạng hôm nay - VẪN GIỮ NGUYÊN NGÀY):
+   * Keeps currentDay strictly unchanged (e.g. today stays Sep 30, Day 273),
+   * while shuffling the quote content to match the user's mood.
    */
   function pickRandomQuote() {
     if (state.isAnimating) return;
     const totalQuotes = (state.quotes && state.quotes.length > 0) ? state.quotes.length : 365;
-    let randomDay;
+    
+    // Pick a quote different from the one currently shown
+    const currentId = state.currentQuoteData ? state.currentQuoteData.id : state.currentDay;
+    let newIndex;
     do {
-      randomDay = Math.floor(Math.random() * totalQuotes) + 1;
-    } while (randomDay === state.currentDay && totalQuotes > 1);
+      newIndex = Math.floor(Math.random() * totalQuotes);
+    } while (state.quotes[newIndex].id === currentId && totalQuotes > 1);
 
-    navigateDay(randomDay);
-    showToast(`🎲 Đã mở câu ngẫu nhiên: Ngày ${randomDay}/365`);
+    const newQuote = state.quotes[newIndex];
+    if (!state.customQuotes) state.customQuotes = {};
+    state.customQuotes[state.currentDay] = newQuote;
+
+    // Remember choice for this day in localStorage
+    try {
+      localStorage.setItem(`mindset_quote_choice_${state.currentDay}`, JSON.stringify(newQuote));
+    } catch (e) {}
+
+    playPaperTurnSound();
+    // Render while KEEPING state.currentDay (e.g. today) unchanged!
+    renderQuote(state.currentDay, 'next', newQuote);
+    showToast(`🎲 Đã đổi câu khác hợp tâm trạng: "${newQuote.headline}"`);
   }
 
   /**
@@ -1104,15 +1136,30 @@
     state.todayDayOfYear = day;
     state.currentDay = day;
 
-    // Check URL parameters for day or random (e.g. from Scriptable widget tap or shared link)
+    // Restore any saved quote choice for today from localStorage
+    try {
+      const savedChoice = localStorage.getItem(`mindset_quote_choice_${state.todayDayOfYear}`);
+      if (savedChoice) {
+        state.customQuotes[state.todayDayOfYear] = JSON.parse(savedChoice);
+      }
+    } catch (e) {}
+
+    // Check URL parameters for day or quoteId (from Scriptable widget or shared link)
     try {
       const urlParams = new URLSearchParams(window.location.search);
+      const quoteIdParam = urlParams.get('quoteId');
       const dayParam = urlParams.get('day');
       const randomParam = urlParams.get('random');
       
-      if (randomParam === '1' || randomParam === 'true' || dayParam === 'random') {
+      if (quoteIdParam && !isNaN(parseInt(quoteIdParam, 10))) {
+        const qId = parseInt(quoteIdParam, 10);
+        const matched = state.quotes.find(q => q.id === qId);
+        if (matched) {
+          state.customQuotes[state.todayDayOfYear] = matched;
+        }
+      } else if (randomParam === '1' || randomParam === 'true') {
         const total = (state.quotes && state.quotes.length > 0) ? state.quotes.length : 365;
-        state.currentDay = Math.floor(Math.random() * total) + 1;
+        state.customQuotes[state.todayDayOfYear] = state.quotes[Math.floor(Math.random() * total)];
       } else if (dayParam && !isNaN(parseInt(dayParam, 10))) {
         const parsed = parseInt(dayParam, 10);
         if (parsed >= 1 && parsed <= 365) {
