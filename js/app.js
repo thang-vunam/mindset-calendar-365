@@ -494,6 +494,13 @@
       if (hasCustom) {
         delete state.customQuotes[state.todayDayOfYear];
         try { localStorage.removeItem(`mindset_quote_choice_${state.todayDayOfYear}`); } catch(e) {}
+        try {
+          fetch('/api/sync-quote', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ day: state.todayDayOfYear, quoteId: state.todayDayOfYear, isCustom: false })
+          }).catch(() => {});
+        } catch(e) {}
         playPaperTurnSound();
         renderQuote(state.todayDayOfYear, 'prev');
         showToast('🔄 Đã khôi phục câu danh ngôn gốc của ngày hôm nay');
@@ -529,6 +536,15 @@
     // Remember choice for this day in localStorage
     try {
       localStorage.setItem(`mindset_quote_choice_${state.currentDay}`, JSON.stringify(newQuote));
+    } catch (e) {}
+
+    // Cloud Sync Engine: Notify server so Scriptable Widget & Safari immediately sync
+    try {
+      fetch('/api/sync-quote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ day: state.todayDayOfYear, quoteId: newQuote.id, isCustom: true })
+      }).catch(() => {});
     } catch (e) {}
 
     playPaperTurnSound();
@@ -1176,6 +1192,41 @@
     } catch (e) {}
 
     renderQuote(state.currentDay);
+
+    // 3-Way Cloud Sync Engine:
+    // Synchronize seamlessly with Scriptable Widget & other tabs in real-time
+    checkCloudQuoteSync();
+  }
+
+  async function checkCloudQuoteSync() {
+    try {
+      const res = await fetch('/api/sync-quote');
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data && data.day === state.todayDayOfYear && data.quoteId) {
+        if (data.isCustom) {
+          const matched = state.quotes.find(q => q.id === data.quoteId);
+          if (matched && (!state.customQuotes[state.todayDayOfYear] || state.customQuotes[state.todayDayOfYear].id !== matched.id)) {
+            state.customQuotes[state.todayDayOfYear] = matched;
+            try {
+              localStorage.setItem(`mindset_quote_choice_${state.todayDayOfYear}`, JSON.stringify(matched));
+            } catch (e) {}
+            if (state.currentDay === state.todayDayOfYear) {
+              renderQuote(state.todayDayOfYear, 'next', matched);
+            }
+          }
+        } else if (state.customQuotes[state.todayDayOfYear]) {
+          // Cloud says reset to default
+          delete state.customQuotes[state.todayDayOfYear];
+          try {
+            localStorage.removeItem(`mindset_quote_choice_${state.todayDayOfYear}`);
+          } catch(e) {}
+          if (state.currentDay === state.todayDayOfYear) {
+            renderQuote(state.todayDayOfYear, 'prev');
+          }
+        }
+      }
+    } catch (e) {}
   }
 
   function generateFallbackQuotes() {
