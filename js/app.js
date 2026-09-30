@@ -1156,10 +1156,17 @@
         const matched = state.quotes.find(q => q.id === qId);
         if (matched) {
           state.customQuotes[state.todayDayOfYear] = matched;
+          try {
+            localStorage.setItem(`mindset_quote_choice_${state.todayDayOfYear}`, JSON.stringify(matched));
+          } catch (e) {}
         }
       } else if (randomParam === '1' || randomParam === 'true') {
         const total = (state.quotes && state.quotes.length > 0) ? state.quotes.length : 365;
-        state.customQuotes[state.todayDayOfYear] = state.quotes[Math.floor(Math.random() * total)];
+        const picked = state.quotes[Math.floor(Math.random() * total)];
+        state.customQuotes[state.todayDayOfYear] = picked;
+        try {
+          localStorage.setItem(`mindset_quote_choice_${state.todayDayOfYear}`, JSON.stringify(picked));
+        } catch (e) {}
       } else if (dayParam && !isNaN(parseInt(dayParam, 10))) {
         const parsed = parseInt(dayParam, 10);
         if (parsed >= 1 && parsed <= 365) {
