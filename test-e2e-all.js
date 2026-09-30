@@ -85,12 +85,12 @@ async function runFullAudit() {
   }
 
   // ----------------------------------------------------------------
-  // 3. SERVICE WORKER (v9) & SAFARI WEBKIT PROTECTION
+  // 3. SERVICE WORKER (v10) & SAFARI WEBKIT PROTECTION
   // ----------------------------------------------------------------
   console.log('\n3. Auditing Service Worker (sw.js) & WebKit Redirection Protection:');
   try {
     const sw = fs.readFileSync(path.join(__dirname, 'sw.js'), 'utf-8');
-    assert(sw.includes("CACHE_NAME = 'mindset-calendar-v9'"), 'sw.js cache version is updated to v9');
+    assert(sw.includes("CACHE_NAME = 'mindset-calendar-v10'"), 'sw.js cache version is updated to v10');
     assert(sw.includes('cleanResponse'), 'sw.js includes cleanResponse() function to strip redirected flag');
     assert(sw.includes("event.request.mode === 'navigate'"), 'sw.js handles navigate requests directly to avoid redirection errors');
     assert(sw.includes("self.addEventListener('push'"), 'sw.js contains Web Push notification event listener');
@@ -157,6 +157,38 @@ async function runFullAudit() {
     assert(css.includes('.big-day-number'), 'css/style.css includes bold desk typography for .big-day-number');
   } catch (e) {
     assert(false, `Error auditing widget layout: ${e.message}`);
+  }
+
+  // ----------------------------------------------------------------
+  // 5.6. RANDOM QUOTES FEATURE (WEB APP & SCRIPTABLE INTEGRATION)
+  // ----------------------------------------------------------------
+  console.log('\n5.6. Auditing Random Quotes Feature (Web App & URL Handlers):');
+  try {
+    const html = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf-8');
+    assert(html.includes('id="btn-random-quote"'), 'index.html contains #btn-random-quote in top bar');
+    assert(html.includes('id="btn-random-nav"'), 'index.html contains #btn-random-nav in bottom navigation deck');
+    assert(html.includes('id="btn-widget-random"'), 'index.html contains #btn-widget-random in desk widget view');
+    assert(html.includes('data-jump="random"'), 'index.html contains data-jump="random" in day picker modal');
+
+    const appJs = fs.readFileSync(path.join(__dirname, 'js/app.js'), 'utf-8');
+    assert(appJs.includes('function pickRandomQuote()'), 'js/app.js implements pickRandomQuote() function');
+    assert(appJs.includes('btnRandomQuote'), 'js/app.js wires btnRandomQuote click event');
+    assert(appJs.includes('btnRandomNav'), 'js/app.js wires btnRandomNav click event');
+    assert(appJs.includes("e.key === 'r' || e.key === 'R'"), 'js/app.js supports R shortcut key for random quote');
+    assert(appJs.includes("randomParam === '1'"), 'js/app.js parses ?random=1 or ?day=random from URL');
+
+    const css = fs.readFileSync(path.join(__dirname, 'css/style.css'), 'utf-8');
+    assert(css.includes('.clickable-pill'), 'css/style.css includes styles for .clickable-pill');
+    assert(css.includes('.highlight-chip'), 'css/style.css includes styles for .highlight-chip');
+
+    const scriptableFile = path.join(__dirname, 'scripts/scriptable-widget.js');
+    assert(fs.existsSync(scriptableFile), 'scripts/scriptable-widget.js exists');
+    const scriptableCode = fs.readFileSync(scriptableFile, 'utf-8');
+    assert(scriptableCode.includes('DEFAULT_MODE'), 'scripts/scriptable-widget.js defines DEFAULT_MODE (random/daily)');
+    assert(scriptableCode.includes('isRandom'), 'scripts/scriptable-widget.js handles both random and daily selection');
+    assert(scriptableCode.includes('?day='), 'scripts/scriptable-widget.js click link opens exact quote in Web App');
+  } catch (e) {
+    assert(false, `Error auditing random quote feature: ${e.message}`);
   }
 
   // ----------------------------------------------------------------
@@ -275,7 +307,7 @@ async function runFullAudit() {
 
   const swCheck = await httpGet('https://dong-luc-365.vercel.app/sw.js');
   assert(swCheck.status === 200, `Live sw.js returns HTTP ${swCheck.status} OK`);
-  assert(swCheck.data.includes('mindset-calendar-v8') || swCheck.data.includes('mindset-calendar-v9'), 'Live sw.js is running cache version v8 or v9');
+  assert(swCheck.data.includes('mindset-calendar-v9') || swCheck.data.includes('mindset-calendar-v10'), 'Live sw.js is running cache version v9 or v10');
   assert(swCheck.data.includes('cleanResponse'), 'Live sw.js contains WebKit redirection patch');
 
   const quotesCheck = await httpGet('https://dong-luc-365.vercel.app/quotes.json');
