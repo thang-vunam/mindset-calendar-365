@@ -88,5 +88,20 @@
       "time2": "14:00"
     },
     "updatedAt": "2026-09-30T01:49:12.655Z"
+  },
+  {
+    "endpoint": "https://web.push.apple.com/QH-PKpMZGbuXp4dyUdBZEXLIfEkOyBWi5v7HtLXM8-rqb8-wWqBfsQFmyLdjdrehm1NE85aYegRZAHWTUEulAHqyEB19xp8PSAXPemoUV3gH7ROuvqM7Qg3MXQ-CIdASEno6nptl3yd3vl595LiwBSrbIkiY76TsrdPuI2nNErM",
+    "expirationTime": null,
+    "keys": {
+      "p256dh": "BBP19gsl4U1CnpMSz5i7I_r_yNR-e2O4cS3m7Am2I-3V4EH2FiKMXrHhVMxuc4xEsIDcVBapUkic7036zd_aU6I",
+      "auth": "cQfp-AARRjhpfwJsjsMhVw"
+    },
+    "settings": {
+      "enabled1": true,
+      "time1": "07:30",
+      "enabled2": true,
+      "time2": "14:30"
+    },
+    "updatedAt": "2026-10-01T03:30:59.961Z"
   }
 ]
