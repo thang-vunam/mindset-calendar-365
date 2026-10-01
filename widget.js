@@ -113,9 +113,15 @@
 
   if (isLockScreen) {
     widget.addSpacer(1);
-    const headerTxt = widget.addText(currentDateText);
+    const headerStack = widget.addStack();
+    headerStack.layoutHorizontally();
+    const headerTxt = headerStack.addText(currentDateText);
     headerTxt.font = Font.boldSystemFont(10);
     headerTxt.textColor = Color.white();
+    headerStack.addSpacer();
+    const dayTxt = headerStack.addText(`${dayOfYear}/365`);
+    dayTxt.font = Font.systemFont(9.5);
+    dayTxt.textColor = new Color("#cbd5e1");
     
     widget.addSpacer(2);
     const quoteTxt = widget.addText(`"${selectedQuote.quote}" — ${selectedQuote.author}`);
@@ -135,12 +141,23 @@
     ];
     widget.backgroundGradient = gradient;
 
-    // Header: Chỉ hiển thị Ngày hiện tại
-    const badge = widget.addText(currentDateText);
-    badge.font = Font.boldSystemFont(isSmall ? 10.5 : 11);
-    badge.textColor = new Color("#38bdf8");
+    // Hàng trên cùng: Ngày hiện tại (lề trái) và Ngày/365 (lề phải)
+    const headerStack = widget.addStack();
+    headerStack.layoutHorizontally();
+    headerStack.centerAlignContent();
 
-    widget.addSpacer(isSmall ? 5 : 6);
+    const dateBadge = headerStack.addText(currentDateText);
+    dateBadge.font = Font.boldSystemFont(isSmall ? 9.5 : 10.5);
+    dateBadge.textColor = new Color("#38bdf8");
+
+    headerStack.addSpacer();
+
+    const dayOfYearBadge = headerStack.addText(`${dayOfYear}/365`);
+    dayOfYearBadge.font = Font.boldSystemFont(isSmall ? 9.5 : 10.5);
+    dayOfYearBadge.textColor = new Color("#94a3b8");
+
+    // Khoảng đệm đàn hồi trên (đẩy khối quote vào giữa)
+    widget.addSpacer();
 
     // Tiêu đề hành động
     const headlineTxt = widget.addText(selectedQuote.headline.toUpperCase());
@@ -151,16 +168,18 @@
     widget.addSpacer(isSmall ? 3 : 4);
 
     // Nội dung câu trích dẫn
-    const quoteTxt = widget.addText(`"${selectedQuote.quote}"`);
+    const quoteTxt = widget.addText(`"${selectedQuote.quote.trim()}"`);
     quoteTxt.font = Font.italicSystemFont(isSmall ? 10.5 : 11.5);
     quoteTxt.textColor = new Color("#f1f5f9");
     quoteTxt.lineLimit = isSmall ? 4 : 4;
 
+    // Khoảng đệm đàn hồi dưới (hoàn toàn tương đương khoảng đệm trên để cân đối 100%)
     widget.addSpacer();
 
-    // Footer: Chỉ hiển thị Tác giả ở góc phải
+    // Hàng dưới cùng: Chỉ hiển thị Tác giả ở góc phải
     const footerStack = widget.addStack();
     footerStack.layoutHorizontally();
+    footerStack.centerAlignContent();
     footerStack.addSpacer();
     
     const authorLabel = footerStack.addText(`— ${selectedQuote.author}`);
