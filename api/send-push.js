@@ -85,9 +85,30 @@ function getTodayQuote() {
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
   if (req.method === 'OPTIONS') return res.status(200).end();
+
+  // Kiểm soát truy cập bảo mật (Broken Access Control Mitigation)
+  const CRON_SECRET = process.env.CRON_SECRET || 'mindset_365_cron_secure_token';
+  const authHeader = req.headers['authorization'];
+  const isVercelCron = req.headers['x-vercel-cron'] === '1' || req.headers['user-agent']?.includes('vercel-cron');
+  
+  let querySecret = null;
+  try {
+    const parsedUrl = new URL(req.url, 'http://localhost');
+    querySecret = parsedUrl.searchParams.get('secret');
+  } catch (e) {}
+
+  const isAuthorized = isVercelCron || 
+    (authHeader && authHeader === `Bearer ${CRON_SECRET}`) || 
+    (querySecret && querySecret === CRON_SECRET);
+
+  if (!isAuthorized) {
+    return res.status(401).json({
+      error: 'Unauthorized: Yêu cầu mã xác thực quản trị (Missing or invalid authorization token)'
+    });
+  }
 
   try {
     // 1. Get subscriptions
