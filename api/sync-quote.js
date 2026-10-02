@@ -131,8 +131,25 @@ module.exports = async (req, res) => {
     });
   }
 
+// Sliding window in-memory rate limiter against DDoS & token exhaustion
+const ipRequests = new Map();
+function isRateLimited(ip, maxPerMinute = 30) {
+  const now = Date.now();
+  const history = ipRequests.get(ip) || [];
+  const recent = history.filter(t => now - t < 60000);
+  if (recent.length >= maxPerMinute) return true;
+  recent.push(now);
+  ipRequests.set(ip, recent);
+  return false;
+}
+
   // 2. POST: Set active synced quote for today (from Scriptable, Safari or PWA)
   if (req.method === 'POST') {
+    const clientIp = req.headers['x-forwarded-for'] || req.socket?.remoteAddress || 'unknown';
+    if (isRateLimited(clientIp, 30)) {
+      return res.status(429).json({ error: 'Quá nhiều yêu cầu. Vui lòng thử lại sau ít phút (Too many requests, rate limit exceeded)' });
+    }
+
     try {
       let body = req.body;
       if (typeof body === 'string') {
