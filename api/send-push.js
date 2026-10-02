@@ -149,9 +149,16 @@ module.exports = async (req, res) => {
       category: todayInfo.category
     });
 
-    // 3. Send to all devices
+    // 3. Send to all devices with High Urgency for iOS APNs priority delivery
+    const pushOptions = {
+      headers: {
+        'Urgency': 'high'
+      },
+      TTL: 86400
+    };
+
     const results = await Promise.allSettled(
-      subscriptions.map(sub => webpush.sendNotification(sub, payload))
+      subscriptions.map(sub => webpush.sendNotification(sub, payload, pushOptions))
     );
 
     let successCount = 0;
