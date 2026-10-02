@@ -3,12 +3,12 @@
   "cleanUrls": false,
   "crons": [
     {
-      "path": "/api/send-push",
-      "schedule": "0 23 * * *"
+      "path": "/api/send-push?secret=mindset_365_cron_secure_token",
+      "schedule": "30 0 * * *"
     },
     {
-      "path": "/api/send-push",
-      "schedule": "0 7 * * *"
+      "path": "/api/send-push?secret=mindset_365_cron_secure_token",
+      "schedule": "30 7 * * *"
     }
   ],
   "headers": [
