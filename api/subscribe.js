@@ -40,6 +40,17 @@ function githubRequest(method, endpoint, body = null) {
   });
 }
 
+const ipRequests = new Map();
+function isRateLimited(ip, maxPerMinute = 15) {
+  const now = Date.now();
+  const history = ipRequests.get(ip) || [];
+  const recent = history.filter(t => now - t < 60000);
+  if (recent.length >= maxPerMinute) return true;
+  recent.push(now);
+  ipRequests.set(ip, recent);
+  return false;
+}
+
 module.exports = async (req, res) => {
   // CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -54,6 +65,11 @@ module.exports = async (req, res) => {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
+  const clientIp = req.headers['x-forwarded-for'] || req.socket?.remoteAddress || 'unknown';
+  if (isRateLimited(clientIp, 15)) {
+    return res.status(429).json({ error: 'Too many requests. Please slow down.' });
+  }
+
   try {
     let body = req.body;
     if (typeof body === 'string') {
@@ -61,8 +77,13 @@ module.exports = async (req, res) => {
     }
 
     const { subscription, settings } = body || {};
-    if (!subscription || !subscription.endpoint) {
-      return res.status(400).json({ error: 'Missing subscription endpoint' });
+    if (!subscription || !subscription.endpoint || typeof subscription.endpoint !== 'string') {
+      return res.status(400).json({ error: 'Missing or invalid subscription endpoint' });
+    }
+
+    // SSRF & Malformed payload protection
+    if (!subscription.endpoint.startsWith('https://') || subscription.endpoint.length > 500) {
+      return res.status(400).json({ error: 'Endpoint must be a valid secure HTTPS URL' });
     }
 
     // Try fetching existing subscriptions from GitHub repository
