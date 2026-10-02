@@ -147,13 +147,13 @@
     headerStack.centerAlignContent();
 
     const dateBadge = headerStack.addText(currentDateText);
-    dateBadge.font = Font.boldSystemFont(isSmall ? 9.5 : 10.5);
+    dateBadge.font = Font.boldSystemFont(isSmall ? 10 : 11);
     dateBadge.textColor = new Color("#38bdf8");
 
     headerStack.addSpacer();
 
     const dayOfYearBadge = headerStack.addText(`${dayOfYear}/365`);
-    dayOfYearBadge.font = Font.boldSystemFont(isSmall ? 9.5 : 10.5);
+    dayOfYearBadge.font = Font.boldSystemFont(isSmall ? 10 : 11);
     dayOfYearBadge.textColor = new Color("#94a3b8");
 
     // Khoảng đệm đàn hồi trên (đẩy khối quote vào giữa)
@@ -161,15 +161,15 @@
 
     // Tiêu đề hành động
     const headlineTxt = widget.addText(selectedQuote.headline.toUpperCase());
-    headlineTxt.font = Font.boldSystemFont(isSmall ? 11.5 : 12.5);
+    headlineTxt.font = Font.boldSystemFont(isSmall ? 12.5 : 14);
     headlineTxt.textColor = Color.white();
     headlineTxt.lineLimit = isSmall ? 2 : 1;
 
     widget.addSpacer(isSmall ? 3 : 4);
 
-    // Nội dung câu trích dẫn
+    // Nội dung câu trích dẫn: Tăng kích thước chữ từ 10.5pt lên 12.5pt giúp đọc rõ ràng, không bị mỏi mắt
     const quoteTxt = widget.addText(`"${selectedQuote.quote.trim()}"`);
-    quoteTxt.font = Font.italicSystemFont(isSmall ? 10.5 : 11.5);
+    quoteTxt.font = Font.italicSystemFont(isSmall ? 12 : 13.5);
     quoteTxt.textColor = new Color("#f1f5f9");
     quoteTxt.lineLimit = isSmall ? 4 : 4;
 
@@ -183,7 +183,7 @@
     footerStack.addSpacer();
     
     const authorLabel = footerStack.addText(`— ${selectedQuote.author}`);
-    authorLabel.font = Font.boldSystemFont(isSmall ? 9.5 : 10.5);
+    authorLabel.font = Font.boldSystemFont(isSmall ? 10 : 11.5);
     authorLabel.textColor = new Color("#38bdf8");
     authorLabel.lineLimit = 1;
   }
