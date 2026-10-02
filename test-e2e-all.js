@@ -323,7 +323,7 @@ async function runFullAudit() {
   const iconCheck = await httpGet('https://dong-luc-365.vercel.app/assets/icons/apple-touch-icon.png');
   assert(iconCheck.status === 200, `Live apple-touch-icon.png returns HTTP ${iconCheck.status} OK`);
 
-  const pushCheck = await httpGet('https://dong-luc-365.vercel.app/api/send-push');
+  const pushCheck = await httpGet('https://dong-luc-365.vercel.app/api/send-push?secret=mindset_365_cron_secure_token');
   assert(pushCheck.status === 200, `Live /api/send-push endpoint returns HTTP ${pushCheck.status} OK`);
   try {
     const pushRes = JSON.parse(pushCheck.data);
