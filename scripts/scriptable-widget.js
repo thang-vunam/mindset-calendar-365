@@ -159,18 +159,18 @@
     // Khoảng đệm đàn hồi trên (đẩy khối quote vào giữa)
     widget.addSpacer();
 
-    // Tiêu đề hành động
+    // Tiêu đề hành động: Giảm nhẹ để nhường sự chú ý cho nội dung chính
     const headlineTxt = widget.addText(selectedQuote.headline.toUpperCase());
-    headlineTxt.font = Font.boldSystemFont(isSmall ? 12.5 : 14);
-    headlineTxt.textColor = Color.white();
+    headlineTxt.font = Font.boldSystemFont(isSmall ? 11 : 12);
+    headlineTxt.textColor = new Color("#e2e8f0");
     headlineTxt.lineLimit = isSmall ? 2 : 1;
 
     widget.addSpacer(isSmall ? 3 : 4);
 
-    // Nội dung câu trích dẫn: Tăng kích thước chữ từ 10.5pt lên 12.5pt giúp đọc rõ ràng, không bị mỏi mắt
+    // Nội dung câu trích dẫn: Tăng lớn hơn giúp câu quote nổi bật, dễ đọc rõ ràng
     const quoteTxt = widget.addText(`"${selectedQuote.quote.trim()}"`);
-    quoteTxt.font = Font.italicSystemFont(isSmall ? 12 : 13.5);
-    quoteTxt.textColor = new Color("#f1f5f9");
+    quoteTxt.font = Font.italicSystemFont(isSmall ? 13 : 14);
+    quoteTxt.textColor = new Color("#f8fafc");
     quoteTxt.lineLimit = isSmall ? 4 : 4;
 
     // Khoảng đệm đàn hồi dưới (hoàn toàn tương đương khoảng đệm trên để cân đối 100%)
