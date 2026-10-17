@@ -57,14 +57,21 @@ async function runFullAudit() {
     
     let validCount = 0;
     const daySet = new Set();
+    const headlineSet = new Set();
+    const quoteSet = new Set();
+
     quotes.forEach(q => {
       daySet.add(q.day);
+      if (q.headline) headlineSet.add(q.headline.trim());
+      if (q.quote) quoteSet.add(q.quote.trim());
       if (q.id && q.day && q.headline && q.quote && q.author && q.category) {
         validCount++;
       }
     });
     assert(validCount === 365, 'All 365 items have complete fields (id, day, headline, quote, author, category)');
     assert(daySet.size === 365, 'All 365 days are completely unique and covered (Day 1 - 365)');
+    assert(headlineSet.size === 365, `All 365 headlines are 100% UNIQUE (found ${headlineSet.size}/365 unique)`);
+    assert(quoteSet.size === 365, `All 365 quotes are 100% UNIQUE (found ${quoteSet.size}/365 unique)`);
   } catch (e) {
     assert(false, `Error reading quotes.json: ${e.message}`);
   }
@@ -85,12 +92,12 @@ async function runFullAudit() {
   }
 
   // ----------------------------------------------------------------
-  // 3. SERVICE WORKER (v10) & SAFARI WEBKIT PROTECTION
+  // 3. SERVICE WORKER (v15) & SAFARI WEBKIT PROTECTION
   // ----------------------------------------------------------------
   console.log('\n3. Auditing Service Worker (sw.js) & WebKit Redirection Protection:');
   try {
     const sw = fs.readFileSync(path.join(__dirname, 'sw.js'), 'utf-8');
-    assert(sw.includes("CACHE_NAME = 'mindset-calendar-v14'"), 'sw.js cache version is updated to v14');
+    assert(sw.includes("CACHE_NAME = 'mindset-calendar-v15'"), 'sw.js cache version is updated to v15');
     assert(sw.includes('cleanResponse'), 'sw.js includes cleanResponse() function to strip redirected flag');
     assert(sw.includes("event.request.mode === 'navigate'"), 'sw.js handles navigate requests directly to avoid redirection errors');
     assert(sw.includes("self.addEventListener('push'"), 'sw.js contains Web Push notification event listener');
