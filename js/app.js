@@ -522,14 +522,32 @@
     if (state.isAnimating) return;
     const totalQuotes = (state.quotes && state.quotes.length > 0) ? state.quotes.length : 365;
     
-    // Pick a quote different from the one currently shown
-    const currentId = state.currentQuoteData ? state.currentQuoteData.id : state.currentDay;
-    let newIndex;
-    do {
-      newIndex = Math.floor(Math.random() * totalQuotes);
-    } while (state.quotes[newIndex].id === currentId && totalQuotes > 1);
+    // Đọc lịch sử các câu đã hiển thị gần nhất để tuyệt đối tránh lặp lại
+    let recentIds = [];
+    try {
+      recentIds = JSON.parse(localStorage.getItem('mindset_recent_random_ids') || '[]');
+      if (!Array.isArray(recentIds)) recentIds = [];
+    } catch (e) {}
 
-    const newQuote = state.quotes[newIndex];
+    const currentId = state.currentQuoteData ? state.currentQuoteData.id : state.currentDay;
+    recentIds.push(currentId);
+    const recentSet = new Set(recentIds);
+
+    let candidates = state.quotes.filter(q => !recentSet.has(q.id));
+    if (candidates.length === 0) {
+      candidates = state.quotes.filter(q => q.id !== currentId);
+      recentIds = [];
+    }
+
+    const randomIndex = Math.floor(Math.random() * candidates.length);
+    const newQuote = candidates[randomIndex] || state.quotes[0];
+
+    recentIds.push(newQuote.id);
+    if (recentIds.length > 50) recentIds = recentIds.slice(-50);
+    try {
+      localStorage.setItem('mindset_recent_random_ids', JSON.stringify(recentIds));
+    } catch (e) {}
+
     if (!state.customQuotes) state.customQuotes = {};
     state.customQuotes[state.currentDay] = newQuote;
 
