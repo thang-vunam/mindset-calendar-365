@@ -25,7 +25,7 @@
 
     try {
       const req = new Request(REPO_URL);
-      req.timeoutInterval = 3;
+      req.timeoutInterval = 8;
       const data = await req.loadJSON();
       if (Array.isArray(data) && data.length > 0) {
         fm.writeString(cachePath, JSON.stringify(data));
@@ -59,15 +59,15 @@
   const month = now.getMonth() + 1;
   const currentDateText = `${dayName}, ${dayOfMonth}/${month}`;
 
-  // 3. Cơ chế xoay vòng ngẫu nhiên mỗi 60 phút (Tránh trùng lặp gần nhau)
+  // 3. Cơ chế xoay vòng xáo bài thông minh (Shuffle Deck: 100% không trùng lặp cho đến khi hết 365 câu)
   const fm = FileManager.local();
   const historyPath = fm.joinPath(fm.documentsDirectory(), "mindset-widget-history.json");
 
-  let history = { lastQuoteId: null, recentIds: [], lastUpdated: 0 };
+  let history = { lastQuoteId: null, deck: [], lastUpdated: 0 };
   if (fm.fileExists(historyPath)) {
     try {
       history = JSON.parse(fm.readString(historyPath));
-      if (!Array.isArray(history.recentIds)) history.recentIds = [];
+      if (!Array.isArray(history.deck)) history.deck = [];
     } catch (e) {}
   }
 
@@ -78,20 +78,28 @@
   let selectedQuote = null;
 
   if (shouldPickNew) {
-    // Lọc bỏ 25 câu đã hiển thị gần nhất để tránh lặp lại
-    const recentSet = new Set(history.recentIds || []);
-    let availableQuotes = quotes.filter(q => !recentSet.has(q.id));
-    if (availableQuotes.length === 0) availableQuotes = quotes;
+    // Nếu bộ bài đã rút hết hoặc chưa khởi tạo, nạp lại toàn bộ 365 câu và xáo trộn ngẫu nhiên (Fisher-Yates Shuffle)
+    if (!history.deck || history.deck.length === 0) {
+      const allIds = quotes.map(q => q.id);
+      for (let i = allIds.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [allIds[i], allIds[j]] = [allIds[j], allIds[i]];
+      }
+      // Tránh việc câu đầu tiên của bộ bài mới trùng với câu vừa hiển thị
+      if (history.lastQuoteId && allIds[allIds.length - 1] === history.lastQuoteId && allIds.length > 1) {
+        [allIds[allIds.length - 1], allIds[0]] = [allIds[0], allIds[allIds.length - 1]];
+      }
+      history.deck = allIds;
+    }
 
-    const randomIndex = Math.floor(Math.random() * availableQuotes.length);
-    selectedQuote = availableQuotes[randomIndex];
+    // Rút 1 câu độc bản từ bộ bài
+    const nextQuoteId = history.deck.pop();
+    selectedQuote = quotes.find(q => q.id === nextQuoteId) || quotes[dayOfYear - 1] || quotes[0];
 
-    // Lưu vào lịch sử
-    const updatedRecent = [selectedQuote.id, ...(history.recentIds || [])].slice(0, 25);
     try {
       fm.writeString(historyPath, JSON.stringify({
         lastQuoteId: selectedQuote.id,
-        recentIds: updatedRecent,
+        deck: history.deck,
         lastUpdated: now.getTime()
       }));
     } catch (e) {}
