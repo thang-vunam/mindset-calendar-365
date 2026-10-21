@@ -315,7 +315,7 @@ async function runFullAudit() {
 
   const swCheck = await httpGet('https://dong-luc-365.vercel.app/sw.js');
   assert(swCheck.status === 200, `Live sw.js returns HTTP ${swCheck.status} OK`);
-  assert(swCheck.data.includes('mindset-calendar-v13') || swCheck.data.includes('mindset-calendar-v14'), 'Live sw.js is running cache version v13 or v14');
+  assert(swCheck.data.includes('mindset-calendar-v14') || swCheck.data.includes('mindset-calendar-v15'), 'Live sw.js is running cache version v14 or v15');
   assert(swCheck.data.includes('cleanResponse'), 'Live sw.js contains WebKit redirection patch');
 
   const quotesCheck = await httpGet('https://dong-luc-365.vercel.app/quotes.json');
