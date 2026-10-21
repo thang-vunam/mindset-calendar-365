@@ -11,10 +11,10 @@
   const APP_URL = "https://dong-luc-365.vercel.app";
   const ROTATE_INTERVAL_MS = 60 * 60 * 1000; // 60 phút
 
-  // 1. Tải danh sách 365 câu trích dẫn (Ưu tiên đọc đệm cục bộ 0.001s)
+  // 1. Tải danh sách 365 câu trích dẫn (Ưu tiên đọc đệm cục bộ v2)
   async function loadQuotes() {
     const fm = FileManager.local();
-    const cachePath = fm.joinPath(fm.documentsDirectory(), "mindset-quotes-cache.json");
+    const cachePath = fm.joinPath(fm.documentsDirectory(), "mindset-quotes-cache-v2.json");
     
     if (fm.fileExists(cachePath)) {
       try {
@@ -114,7 +114,8 @@
 
   // 4. Khởi tạo Widget
   const widget = new ListWidget();
-  widget.url = `${APP_URL}?quoteId=${selectedQuote.id}`;
+  const cleanHeadline = (selectedQuote.headline || "").trim();
+  widget.url = `${APP_URL}?quoteId=${selectedQuote.id}&h=${encodeURIComponent(cleanHeadline)}`;
 
   const isLockScreen = config.runsInAccessory;
   const isSmall = config.widgetFamily === "small";
