@@ -1182,21 +1182,28 @@
     let hasExplicitQuoteParam = false;
     try {
       const urlParams = new URLSearchParams(window.location.search);
+      const headlineParam = urlParams.get('h') || urlParams.get('headline');
       const quoteIdParam = urlParams.get('quoteId') || urlParams.get('id');
       const dayParam = urlParams.get('day');
       const randomParam = urlParams.get('random');
       
-      if (quoteIdParam && !isNaN(parseInt(quoteIdParam, 10))) {
+      let matched = null;
+      if (headlineParam) {
+        const targetH = headlineParam.trim().toLowerCase();
+        matched = state.quotes.find(q => q.headline && q.headline.trim().toLowerCase() === targetH);
+      }
+      if (!matched && quoteIdParam && !isNaN(parseInt(quoteIdParam, 10))) {
         const qId = parseInt(quoteIdParam, 10);
-        const matched = state.quotes.find(q => q.id === qId);
-        if (matched) {
-          hasExplicitQuoteParam = true;
-          state.customQuotes[state.todayDayOfYear] = matched;
-          state.currentQuoteData = matched;
-          try {
-            localStorage.setItem(`mindset_quote_choice_${state.todayDayOfYear}`, JSON.stringify(matched));
-          } catch (e) {}
-        }
+        matched = state.quotes.find(q => q.id === qId);
+      }
+
+      if (matched) {
+        hasExplicitQuoteParam = true;
+        state.customQuotes[state.todayDayOfYear] = matched;
+        state.currentQuoteData = matched;
+        try {
+          localStorage.setItem(`mindset_quote_choice_${state.todayDayOfYear}`, JSON.stringify(matched));
+        } catch (e) {}
       } else if (randomParam === '1' || randomParam === 'true') {
         const total = (state.quotes && state.quotes.length > 0) ? state.quotes.length : 365;
         const picked = state.quotes[Math.floor(Math.random() * total)];
